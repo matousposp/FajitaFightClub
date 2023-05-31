@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c63sp7otrl22p"]
+[gd_scene load_steps=9 format=3 uid="uid://c63sp7otrl22p"]
 
 [ext_resource type="Texture2D" uid="uid://dgiu833stxyfu" path="res://assets/1.jpg" id="1_edosw"]
 [ext_resource type="Texture2D" uid="uid://bl1pem7x4nixa" path="res://assets/2.jpg" id="2_4psyg"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dncggr13dp5d0" path="res://assets/4.jpg" id="4_d8bxq"]
 [ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="5_6406e"]
 [ext_resource type="FontFile" uid="uid://dbg7fxopdcllr" path="res://extra/CompactC Italic.otf" id="6_k8klp"]
+[ext_resource type="Texture2D" uid="uid://fa33ohskb4lp" path="res://assets/circle.png" id="7_4tp8w"]
+[ext_resource type="Texture2D" uid="uid://d1xd4wrenagxp" path="res://assets/lgo.png" id="8_807qp"]
 
 [node name="MainMenu" type="Node2D"]
 position = Vector2(0, 1)
@@ -87,7 +89,7 @@ offset_top = 12.0
 offset_right = 527.0
 offset_bottom = 38.0
 theme_override_fonts/font = ExtResource("5_6406e")
-text = "FAJITA FIGHT CLUB ULTIMATE - @fajitaclub - VERSION 1.0 2023"
+text = "FAJITA FIGHT CLUB ULTIMATE - @fajitaclub - VERSION 2.0 2023"
 
 [node name="Fight" type="Label" parent="."]
 offset_left = 224.0
@@ -136,3 +138,13 @@ theme_override_constants/shadow_offset_y = 8
 theme_override_fonts/font = ExtResource("6_k8klp")
 theme_override_font_sizes/font_size = 80
 text = "EXTRAS"
+
+[node name="Circle" type="Sprite2D" parent="."]
+position = Vector2(585, 334)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_4tp8w")
+
+[node name="Lgo" type="Sprite2D" parent="."]
+position = Vector2(597, 340)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_807qp")
