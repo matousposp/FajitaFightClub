@@ -1,0 +1,313 @@
+[gd_scene load_steps=31 format=3 uid="uid://bsaokdaj4qi3a"]
+
+[ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="1_rmibl"]
+[ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="2_ai86t"]
+[ext_resource type="Script" path="res://main scripts/fight.gd" id="2_v350f"]
+[ext_resource type="Script" path="res://main scripts/options.gd" id="3_1sjhn"]
+[ext_resource type="Script" path="res://main scripts/online.gd" id="4_hjp08"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gc0my"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s04a"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amuxh"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24m3p"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8sdsv"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="Animation" id="Animation_7need"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1e6jj"]
+resource_name = "a"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+
+[sub_resource type="Animation" id="Animation_0ecw2"]
+resource_name = "d"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s74ux"]
+_data = {
+"RESET": SubResource("Animation_7need"),
+"a": SubResource("Animation_1e6jj"),
+"d": SubResource("Animation_0ecw2")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ean54"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8m8d"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apilx"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cjwu"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="Animation" id="Animation_0bfnc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_clsfn"]
+resource_name = "a"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+
+[sub_resource type="Animation" id="Animation_p2oly"]
+resource_name = "d"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7k3ux"]
+_data = {
+"RESET": SubResource("Animation_0bfnc"),
+"a": SubResource("Animation_clsfn"),
+"d": SubResource("Animation_p2oly")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5j2m"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skmqd"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3j3t"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_suyfe"]
+bg_color = Color(1, 0.811765, 0.913725, 1)
+
+[sub_resource type="Animation" id="Animation_54g7o"]
+resource_name = "a"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+
+[sub_resource type="Animation" id="Animation_w5obw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_n5x3r"]
+resource_name = "d"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uonao"]
+_data = {
+"RESET": SubResource("Animation_w5obw"),
+"a": SubResource("Animation_54g7o"),
+"d": SubResource("Animation_n5x3r")
+}
+
+[node name="altMainMenu" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 651.0
+color = Color(0.92549, 0.92549, 0.92549, 1)
+
+[node name="fight" type="Button" parent="."]
+offset_left = 531.0
+offset_top = 332.0
+offset_right = 642.0
+offset_bottom = 379.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_rmibl")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5s04a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_amuxh")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_24m3p")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8sdsv")
+text = "FIGHT"
+script = ExtResource("2_v350f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="fight"]
+libraries = {
+"": SubResource("AnimationLibrary_s74ux")
+}
+
+[node name="options" type="Button" parent="."]
+offset_left = 502.0
+offset_top = 391.0
+offset_right = 674.0
+offset_bottom = 440.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_rmibl")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ean54")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t8m8d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_apilx")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8cjwu")
+text = "OPTIONS"
+script = ExtResource("3_1sjhn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="options"]
+libraries = {
+"": SubResource("AnimationLibrary_7k3ux")
+}
+
+[node name="online" type="Button" parent="."]
+offset_left = 513.0
+offset_top = 453.0
+offset_right = 660.0
+offset_bottom = 502.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_rmibl")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u5j2m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_skmqd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_v3j3t")
+theme_override_styles/focus = SubResource("StyleBoxFlat_suyfe")
+text = "ONLINE
+"
+script = ExtResource("4_hjp08")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="online"]
+libraries = {
+"": SubResource("AnimationLibrary_uonao")
+}
+
+[node name="title" type="Label" parent="."]
+offset_left = 135.0
+offset_top = 140.0
+offset_right = 991.0
+offset_bottom = 326.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.698039, 0.870588, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("2_ai86t")
+theme_override_font_sizes/font_size = 150
+text = "FIGHT CLUB
+"
+
+[node name="title2" type="Label" parent="."]
+offset_left = 539.0
+offset_top = 126.0
+offset_right = 1395.0
+offset_bottom = 312.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("2_ai86t")
+theme_override_font_sizes/font_size = 30
+text = "FAJITA"
+
+[node name="title3" type="Label" parent="."]
+offset_left = 497.0
+offset_top = 602.0
+offset_right = 1353.0
+offset_bottom = 788.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("2_ai86t")
+theme_override_font_sizes/font_size = 23
+text = "@ fajitafightclub"
