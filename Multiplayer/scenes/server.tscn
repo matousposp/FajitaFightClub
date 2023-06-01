@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=3 uid="uid://rnsitdrx3lh0"]
+
+[ext_resource type="Script" path="res://Multiplayer/scripts/server.gd" id="1_5vhub"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5vhub")
+
+[node name="Host_Title" type="Label" parent="."]
+offset_left = 164.0
+offset_top = 1.0
+offset_right = 403.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 90
+text = "HOST
+"
+
+[node name="Host" type="Button" parent="."]
+offset_left = 150.0
+offset_top = 133.0
+offset_right = 366.0
+offset_bottom = 198.0
+theme_override_font_sizes/font_size = 50
+text = "Host
+"
+
+[node name="Join_Title" type="Label" parent="."]
+offset_left = 789.0
+offset_top = -5.0
+offset_right = 984.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 90
+text = "JOIN
+"
+
+[node name="Join_IP" type="LineEdit" parent="."]
+offset_left = 412.0
+offset_top = 124.0
+offset_right = 741.0
+offset_bottom = 201.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "ENTER IP"
+alignment = 1
+
+[node name="Join" type="Button" parent="."]
+offset_left = 781.0
+offset_top = 136.0
+offset_right = 979.0
+offset_bottom = 213.0
+theme_override_font_sizes/font_size = 50
+text = "JOIN"
+
+[node name="IP" type="Label" parent="."]
+offset_left = 122.0
+offset_top = 241.0
+offset_right = 678.0
+offset_bottom = 331.0
+theme_override_font_sizes/font_size = 35
+
+[node name="Copy" type="Button" parent="."]
+offset_left = 810.0
+offset_top = 230.0
+offset_right = 985.0
+offset_bottom = 307.0
+theme_override_font_sizes/font_size = 50
+text = "Copy"
+
+[connection signal="pressed" from="Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="Join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="Copy" to="." method="_on_copy_pressed"]
