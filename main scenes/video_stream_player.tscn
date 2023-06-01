@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://drjayrppoafxj"]
+[gd_scene load_steps=3 format=3 uid="uid://drjayrppoafxj"]
 
 [ext_resource type="VideoStream" path="res://assets/logovid.ogv" id="1_0orr0"]
+[ext_resource type="Script" path="res://main scripts/video_stream_player.gd" id="2_ki03o"]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer"]
 offset_left = 1.0
@@ -10,3 +11,4 @@ offset_bottom = 649.0
 stream = ExtResource("1_0orr0")
 autoplay = true
 expand = true
+script = ExtResource("2_ki03o")
