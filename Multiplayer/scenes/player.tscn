@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://oroftn7qbwvc"]
+
+[ext_resource type="Texture2D" uid="uid://cyhyyp8nmcnvv" path="res://assets/icons8-walter-white-480.png" id="1_b1otq"]
+
+[node name="player" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, 3)
+texture = ExtResource("1_b1otq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
