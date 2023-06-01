@@ -7,19 +7,44 @@
 [ext_resource type="Script" path="res://main scripts/online.gd" id="4_hjp08"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gc0my"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s04a"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amuxh"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24m3p"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8sdsv"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="Animation" id="Animation_7need"]
 length = 0.001
@@ -76,16 +101,36 @@ _data = {
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ean54"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8m8d"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apilx"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cjwu"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="Animation" id="Animation_0bfnc"]
 length = 0.001
@@ -142,16 +187,36 @@ _data = {
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5j2m"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skmqd"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3j3t"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_suyfe"]
-bg_color = Color(1, 0.811765, 0.913725, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8gdy"]
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 8.0
 
 [sub_resource type="Animation" id="Animation_w5obw"]
 length = 0.001
@@ -237,9 +302,9 @@ libraries = {
 
 [node name="options" type="Button" parent="."]
 offset_left = 502.0
-offset_top = 391.0
+offset_top = 397.0
 offset_right = 674.0
-offset_bottom = 440.0
+offset_bottom = 446.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_rmibl")
 theme_override_font_sizes/font_size = 30
@@ -258,9 +323,9 @@ libraries = {
 
 [node name="online" type="Button" parent="."]
 offset_left = 513.0
-offset_top = 453.0
+offset_top = 465.0
 offset_right = 660.0
-offset_bottom = 502.0
+offset_bottom = 514.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_rmibl")
 theme_override_font_sizes/font_size = 30
@@ -268,7 +333,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_u5j2m")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_skmqd")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_v3j3t")
-theme_override_styles/focus = SubResource("StyleBoxFlat_suyfe")
+theme_override_styles/focus = SubResource("StyleBoxFlat_g8gdy")
 text = "ONLINE
 "
 script = ExtResource("4_hjp08")
