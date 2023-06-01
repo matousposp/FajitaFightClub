@@ -27,23 +27,23 @@ text = "OPTIONS
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = -43.0
-offset_top = 159.0
+offset_top = 179.0
 offset_right = 577.0
-offset_bottom = 554.0
+offset_bottom = 574.0
 color = Color(1, 0.843137, 0.92549, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 offset_left = 612.0
-offset_top = 159.0
+offset_top = 179.0
 offset_right = 1232.0
-offset_bottom = 554.0
+offset_bottom = 574.0
 color = Color(1, 0.843137, 0.92549, 1)
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1046.0
-offset_top = 462.0
-offset_right = 1546.0
-offset_bottom = 1009.0
+offset_left = 1057.0
+offset_top = 486.0
+offset_right = 1557.0
+offset_bottom = 1033.0
 scale = Vector2(0.150548, 0.126708)
 texture_normal = ExtResource("2_n6wf2")
 texture_pressed = ExtResource("2_n6wf2")
