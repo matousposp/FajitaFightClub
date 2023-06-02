@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://rnsitdrx3lh0"]
+[gd_scene load_steps=2 format=3 uid="uid://rnsitdrx3lh0"]
 
 [ext_resource type="Script" path="res://Multiplayer/scripts/server.gd" id="1_5vhub"]
 [ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="2_cg03x"]
@@ -150,89 +150,56 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5vhub")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 1.0
-offset_right = 1157.0
-offset_bottom = 651.0
-color = Color(0.92549, 0.92549, 0.92549, 1)
-
 [node name="Host_Title" type="Label" parent="."]
-layout_mode = 0
-offset_left = 149.0
-offset_top = 160.0
-offset_right = 407.0
-offset_bottom = 287.0
-theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_fonts/font = ExtResource("2_cg03x")
+offset_left = 164.0
+offset_top = 1.0
+offset_right = 403.0
+offset_bottom = 128.0
 theme_override_font_sizes/font_size = 90
 text = "HOST
 "
 
 [node name="Host" type="Button" parent="."]
-layout_mode = 0
-offset_left = 154.0
-offset_top = 307.0
-offset_right = 370.0
-offset_bottom = 384.0
-theme_override_fonts/font = ExtResource("2_cg03x")
+offset_left = 150.0
+offset_top = 133.0
+offset_right = 366.0
+offset_bottom = 198.0
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_4owtc")
-theme_override_styles/hover = SubResource("StyleBoxFlat_min6r")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6g2d2")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_w4yai")
-theme_override_styles/focus = SubResource("StyleBoxFlat_7b7nn")
-text = "HOST"
+text = "Host
+"
 
 [node name="Join_Title" type="Label" parent="."]
-layout_mode = 0
-offset_left = 766.0
-offset_top = 160.0
-offset_right = 989.0
-offset_bottom = 287.0
-theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_fonts/font = ExtResource("2_cg03x")
+offset_left = 789.0
+offset_top = -5.0
+offset_right = 984.0
+offset_bottom = 122.0
 theme_override_font_sizes/font_size = 90
 text = "JOIN
 "
 
 [node name="Join_IP" type="LineEdit" parent="."]
-layout_mode = 0
-offset_left = 409.0
-offset_top = 309.0
-offset_right = 738.0
-offset_bottom = 386.0
-theme_override_fonts/font = ExtResource("2_cg03x")
+offset_left = 412.0
+offset_top = 124.0
+offset_right = 741.0
+offset_bottom = 201.0
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_tsp4h")
-theme_override_styles/focus = SubResource("StyleBoxFlat_ph20j")
 placeholder_text = "ENTER IP"
 alignment = 1
 
 [node name="Join" type="Button" parent="."]
-layout_mode = 0
-offset_left = 777.0
-offset_top = 310.0
-offset_right = 975.0
-offset_bottom = 387.0
-theme_override_fonts/font = ExtResource("2_cg03x")
+offset_left = 781.0
+offset_top = 136.0
+offset_right = 979.0
+offset_bottom = 213.0
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_nfwn2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_mp5ld")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6jqom")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_xuqh7")
-theme_override_styles/focus = SubResource("StyleBoxFlat_yorws")
 text = "JOIN"
 
 [node name="IP" type="Label" parent="."]
-layout_mode = 0
-offset_left = 301.0
-offset_top = 193.0
-offset_right = 857.0
-offset_bottom = 283.0
-theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_fonts/font = ExtResource("2_cg03x")
+offset_left = 122.0
+offset_top = 241.0
+offset_right = 678.0
+offset_bottom = 331.0
 theme_override_font_sizes/font_size = 35
-horizontal_alignment = 1
 
 [node name="Copy" type="Button" parent="."]
 layout_mode = 0
@@ -248,6 +215,12 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_y8stn")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_s0pwl")
 theme_override_styles/focus = SubResource("StyleBoxFlat_w3tb4")
 text = "COPY"
+offset_left = 810.0
+offset_top = 230.0
+offset_right = 985.0
+offset_bottom = 307.0
+theme_override_font_sizes/font_size = 50
+text = "Copy"
 
 [connection signal="pressed" from="Host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="Join" to="." method="_on_join_pressed"]
