@@ -116,7 +116,7 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 expand_margin_top = 8.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrpyi"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8stn"]
 bg_color = Color(0.278431, 0.682353, 1, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
@@ -236,15 +236,15 @@ horizontal_alignment = 1
 
 [node name="Copy" type="Button" parent="."]
 layout_mode = 0
-offset_left = 523.0
-offset_top = 433.0
-offset_right = 629.0
-offset_bottom = 493.0
+offset_left = 525.0
+offset_top = 434.0
+offset_right = 631.0
+offset_bottom = 494.0
 theme_override_fonts/font = ExtResource("2_cg03x")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_t4bvg")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8am5g")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vrpyi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y8stn")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_s0pwl")
 theme_override_styles/focus = SubResource("StyleBoxFlat_w3tb4")
 text = "COPY"
