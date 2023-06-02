@@ -60,7 +60,7 @@ offset_top = 27.0
 offset_right = 904.0
 offset_bottom = 213.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_colors/font_shadow_color = Color(1, 0.698039, 0.870588, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)
 theme_override_constants/shadow_offset_x = 7
 theme_override_constants/shadow_offset_y = 6
 theme_override_fonts/font = ExtResource("1_nyxa8")
@@ -73,14 +73,14 @@ offset_left = -43.0
 offset_top = 179.0
 offset_right = 577.0
 offset_bottom = 574.0
-color = Color(1, 0.843137, 0.92549, 1)
+color = Color(1, 0.945098, 0.839216, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 offset_left = 612.0
 offset_top = 179.0
 offset_right = 1232.0
 offset_bottom = 574.0
-color = Color(1, 0.843137, 0.92549, 1)
+color = Color(1, 0.945098, 0.839216, 1)
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 1057.0

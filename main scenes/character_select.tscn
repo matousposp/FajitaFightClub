@@ -55,32 +55,18 @@ offset_top = 34.0
 offset_right = 916.0
 offset_bottom = 220.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_colors/font_shadow_color = Color(1, 0.698039, 0.870588, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)
 theme_override_constants/shadow_offset_x = 7
 theme_override_constants/shadow_offset_y = 6
 theme_override_fonts/font = ExtResource("1_aufxw")
 theme_override_font_sizes/font_size = 90
 text = "PLAYER SELECT"
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = -43.0
-offset_top = 179.0
-offset_right = 577.0
-offset_bottom = 574.0
-color = Color(1, 0.843137, 0.92549, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="."]
-offset_left = 612.0
-offset_top = 179.0
-offset_right = 1232.0
-offset_bottom = 574.0
-color = Color(1, 0.843137, 0.92549, 1)
-
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1053.0
-offset_top = 486.0
-offset_right = 1553.0
-offset_bottom = 1033.0
+offset_left = 1030.0
+offset_top = 545.0
+offset_right = 1530.0
+offset_bottom = 1092.0
 scale = Vector2(0.150548, 0.126708)
 texture_normal = ExtResource("2_qg5e5")
 texture_pressed = ExtResource("2_qg5e5")

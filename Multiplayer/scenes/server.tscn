@@ -131,6 +131,7 @@ scale = Vector2(0.30638, 0.305504)
 texture = ExtResource("2_qv4mb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 651.0
 color = Color(0.92549, 0.92549, 0.92549, 0.882353)

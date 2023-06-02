@@ -1,6 +1,7 @@
-[gd_scene load_steps=31 format=3 uid="uid://bsaokdaj4qi3a"]
+[gd_scene load_steps=32 format=3 uid="uid://bsaokdaj4qi3a"]
 
 [ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="1_rmibl"]
+[ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="1_rpjd1"]
 [ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="2_ai86t"]
 [ext_resource type="Script" path="res://main scripts/fight.gd" id="2_v350f"]
 [ext_resource type="Script" path="res://main scripts/options.gd" id="3_1sjhn"]
@@ -279,6 +280,53 @@ offset_right = 1156.0
 offset_bottom = 651.0
 color = Color(0.92549, 0.92549, 0.92549, 1)
 
+[node name="T2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.560784)
+position = Vector2(781, 325)
+scale = Vector2(0.201172, 0.21875)
+texture = ExtResource("1_rpjd1")
+
+[node name="T16" type="Sprite2D" parent="T2"]
+position = Vector2(1516.12, -589.714)
+texture = ExtResource("1_rpjd1")
+
+[node name="T14" type="Sprite2D" parent="T2"]
+position = Vector2(149.126, 1088)
+texture = ExtResource("1_rpjd1")
+
+[node name="T11" type="Sprite2D" parent="T2"]
+position = Vector2(-3072, -1024)
+texture = ExtResource("1_rpjd1")
+
+[node name="T12" type="Sprite2D" parent="T2"]
+modulate = Color(1, 1, 1, 0.196078)
+position = Vector2(-3072, -1024)
+texture = ExtResource("1_rpjd1")
+
+[node name="T13" type="Sprite2D" parent="T2"]
+position = Vector2(1267.57, 667.429)
+texture = ExtResource("1_rpjd1")
+
+[node name="T3" type="Sprite2D" parent="T2"]
+position = Vector2(218.718, -937.143)
+texture = ExtResource("1_rpjd1")
+
+[node name="T4" type="Sprite2D" parent="T2"]
+position = Vector2(-1481.32, -1243.43)
+texture = ExtResource("1_rpjd1")
+
+[node name="T6" type="Sprite2D" parent="T2"]
+position = Vector2(-3121.71, 1005.71)
+texture = ExtResource("1_rpjd1")
+
+[node name="T9" type="Sprite2D" parent="T2"]
+position = Vector2(-3295.69, 73.1427)
+texture = ExtResource("1_rpjd1")
+
+[node name="T8" type="Sprite2D" parent="T2"]
+position = Vector2(-2092.74, 525.714)
+texture = ExtResource("1_rpjd1")
+
 [node name="fight" type="Button" parent="."]
 offset_left = 531.0
 offset_top = 332.0
@@ -349,7 +397,7 @@ offset_top = 140.0
 offset_right = 991.0
 offset_bottom = 326.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_colors/font_shadow_color = Color(1, 0.698039, 0.870588, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)
 theme_override_constants/shadow_offset_x = 7
 theme_override_constants/shadow_offset_y = 6
 theme_override_fonts/font = ExtResource("2_ai86t")
