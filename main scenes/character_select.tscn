@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://6l602pnrkpki"]
 
-[ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="1_aufxw"]
+[ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="2_4g2lm"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_e6p2o"]
 
@@ -58,8 +58,8 @@ theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)
 theme_override_constants/shadow_offset_x = 7
 theme_override_constants/shadow_offset_y = 6
-theme_override_fonts/font = ExtResource("1_aufxw")
-theme_override_font_sizes/font_size = 90
+theme_override_fonts/font = ExtResource("1_gs7ng")
+theme_override_font_sizes/font_size = 110
 text = "PLAYER SELECT"
 
 [node name="TextureButton" type="TextureButton" parent="."]

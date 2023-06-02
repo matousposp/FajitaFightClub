@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cjlrfxv51r3sa"]
 
-[ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="1_nyxa8"]
+[ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_jhm3e"]
 [ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="2_y0ia7"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_g0p7y"]
 [ext_resource type="Script" path="res://main scripts/HSlider.gd" id="4_f365g"]
@@ -56,15 +56,15 @@ color = Color(0.92549, 0.92549, 0.92549, 1)
 
 [node name="title" type="Label" parent="."]
 offset_left = 48.0
-offset_top = 27.0
+offset_top = 33.0
 offset_right = 904.0
-offset_bottom = 213.0
+offset_bottom = 219.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)
 theme_override_constants/shadow_offset_x = 7
 theme_override_constants/shadow_offset_y = 6
-theme_override_fonts/font = ExtResource("1_nyxa8")
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("1_jhm3e")
+theme_override_font_sizes/font_size = 120
 text = "OPTIONS
 "
 
@@ -114,14 +114,14 @@ rounded = true
 script = ExtResource("4_f365g")
 
 [node name="title2" type="Label" parent="."]
-offset_left = 647.0
-offset_top = 208.0
-offset_right = 1503.0
-offset_bottom = 285.0
+offset_left = 653.0
+offset_top = 214.0
+offset_right = 1509.0
+offset_bottom = 291.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_constants/shadow_offset_x = 7
 theme_override_constants/shadow_offset_y = 6
-theme_override_fonts/font = ExtResource("1_nyxa8")
+theme_override_fonts/font = ExtResource("1_jhm3e")
 theme_override_font_sizes/font_size = 60
 text = "GAME VOLUME"
 
