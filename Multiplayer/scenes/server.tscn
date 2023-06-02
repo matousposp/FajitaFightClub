@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://rnsitdrx3lh0"]
+[gd_scene load_steps=19 format=3 uid="uid://rnsitdrx3lh0"]
 
 [ext_resource type="Script" path="res://Multiplayer/scripts/server.gd" id="1_5vhub"]
 [ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="2_cg03x"]
+[ext_resource type="Texture2D" uid="uid://dgiu833stxyfu" path="res://assets/1.jpg" id="2_qv4mb"]
 [ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="3_8qb3f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aknhl"]
@@ -124,10 +125,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5vhub")
 
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(584.75, 324.75)
+scale = Vector2(0.30638, 0.305504)
+texture = ExtResource("2_qv4mb")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1156.0
 offset_bottom = 651.0
-color = Color(0.92549, 0.92549, 0.92549, 1)
+color = Color(0.92549, 0.92549, 0.92549, 0.85098)
 
 [node name="Host_Title" type="Label" parent="."]
 layout_mode = 0
