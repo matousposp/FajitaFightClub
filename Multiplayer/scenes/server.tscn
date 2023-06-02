@@ -133,7 +133,7 @@ texture = ExtResource("2_qv4mb")
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1156.0
 offset_bottom = 651.0
-color = Color(0.92549, 0.92549, 0.92549, 0.85098)
+color = Color(0.92549, 0.92549, 0.92549, 0.882353)
 
 [node name="Host_Title" type="Label" parent="."]
 layout_mode = 0
