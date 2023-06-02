@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cjlrfxv51r3sa"]
 
 [ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="1_nyxa8"]
-[ext_resource type="Texture2D" uid="uid://dilv0o177nqif" path="res://assets/2176395-removebg-preview.png" id="2_n6wf2"]
+[ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="2_y0ia7"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_g0p7y"]
 [ext_resource type="Script" path="res://main scripts/HSlider.gd" id="4_f365g"]
 [ext_resource type="AudioStream" uid="uid://b6pxvj16ap1xv" path="res://breaking-news-in-2029-5994.mp3" id="5_qunju"]
@@ -88,11 +88,11 @@ offset_top = 486.0
 offset_right = 1557.0
 offset_bottom = 1033.0
 scale = Vector2(0.150548, 0.126708)
-texture_normal = ExtResource("2_n6wf2")
-texture_pressed = ExtResource("2_n6wf2")
-texture_hover = ExtResource("2_n6wf2")
-texture_disabled = ExtResource("2_n6wf2")
-texture_focused = ExtResource("2_n6wf2")
+texture_normal = ExtResource("2_y0ia7")
+texture_pressed = ExtResource("2_y0ia7")
+texture_hover = ExtResource("2_y0ia7")
+texture_disabled = ExtResource("2_y0ia7")
+texture_focused = ExtResource("2_y0ia7")
 stretch_mode = 0
 script = ExtResource("3_g0p7y")
 
