@@ -890,7 +890,7 @@ offset_bottom = 651.0
 color = Color(0.92549, 0.92549, 0.92549, 1)
 
 [node name="T16" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.847059)
+modulate = Color(1, 1, 1, 0.756863)
 position = Vector2(1083, -36)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -901,7 +901,7 @@ libraries = {
 }
 
 [node name="T14" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.847059)
+modulate = Color(1, 1, 1, 0.756863)
 position = Vector2(811, 563)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -912,7 +912,7 @@ libraries = {
 }
 
 [node name="T11" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.847059)
+modulate = Color(1, 1, 1, 0.756863)
 position = Vector2(165, -325)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -923,7 +923,7 @@ libraries = {
 }
 
 [node name="T13" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.847059)
+modulate = Color(1, 1, 1, 0.756863)
 position = Vector2(981, -146)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -934,7 +934,7 @@ libraries = {
 }
 
 [node name="T6" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.847059)
+modulate = Color(1, 1, 1, 0.756863)
 position = Vector2(161, -43)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -945,7 +945,7 @@ libraries = {
 }
 
 [node name="T3" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.847059)
+modulate = Color(1, 1, 1, 0.756863)
 position = Vector2(728, -44)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -956,7 +956,7 @@ libraries = {
 }
 
 [node name="T4" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.847059)
+modulate = Color(1, 1, 1, 0.756863)
 position = Vector2(485, -47)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -967,7 +967,7 @@ libraries = {
 }
 
 [node name="T9" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.847059)
+modulate = Color(1, 1, 1, 0.756863)
 position = Vector2(78, -95)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -978,7 +978,7 @@ libraries = {
 }
 
 [node name="T8" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.847059)
+modulate = Color(1, 1, 1, 0.756863)
 position = Vector2(394, -154)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -989,7 +989,7 @@ libraries = {
 }
 
 [node name="T2" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.847059)
+modulate = Color(1, 1, 1, 0.756863)
 position = Vector2(714, -76)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
