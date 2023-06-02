@@ -3,7 +3,6 @@ extends Control
 const port = 7777
 var peer = ENetMultiplayerPeer.new()
 var ipad : String
-var player = 1
 
 func _ready() -> void:
 	if OS.get_name() == "Windows":
@@ -14,7 +13,7 @@ func _ready() -> void:
 		ipad = IP.get_local_addresses()[3]
 	
 	for ip in IP.get_local_addresses():
-		if ip.begins_with("192.168.") or ip.begins_with("10."):
+		if ip.begins_with("192.168.") or ip.begins_with("127.") or ip.begins_with("10."):
 			ipad = ip
 	$IP.text = ipad
 
