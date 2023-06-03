@@ -1,51 +1,69 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjlrfxv51r3sa"]
+[gd_scene load_steps=13 format=3 uid="uid://cjlrfxv51r3sa"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_jhm3e"]
-[ext_resource type="Texture2D" uid="uid://dq176nd03stj3" path="res://assets/bakbtn.png" id="2_wjvel"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_g0p7y"]
+[ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://back btn.png" id="4_0jj4v"]
 [ext_resource type="Script" path="res://main scripts/HSlider.gd" id="4_f365g"]
+[ext_resource type="Texture2D" uid="uid://cf77t61ybtqtk" path="res://outline.png" id="4_j7bbl"]
+[ext_resource type="Script" path="res://main scripts/Outline.gd" id="5_5p7g3"]
 [ext_resource type="AudioStream" uid="uid://b6pxvj16ap1xv" path="res://breaking-news-in-2029-5994.mp3" id="5_qunju"]
 
-[sub_resource type="Animation" id="Animation_i2wv3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jmgi"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+
+[sub_resource type="Animation" id="Animation_61660"]
+resource_name = "1"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.167, 0.167)]
+}
+
+[sub_resource type="Animation" id="Animation_nhjcw"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(1e-05, 1e-05)]
 }
 
-[sub_resource type="Animation" id="Animation_sceex"]
-resource_name = "hover"
-length = 0.4
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_xwsoh"]
+resource_name = "2"
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Vector2(0.167, 0.167), Vector2(1e-05, 1e-05)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ejxoo"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kdvs4"]
 _data = {
-"RESET": SubResource("Animation_i2wv3"),
-"hover": SubResource("Animation_sceex")
+"1": SubResource("Animation_61660"),
+"2": SubResource("Animation_xwsoh"),
+"RESET": SubResource("Animation_nhjcw")
 }
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jmgi"]
-bg_color = Color(0.278431, 0.682353, 1, 1)
 
 [node name="Options" type="Node2D"]
 
@@ -82,25 +100,6 @@ offset_right = 1232.0
 offset_bottom = 574.0
 color = Color(1, 0.945098, 0.839216, 1)
 
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1042.0
-offset_top = 480.0
-offset_right = 1554.0
-offset_bottom = 992.0
-scale = Vector2(0.150548, 0.126708)
-texture_normal = ExtResource("2_wjvel")
-texture_pressed = ExtResource("2_wjvel")
-texture_hover = ExtResource("2_wjvel")
-texture_disabled = ExtResource("2_wjvel")
-texture_focused = ExtResource("2_wjvel")
-stretch_mode = 0
-script = ExtResource("3_g0p7y")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureButton"]
-libraries = {
-"": SubResource("AnimationLibrary_ejxoo")
-}
-
 [node name="HSlider" type="HSlider" parent="."]
 offset_left = 657.0
 offset_top = 292.0
@@ -128,5 +127,30 @@ text = "GAME VOLUME"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_qunju")
 autoplay = true
+
+[node name="Outline" type="Sprite2D" parent="."]
+position = Vector2(1046.88, 558.875)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("4_j7bbl")
+script = ExtResource("5_5p7g3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Outline"]
+libraries = {
+"": SubResource("AnimationLibrary_kdvs4")
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1015.0
+offset_top = 476.0
+offset_right = 1975.0
+offset_bottom = 1314.0
+scale = Vector2(0.150548, 0.126708)
+texture_normal = ExtResource("4_0jj4v")
+texture_pressed = ExtResource("4_0jj4v")
+texture_hover = ExtResource("4_0jj4v")
+texture_disabled = ExtResource("4_0jj4v")
+texture_focused = ExtResource("4_0jj4v")
+stretch_mode = 0
+script = ExtResource("3_g0p7y")
 
 [connection signal="value_changed" from="HSlider" to="HSlider" method="_on_value_changed"]

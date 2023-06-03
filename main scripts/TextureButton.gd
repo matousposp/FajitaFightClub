@@ -1,5 +1,6 @@
 extends TextureButton
-
+signal hovr
+signal nothovr
 func _ready():
 	connect("mouse_entered", Callable(self, "_on_button_hover"))
 	connect("mouse_exited", Callable(self, "_on_button_hover_off"))
@@ -8,10 +9,10 @@ func _ready():
 	
 
 func _on_button_hover():
-	get_node("AnimationPlayer").play("hover")
+	emit_signal("hovr")
 
 func _on_button_hover_off():
-	$AnimationPlayer.stop()
+	emit_signal("nothovr")
 
 
 func button_pressed():

@@ -1,49 +1,67 @@
-[gd_scene load_steps=11 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=14 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_e6p2o"]
-[ext_resource type="Texture2D" uid="uid://dq176nd03stj3" path="res://assets/bakbtn.png" id="3_vdmu2"]
+[ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://back btn.png" id="3_sxwb3"]
+[ext_resource type="Texture2D" uid="uid://cf77t61ybtqtk" path="res://outline.png" id="3_t07pt"]
+[ext_resource type="Script" path="res://main scripts/Outline.gd" id="4_2g4ib"]
 [ext_resource type="Script" path="res://main scripts/p1.gd" id="4_ex3yg"]
 [ext_resource type="Texture2D" uid="uid://dj2fcduq5e4hl" path="res://assets/New Piskel-1.png.png" id="6_hlrds"]
 [ext_resource type="Texture2D" uid="uid://dxiqol03r1vlu" path="res://assets/tim.png" id="7_tv8ar"]
 
-[sub_resource type="Animation" id="Animation_i2wv3"]
+[sub_resource type="Animation" id="Animation_61660"]
+resource_name = "1"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.167, 0.167)]
+}
+
+[sub_resource type="Animation" id="Animation_nhjcw"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(1e-05, 1e-05)]
 }
 
-[sub_resource type="Animation" id="Animation_sceex"]
-resource_name = "hover"
-length = 0.4
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_xwsoh"]
+resource_name = "2"
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Vector2(0.167, 0.167), Vector2(1e-05, 1e-05)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ejxoo"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kdvs4"]
 _data = {
-"RESET": SubResource("Animation_i2wv3"),
-"hover": SubResource("Animation_sceex")
+"1": SubResource("Animation_61660"),
+"2": SubResource("Animation_xwsoh"),
+"RESET": SubResource("Animation_nhjcw")
 }
 
 [node name="CharacterSelect" type="Node2D"]
@@ -67,24 +85,30 @@ theme_override_fonts/font = ExtResource("1_gs7ng")
 theme_override_font_sizes/font_size = 110
 text = "PLAYER SELECT"
 
+[node name="Outline" type="Sprite2D" parent="."]
+position = Vector2(1046.88, 558.875)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("3_t07pt")
+script = ExtResource("4_2g4ib")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Outline"]
+libraries = {
+"": SubResource("AnimationLibrary_kdvs4")
+}
+
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 998.0
-offset_top = 527.0
-offset_right = 1510.0
-offset_bottom = 1039.0
+offset_left = 966.0
+offset_top = 512.0
+offset_right = 1926.0
+offset_bottom = 1350.0
 scale = Vector2(0.150548, 0.126708)
-texture_normal = ExtResource("3_vdmu2")
-texture_pressed = ExtResource("3_vdmu2")
-texture_hover = ExtResource("3_vdmu2")
-texture_disabled = ExtResource("3_vdmu2")
-texture_focused = ExtResource("3_vdmu2")
+texture_normal = ExtResource("3_sxwb3")
+texture_pressed = ExtResource("3_sxwb3")
+texture_hover = ExtResource("3_sxwb3")
+texture_disabled = ExtResource("3_sxwb3")
+texture_focused = ExtResource("3_sxwb3")
 stretch_mode = 0
 script = ExtResource("3_e6p2o")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureButton"]
-libraries = {
-"": SubResource("AnimationLibrary_ejxoo")
-}
 
 [node name="p1" type="ColorRect" parent="."]
 offset_left = 64.0
@@ -141,3 +165,6 @@ offset_top = 154.0
 offset_right = 911.0
 offset_bottom = 591.0
 color = Color(1, 0.917647, 0.74902, 1)
+
+[connection signal="hovr" from="TextureButton" to="Outline" method="_on_texture_button_hovr"]
+[connection signal="nothovr" from="TextureButton" to="Outline" method="_on_texture_button_nothovr"]
