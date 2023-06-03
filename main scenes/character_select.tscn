@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=9 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
+[ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
 [ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="2_4g2lm"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_e6p2o"]
+[ext_resource type="Script" path="res://main scripts/p1.gd" id="4_ex3yg"]
 
 [sub_resource type="Animation" id="Animation_i2wv3"]
 length = 0.001
@@ -43,6 +45,7 @@ _data = {
 }
 
 [node name="CharacterSelect" type="Node2D"]
+script = ExtResource("1_jprwa")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1156.0
@@ -63,10 +66,10 @@ theme_override_font_sizes/font_size = 110
 text = "PLAYER SELECT"
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1030.0
-offset_top = 545.0
-offset_right = 1530.0
-offset_bottom = 1092.0
+offset_left = 982.0
+offset_top = 533.0
+offset_right = 1494.0
+offset_bottom = 1080.0
 scale = Vector2(0.150548, 0.126708)
 texture_normal = ExtResource("2_4g2lm")
 texture_pressed = ExtResource("2_4g2lm")
@@ -80,3 +83,25 @@ script = ExtResource("3_e6p2o")
 libraries = {
 "": SubResource("AnimationLibrary_ejxoo")
 }
+
+[node name="p1" type="ColorRect" parent="."]
+offset_left = 64.0
+offset_top = 154.0
+offset_right = 323.0
+offset_bottom = 591.0
+color = Color(1, 0.917647, 0.74902, 1)
+script = ExtResource("4_ex3yg")
+
+[node name="p2" type="ColorRect" parent="."]
+offset_left = 335.0
+offset_top = 154.0
+offset_right = 594.0
+offset_bottom = 591.0
+color = Color(1, 0.917647, 0.74902, 1)
+
+[node name="p3" type="ColorRect" parent="."]
+offset_left = 607.0
+offset_top = 154.0
+offset_right = 866.0
+offset_bottom = 591.0
+color = Color(1, 0.917647, 0.74902, 1)
