@@ -1,12 +1,15 @@
-extends Node2D
-signal start
-var selectedChars = 0
+extends ColorRect
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if selectedChars == 2:
-		emit_signal("start")
+	pass
+
+
+func _on_character_select_start():
+	visible = true

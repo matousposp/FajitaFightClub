@@ -16,3 +16,4 @@ func _on_button_hover_off():
 
 func button_pressed():
 	emit_signal("select")
+	get_parent().selectedChars += 1
