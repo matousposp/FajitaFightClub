@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=29 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" path="res://main scripts/selec1t1.gd" id="11_538hd"]
 [ext_resource type="Script" path="res://main scripts/select1.gd" id="11_oe7aa"]
 [ext_resource type="Script" path="res://main scripts/star1t.gd" id="13_20j36"]
+[ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="14_2j0ef"]
+[ext_resource type="Script" path="res://main scripts/CheckButton.gd" id="15_5fvx7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytidb"]
 bg_color = Color(0.278431, 0.682353, 1, 1)
@@ -282,6 +284,18 @@ libraries = {
 "": SubResource("AnimationLibrary_73u85")
 }
 
+[node name="CheckButton" type="CheckButton" parent="."]
+offset_left = 788.0
+offset_top = 67.0
+offset_right = 1036.0
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("14_2j0ef")
+theme_override_font_sizes/font_size = 20
+text = "PLAYER SELECTION"
+script = ExtResource("15_5fvx7")
+
 [connection signal="start" from="." to="start" method="_on_character_select_start"]
 [connection signal="selected" from="selectionBTN" to="select1" method="_on_selection_btn_selected"]
 [connection signal="select" from="selectionBTN2" to="select2" method="_on_selection_btn_2_select"]
+[connection signal="toggled" from="CheckButton" to="CheckButton" method="_on_toggled"]
