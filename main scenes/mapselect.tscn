@@ -181,6 +181,7 @@ text = "GRASSLAND"
 script = ExtResource("5_txh7g")
 
 [node name="Grass" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(415.5, 379)
 scale = Vector2(0.614235, 0.747634)
 texture = ExtResource("6_jm1yt")
@@ -203,6 +204,7 @@ text = "SPACE"
 script = ExtResource("8_stghg")
 
 [node name="Spacemap" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(416.25, 379)
 scale = Vector2(0.462227, 0.546083)
 texture = ExtResource("8_oq6si")
@@ -232,3 +234,4 @@ script = ExtResource("11_y1hva")
 [connection signal="showSpaceMap" from="SPACE" to="Button" method="_on_space_show_space_map"]
 [connection signal="spaceChosen" from="SPACE" to="." method="_on_space_space_chosen"]
 [connection signal="hide" from="Spacemap" to="Grass" method="_on_spacemap_hide"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

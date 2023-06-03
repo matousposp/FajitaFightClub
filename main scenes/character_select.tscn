@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=31 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://main scripts/selec1t1.gd" id="11_538hd"]
 [ext_resource type="Script" path="res://main scripts/select1.gd" id="11_oe7aa"]
 [ext_resource type="Script" path="res://main scripts/star1t.gd" id="13_20j36"]
+[ext_resource type="FontFile" uid="uid://dp1ortpeav3ne" path="res://extra/MASQUE__.ttf" id="14_2b48n"]
 [ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="14_2j0ef"]
 [ext_resource type="Script" path="res://main scripts/CheckButton.gd" id="15_5fvx7"]
 
@@ -256,7 +257,6 @@ color = Color(0, 0.858824, 0.941176, 0.372549)
 script = ExtResource("11_oe7aa")
 
 [node name="start" type="ColorRect" parent="."]
-visible = false
 offset_left = -83.0
 offset_top = 217.0
 offset_right = 1273.0
@@ -270,7 +270,7 @@ offset_left = 309.0
 offset_top = -19.0
 offset_right = 1031.0
 offset_bottom = 215.0
-theme_override_fonts/font = ExtResource("1_gs7ng")
+theme_override_fonts/font = ExtResource("14_2b48n")
 theme_override_font_sizes/font_size = 200
 theme_override_styles/normal = SubResource("StyleBoxFlat_8jlh3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_o7rkq")
@@ -291,6 +291,12 @@ offset_top = 67.0
 offset_right = 1036.0
 offset_bottom = 131.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_hover_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_focus_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_outline_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_fonts/font = ExtResource("14_2j0ef")
 theme_override_font_sizes/font_size = 20
 text = "PLAYER SELECTION"
