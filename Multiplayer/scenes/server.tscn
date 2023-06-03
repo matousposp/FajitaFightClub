@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="2_cg03x"]
 [ext_resource type="Texture2D" uid="uid://dgiu833stxyfu" path="res://assets/1.jpg" id="2_qv4mb"]
 [ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="3_8qb3f"]
-[ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="5_uv4pm"]
+[ext_resource type="Texture2D" uid="uid://dq176nd03stj3" path="res://assets/bakbtn.png" id="5_ce45i"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="6_cmrbh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aknhl"]
@@ -268,16 +268,17 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_w3tb4")
 text = "COPY"
 
 [node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1030.0
 offset_top = 545.0
 offset_right = 1530.0
 offset_bottom = 1092.0
 scale = Vector2(0.150548, 0.126708)
-texture_normal = ExtResource("5_uv4pm")
-texture_pressed = ExtResource("5_uv4pm")
-texture_hover = ExtResource("5_uv4pm")
-texture_disabled = ExtResource("5_uv4pm")
-texture_focused = ExtResource("5_uv4pm")
+texture_normal = ExtResource("5_ce45i")
+texture_pressed = ExtResource("5_ce45i")
+texture_hover = ExtResource("5_ce45i")
+texture_disabled = ExtResource("5_ce45i")
+texture_focused = ExtResource("5_ce45i")
 stretch_mode = 0
 script = ExtResource("6_cmrbh")
 

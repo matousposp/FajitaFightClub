@@ -2,8 +2,8 @@
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
-[ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="2_4g2lm"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_e6p2o"]
+[ext_resource type="Texture2D" uid="uid://dq176nd03stj3" path="res://assets/bakbtn.png" id="3_vdmu2"]
 [ext_resource type="Script" path="res://main scripts/p1.gd" id="4_ex3yg"]
 [ext_resource type="Texture2D" uid="uid://dj2fcduq5e4hl" path="res://assets/New Piskel-1.png.png" id="6_hlrds"]
 [ext_resource type="Texture2D" uid="uid://dxiqol03r1vlu" path="res://assets/tim.png" id="7_tv8ar"]
@@ -68,16 +68,16 @@ theme_override_font_sizes/font_size = 110
 text = "PLAYER SELECT"
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 991.0
-offset_top = 533.0
-offset_right = 1503.0
-offset_bottom = 1080.0
+offset_left = 998.0
+offset_top = 527.0
+offset_right = 1510.0
+offset_bottom = 1039.0
 scale = Vector2(0.150548, 0.126708)
-texture_normal = ExtResource("2_4g2lm")
-texture_pressed = ExtResource("2_4g2lm")
-texture_hover = ExtResource("2_4g2lm")
-texture_disabled = ExtResource("2_4g2lm")
-texture_focused = ExtResource("2_4g2lm")
+texture_normal = ExtResource("3_vdmu2")
+texture_pressed = ExtResource("3_vdmu2")
+texture_hover = ExtResource("3_vdmu2")
+texture_disabled = ExtResource("3_vdmu2")
+texture_focused = ExtResource("3_vdmu2")
 stretch_mode = 0
 script = ExtResource("3_e6p2o")
 
