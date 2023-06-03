@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=27 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://main scripts/selectionBT1N.gd" id="10_wlugh"]
 [ext_resource type="Script" path="res://main scripts/selec1t1.gd" id="11_538hd"]
 [ext_resource type="Script" path="res://main scripts/select1.gd" id="11_oe7aa"]
+[ext_resource type="Script" path="res://main scripts/star1t.gd" id="13_20j36"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytidb"]
 bg_color = Color(0.278431, 0.682353, 1, 1)
@@ -260,7 +261,7 @@ offset_bottom = 423.0
 color = Color(0, 0.917647, 0.407843, 1)
 script = ExtResource("10_80q22")
 
-[node name="Button" type="Button" parent="start"]
+[node name="start" type="Button" parent="start"]
 layout_mode = 0
 offset_left = 309.0
 offset_top = -19.0
@@ -274,6 +275,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_688md")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_8jabd")
 theme_override_styles/focus = SubResource("StyleBoxFlat_dsh6q")
 text = "START"
+script = ExtResource("13_20j36")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="start"]
 libraries = {
