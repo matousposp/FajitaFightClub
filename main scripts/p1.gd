@@ -1,16 +1,17 @@
 extends ColorRect
 var characterOne = preload("res://Multiplayer/scenes/player.tscn")
-
+signal onhov
+signal hovoff
 func _ready():
 	connect("mouse_entered", Callable(self, "_on_button_hover"))
 	connect("mouse_exited", Callable(self, "_on_button_hover_off"))
 	set_process_input(true)
 
 func _on_button_hover():
-	pass
+	emit_signal("onhov")
 
 func _on_button_hover_off():
-	pass
+	emit_signal("hovoff")
 
 func _input(event):
 	if event is InputEventMouseButton:
