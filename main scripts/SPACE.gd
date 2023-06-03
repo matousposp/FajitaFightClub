@@ -1,6 +1,6 @@
 extends Button
-signal showGrassMap
-signal grassChosen
+signal showSpaceMap
+signal spaceChosen
 func _ready():
 	connect("mouse_entered", Callable(self, "_on_button_hover"))
 	connect("mouse_exited", Callable(self, "_on_button_hover_off"))
@@ -15,5 +15,4 @@ func _on_button_hover_off():
 	pass
 
 func button_pressed():
-	emit_signal("showGrassMap")
-	emit_signal("grassChosen")
+	emit_signal("showSpaceMap")

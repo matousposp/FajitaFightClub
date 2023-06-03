@@ -1,5 +1,5 @@
 extends Sprite2D
-signal hide1
+signal hide
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,11 +11,11 @@ func _process(delta):
 	pass
 
 
-func _on_grassland_show_grass_map():
+func _on_space_show_space_map():
 	visible = true
 	z_index = get_parent().get_child_count() - 1
-	emit_signal("hide1")
+	emit_signal("hide")
 
 
-func _on_spacemap_hide():
+func _on_grass_hide_1():
 	visible = false

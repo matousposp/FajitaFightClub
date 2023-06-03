@@ -1,12 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://bgx7os0415rjh"]
+[gd_scene load_steps=16 format=3 uid="uid://bgx7os0415rjh"]
 
-[ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_dqtek"]
+[ext_resource type="Script" path="res://main scripts/mapselect.gd" id="1_aeiv3"]
 [ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="2_8nulj"]
 [ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://assets/back btn.png" id="3_pv2si"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="4_gnujo"]
 [ext_resource type="Script" path="res://main scripts/GRASSLAND.gd" id="5_txh7g"]
 [ext_resource type="Texture2D" uid="uid://cmk3gy1un25lm" path="res://assets/grass.png" id="6_jm1yt"]
 [ext_resource type="Script" path="res://main scripts/Grass.gd" id="7_62bhr"]
+[ext_resource type="Texture2D" uid="uid://bs7481ym83os7" path="res://assets/spacemap.png" id="8_oq6si"]
+[ext_resource type="Script" path="res://main scripts/SPACE.gd" id="8_stghg"]
+[ext_resource type="Script" path="res://main scripts/Spacemap.gd" id="9_3x4g1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oudbr"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -63,13 +66,20 @@ expand_margin_top = 8.0
 expand_margin_right = 8.0
 expand_margin_bottom = 8.0
 
-[node name="CharacterSelect" type="Node2D"]
-script = ExtResource("1_dqtek")
+[node name="mapselect" type="Node2D"]
+script = ExtResource("1_aeiv3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1156.0
 offset_bottom = 651.0
 color = Color(0.92549, 0.92549, 0.92549, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 54.0
+offset_top = 131.0
+offset_right = 779.0
+offset_bottom = 630.0
+color = Color(1, 0.945098, 0.839216, 1)
 
 [node name="title" type="Label" parent="."]
 offset_left = 60.0
@@ -115,10 +125,37 @@ text = "GRASSLAND"
 script = ExtResource("5_txh7g")
 
 [node name="Grass" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(415.5, 379.75)
-scale = Vector2(0.614235, 0.745268)
+position = Vector2(415.5, 379)
+scale = Vector2(0.614235, 0.747634)
 texture = ExtResource("6_jm1yt")
 script = ExtResource("7_62bhr")
 
+[node name="SPACE" type="Button" parent="."]
+offset_left = 818.0
+offset_top = 246.0
+offset_right = 1087.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_8nulj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_oudbr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p0103")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dt43c")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_rhci5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cjotm")
+text = "SPACE"
+script = ExtResource("8_stghg")
+
+[node name="Spacemap" type="Sprite2D" parent="."]
+position = Vector2(416.25, 379)
+scale = Vector2(0.462227, 0.546083)
+texture = ExtResource("8_oq6si")
+script = ExtResource("9_3x4g1")
+
+[connection signal="grassChosen" from="GRASSLAND" to="." method="_on_grassland_grass_chosen"]
+[connection signal="showGrassMap" from="GRASSLAND" to="." method="_on_grassland_show_grass_map"]
 [connection signal="showGrassMap" from="GRASSLAND" to="Grass" method="_on_grassland_show_grass_map"]
+[connection signal="hide1" from="Grass" to="Spacemap" method="_on_grass_hide_1"]
+[connection signal="showSpaceMap" from="SPACE" to="Spacemap" method="_on_space_show_space_map"]
+[connection signal="spaceChosen" from="SPACE" to="." method="_on_space_space_chosen"]
+[connection signal="hide" from="Spacemap" to="Grass" method="_on_spacemap_hide"]
