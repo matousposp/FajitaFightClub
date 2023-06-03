@@ -1,8 +1,9 @@
-[gd_scene load_steps=79 format=3 uid="uid://bsaokdaj4qi3a"]
+[gd_scene load_steps=80 format=3 uid="uid://bsaokdaj4qi3a"]
 
 [ext_resource type="Script" path="res://main scripts/alt_main_menu.gd" id="1_fm7cy"]
 [ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="1_rpjd1"]
 [ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="2_ai86t"]
+[ext_resource type="AudioStream" uid="uid://mudu422qrd5w" path="res://select-sound-121244.mp3" id="2_iawah"]
 [ext_resource type="Script" path="res://main scripts/fight.gd" id="2_v350f"]
 [ext_resource type="Script" path="res://main scripts/options.gd" id="3_1sjhn"]
 [ext_resource type="Script" path="res://main scripts/online.gd" id="4_hjp08"]
@@ -1102,6 +1103,15 @@ _data = {
 [node name="altMainMenu" type="Node2D"]
 script = ExtResource("1_fm7cy")
 
+[node name="menusfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_iawah")
+
+[node name="menusfx2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_iawah")
+
+[node name="menusfx3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_iawah")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1156.0
 offset_bottom = 651.0
@@ -1224,7 +1234,7 @@ offset_right = 642.0
 offset_bottom = 379.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("7_h2wl6")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5s04a")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_amuxh")
@@ -1239,13 +1249,13 @@ libraries = {
 }
 
 [node name="options" type="Button" parent="."]
-offset_left = 502.0
+offset_left = 492.0
 offset_top = 406.0
-offset_right = 697.0
+offset_right = 687.0
 offset_bottom = 455.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("7_h2wl6")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ean54")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_t8m8d")
@@ -1260,13 +1270,13 @@ libraries = {
 }
 
 [node name="online" type="Button" parent="."]
-offset_left = 516.0
+offset_left = 509.0
 offset_top = 481.0
-offset_right = 677.0
+offset_right = 670.0
 offset_bottom = 530.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("7_h2wl6")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_u5j2m")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_skmqd")
@@ -1282,9 +1292,9 @@ libraries = {
 }
 
 [node name="title" type="Label" parent="."]
-offset_left = 166.0
+offset_left = 155.0
 offset_top = 164.0
-offset_right = 1022.0
+offset_right = 1011.0
 offset_bottom = 350.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)

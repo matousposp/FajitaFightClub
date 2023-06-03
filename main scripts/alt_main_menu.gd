@@ -14,8 +14,3 @@ func _ready():
 	$T2/AnimationPlayer.play("1")
 	$T13/AnimationPlayer.play("1")
 	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
