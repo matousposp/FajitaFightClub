@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=31 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://assets/back btn.png" id="5_1npav"]
 [ext_resource type="Texture2D" uid="uid://dj2fcduq5e4hl" path="res://assets/New Piskel-1.png.png" id="6_hlrds"]
 [ext_resource type="Texture2D" uid="uid://dxiqol03r1vlu" path="res://assets/tim.png" id="7_tv8ar"]
+[ext_resource type="Script" path="res://main scripts/selectionBTN.gd" id="10_0lumc"]
+[ext_resource type="Script" path="res://main scripts/selectionBT1N.gd" id="10_wlugh"]
+[ext_resource type="Script" path="res://main scripts/selec1t1.gd" id="11_538hd"]
+[ext_resource type="Script" path="res://main scripts/select1.gd" id="11_oe7aa"]
 
 [sub_resource type="Animation" id="Animation_61660"]
 resource_name = "1"
@@ -64,6 +68,103 @@ _data = {
 "RESET": SubResource("Animation_nhjcw")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jlh3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7rkq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_688md"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jabd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dsh6q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_rkbvw"]
+resource_name = "1"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gx6eg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_73u85"]
+_data = {
+"1": SubResource("Animation_rkbvw"),
+"RESET": SubResource("Animation_gx6eg")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytidb"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hu2kj"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgpkb"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw2qv"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wglb"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
 [node name="CharacterSelect" type="Node2D"]
 script = ExtResource("1_jprwa")
 
@@ -97,10 +198,10 @@ libraries = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 966.0
-offset_top = 512.0
-offset_right = 1926.0
-offset_bottom = 1350.0
+offset_left = 984.0
+offset_top = 516.0
+offset_right = 1944.0
+offset_bottom = 1354.0
 scale = Vector2(0.150548, 0.126708)
 texture_normal = ExtResource("5_1npav")
 texture_pressed = ExtResource("5_1npav")
@@ -114,7 +215,7 @@ script = ExtResource("3_e6p2o")
 offset_left = 64.0
 offset_top = 154.0
 offset_right = 323.0
-offset_bottom = 591.0
+offset_bottom = 516.0
 color = Color(1, 0.917647, 0.74902, 1)
 script = ExtResource("4_ex3yg")
 
@@ -139,7 +240,7 @@ text = "MIKE"
 offset_left = 359.0
 offset_top = 154.0
 offset_right = 618.0
-offset_bottom = 591.0
+offset_bottom = 515.0
 color = Color(1, 0.917647, 0.74902, 1)
 
 [node name="Tim" type="Sprite2D" parent="p2"]
@@ -163,8 +264,88 @@ text = "TIM"
 offset_left = 652.0
 offset_top = 154.0
 offset_right = 911.0
-offset_bottom = 591.0
+offset_bottom = 516.0
 color = Color(1, 0.917647, 0.74902, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+offset_left = -83.0
+offset_top = 217.0
+offset_right = 1273.0
+offset_bottom = 423.0
+color = Color(0, 0.917647, 0.407843, 1)
+
+[node name="Button" type="Button" parent="ColorRect2"]
+layout_mode = 0
+offset_left = 309.0
+offset_top = -19.0
+offset_right = 1031.0
+offset_bottom = 215.0
+theme_override_fonts/font = ExtResource("1_gs7ng")
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxFlat_8jlh3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o7rkq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_688md")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8jabd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dsh6q")
+text = "START"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect2"]
+libraries = {
+"": SubResource("AnimationLibrary_73u85")
+}
+
+[node name="selectionBTN" type="Button" parent="."]
+offset_left = 130.0
+offset_top = 549.0
+offset_right = 252.0
+offset_bottom = 597.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_gs7ng")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ytidb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hu2kj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dgpkb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mw2qv")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1wglb")
+text = "SELECT"
+script = ExtResource("10_wlugh")
+
+[node name="select1" type="ColorRect" parent="."]
+visible = false
+offset_left = 64.0
+offset_top = 154.0
+offset_right = 323.0
+offset_bottom = 516.0
+color = Color(0.0862745, 1, 0.498039, 0.372549)
+script = ExtResource("11_538hd")
+
+[node name="selectionBTN2" type="Button" parent="."]
+offset_left = 423.0
+offset_top = 549.0
+offset_right = 545.0
+offset_bottom = 597.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_gs7ng")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ytidb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hu2kj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dgpkb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mw2qv")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1wglb")
+text = "SELECT"
+script = ExtResource("10_0lumc")
+
+[node name="select2" type="ColorRect" parent="."]
+visible = false
+offset_left = 358.0
+offset_top = 154.0
+offset_right = 617.0
+offset_bottom = 516.0
+color = Color(0.0862745, 1, 0.498039, 0.372549)
+script = ExtResource("11_oe7aa")
 
 [connection signal="hovr" from="TextureButton" to="Outline" method="_on_texture_button_hovr"]
 [connection signal="nothovr" from="TextureButton" to="Outline" method="_on_texture_button_nothovr"]
+[connection signal="selected" from="selectionBTN" to="select1" method="_on_selection_btn_selected"]
+[connection signal="select" from="selectionBTN2" to="select2" method="_on_selection_btn_2_select"]
