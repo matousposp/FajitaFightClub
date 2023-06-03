@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bsaokdaj4qi3a"]
+[gd_scene load_steps=79 format=3 uid="uid://bsaokdaj4qi3a"]
 
 [ext_resource type="Script" path="res://main scripts/alt_main_menu.gd" id="1_fm7cy"]
 [ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="1_rpjd1"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://main scripts/fight.gd" id="2_v350f"]
 [ext_resource type="Script" path="res://main scripts/options.gd" id="3_1sjhn"]
 [ext_resource type="Script" path="res://main scripts/online.gd" id="4_hjp08"]
-[ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="6_dy5y2"]
 [ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="7_h2wl6"]
 [ext_resource type="Texture2D" uid="uid://cvddhqlbi2kbd" path="res://assets/home shape.png" id="8_s54q2"]
 [ext_resource type="Script" path="res://main scripts/HomeShape.gd" id="9_qv5px"]
@@ -639,6 +638,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s04a"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -646,6 +649,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amuxh"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -653,6 +660,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24m3p"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -660,6 +671,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8sdsv"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -667,6 +682,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="Animation" id="Animation_7need"]
 length = 0.001
@@ -728,6 +747,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8m8d"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -735,6 +758,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apilx"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -742,6 +769,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cjwu"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -749,6 +780,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="Animation" id="Animation_0bfnc"]
 length = 0.001
@@ -810,6 +845,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skmqd"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -817,6 +856,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3j3t"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -824,6 +867,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8gdy"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -831,6 +878,10 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="Animation" id="Animation_w5obw"]
 length = 0.001
@@ -1172,7 +1223,7 @@ offset_top = 332.0
 offset_right = 642.0
 offset_bottom = 379.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("6_dy5y2")
+theme_override_fonts/font = ExtResource("7_h2wl6")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5s04a")
@@ -1189,11 +1240,11 @@ libraries = {
 
 [node name="options" type="Button" parent="."]
 offset_left = 502.0
-offset_top = 397.0
-offset_right = 674.0
-offset_bottom = 446.0
+offset_top = 406.0
+offset_right = 697.0
+offset_bottom = 455.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("6_dy5y2")
+theme_override_fonts/font = ExtResource("7_h2wl6")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ean54")
@@ -1209,12 +1260,12 @@ libraries = {
 }
 
 [node name="online" type="Button" parent="."]
-offset_left = 513.0
-offset_top = 465.0
-offset_right = 660.0
-offset_bottom = 514.0
+offset_left = 516.0
+offset_top = 481.0
+offset_right = 677.0
+offset_bottom = 530.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("6_dy5y2")
+theme_override_fonts/font = ExtResource("7_h2wl6")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_u5j2m")
@@ -1276,7 +1327,7 @@ libraries = {
 }
 
 [node name="HomeShape2" type="Sprite2D" parent="."]
-position = Vector2(460, 424)
+position = Vector2(460, 432)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("8_s54q2")
 script = ExtResource("10_8gy2p")
@@ -1287,7 +1338,7 @@ libraries = {
 }
 
 [node name="HomeShape3" type="Sprite2D" parent="."]
-position = Vector2(472, 493)
+position = Vector2(472, 506)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("8_s54q2")
 script = ExtResource("11_kk4hf")
