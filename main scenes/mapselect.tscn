@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bgx7os0415rjh"]
+[gd_scene load_steps=22 format=3 uid="uid://bgx7os0415rjh"]
 
 [ext_resource type="Script" path="res://main scripts/mapselect.gd" id="1_aeiv3"]
 [ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="2_8nulj"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bs7481ym83os7" path="res://assets/spacemap.png" id="8_oq6si"]
 [ext_resource type="Script" path="res://main scripts/SPACE.gd" id="8_stghg"]
 [ext_resource type="Script" path="res://main scripts/Spacemap.gd" id="9_3x4g1"]
+[ext_resource type="Script" path="res://main scripts/startgame.gd" id="11_y1hva"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oudbr"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -220,11 +221,14 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_dopsm")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_auako")
 theme_override_styles/focus = SubResource("StyleBoxFlat_1s37e")
 text = "START GAME"
+script = ExtResource("11_y1hva")
 
 [connection signal="grassChosen" from="GRASSLAND" to="." method="_on_grassland_grass_chosen"]
 [connection signal="showGrassMap" from="GRASSLAND" to="." method="_on_grassland_show_grass_map"]
 [connection signal="showGrassMap" from="GRASSLAND" to="Grass" method="_on_grassland_show_grass_map"]
+[connection signal="showGrassMap" from="GRASSLAND" to="Button" method="_on_grassland_show_grass_map"]
 [connection signal="hide1" from="Grass" to="Spacemap" method="_on_grass_hide_1"]
 [connection signal="showSpaceMap" from="SPACE" to="Spacemap" method="_on_space_show_space_map"]
+[connection signal="showSpaceMap" from="SPACE" to="Button" method="_on_space_show_space_map"]
 [connection signal="spaceChosen" from="SPACE" to="." method="_on_space_space_chosen"]
 [connection signal="hide" from="Spacemap" to="Grass" method="_on_spacemap_hide"]
