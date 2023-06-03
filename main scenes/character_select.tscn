@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=30 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
+[ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="2_weucl"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_e6p2o"]
 [ext_resource type="Script" path="res://main scripts/p1.gd" id="4_ex3yg"]
 [ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://assets/back btn.png" id="5_1npav"]
@@ -130,8 +131,8 @@ theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)
 theme_override_constants/shadow_offset_x = 7
 theme_override_constants/shadow_offset_y = 6
-theme_override_fonts/font = ExtResource("1_gs7ng")
-theme_override_font_sizes/font_size = 110
+theme_override_fonts/font = ExtResource("2_weucl")
+theme_override_font_sizes/font_size = 80
 text = "PLAYER SELECT"
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -169,8 +170,8 @@ offset_top = 285.0
 offset_right = 185.0
 offset_bottom = 348.0
 theme_override_colors/font_color = Color(0.105882, 0.639216, 1, 1)
-theme_override_fonts/font = ExtResource("1_gs7ng")
-theme_override_font_sizes/font_size = 60
+theme_override_fonts/font = ExtResource("2_weucl")
+theme_override_font_sizes/font_size = 40
 text = "MIKE"
 
 [node name="p2" type="ColorRect" parent="."]
@@ -193,8 +194,8 @@ offset_top = 285.0
 offset_right = 197.0
 offset_bottom = 348.0
 theme_override_colors/font_color = Color(0.105882, 0.639216, 1, 1)
-theme_override_fonts/font = ExtResource("1_gs7ng")
-theme_override_font_sizes/font_size = 60
+theme_override_fonts/font = ExtResource("2_weucl")
+theme_override_font_sizes/font_size = 40
 text = "TIM"
 
 [node name="p3" type="ColorRect" parent="."]

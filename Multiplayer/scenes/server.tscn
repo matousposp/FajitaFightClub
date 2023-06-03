@@ -1,8 +1,8 @@
 [gd_scene load_steps=21 format=3 uid="uid://rnsitdrx3lh0"]
 
 [ext_resource type="Script" path="res://Multiplayer/scripts/server.gd" id="1_5vhub"]
+[ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="2_balud"]
 [ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="2_cg03x"]
-[ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="2_ir4tt"]
 [ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="3_8qb3f"]
 [ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://assets/back btn.png" id="5_hghxu"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="6_cmrbh"]
@@ -140,8 +140,8 @@ offset_top = 135.0
 offset_right = 399.0
 offset_bottom = 262.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_fonts/font = ExtResource("2_ir4tt")
-theme_override_font_sizes/font_size = 120
+theme_override_fonts/font = ExtResource("2_balud")
+theme_override_font_sizes/font_size = 100
 text = "HOST
 "
 
@@ -166,8 +166,8 @@ offset_top = 135.0
 offset_right = 995.0
 offset_bottom = 262.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_fonts/font = ExtResource("2_ir4tt")
-theme_override_font_sizes/font_size = 120
+theme_override_fonts/font = ExtResource("2_balud")
+theme_override_font_sizes/font_size = 100
 text = "JOIN
 "
 
