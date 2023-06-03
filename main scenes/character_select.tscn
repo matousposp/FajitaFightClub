@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=11 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
@@ -6,8 +6,7 @@
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_e6p2o"]
 [ext_resource type="Script" path="res://main scripts/p1.gd" id="4_ex3yg"]
 [ext_resource type="Texture2D" uid="uid://dj2fcduq5e4hl" path="res://assets/New Piskel-1.png.png" id="6_hlrds"]
-[ext_resource type="Texture2D" uid="uid://ddg5p2x4loayt" path="res://assets/border.png" id="7_0i604"]
-[ext_resource type="Script" path="res://main scripts/Border.gd" id="8_plrqa"]
+[ext_resource type="Texture2D" uid="uid://dxiqol03r1vlu" path="res://assets/tim.png" id="7_tv8ar"]
 
 [sub_resource type="Animation" id="Animation_i2wv3"]
 length = 0.001
@@ -45,60 +44,6 @@ tracks/0/keys = {
 _data = {
 "RESET": SubResource("Animation_i2wv3"),
 "hover": SubResource("Animation_sceex")
-}
-
-[sub_resource type="Animation" id="Animation_4hysv"]
-resource_name = "1"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(0.254, 0.254)]
-}
-
-[sub_resource type="Animation" id="Animation_qkwwm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.254167, 0.240278)]
-}
-
-[sub_resource type="Animation" id="Animation_gsura"]
-resource_name = "2"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.254, 0.254), Vector2(1e-05, 1e-05)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_tiybi"]
-_data = {
-"1": SubResource("Animation_4hysv"),
-"2": SubResource("Animation_gsura"),
-"RESET": SubResource("Animation_qkwwm")
 }
 
 [node name="CharacterSelect" type="Node2D"]
@@ -173,23 +118,26 @@ offset_right = 618.0
 offset_bottom = 591.0
 color = Color(1, 0.917647, 0.74902, 1)
 
+[node name="Tim" type="Sprite2D" parent="p2"]
+position = Vector2(130, 179)
+scale = Vector2(0.392361, 0.384549)
+texture = ExtResource("7_tv8ar")
+
+[node name="Label2" type="Label" parent="p2"]
+modulate = Color(1, 1, 1, 0.694118)
+layout_mode = 0
+offset_left = 82.0
+offset_top = 285.0
+offset_right = 197.0
+offset_bottom = 348.0
+theme_override_colors/font_color = Color(0.105882, 0.639216, 1, 1)
+theme_override_fonts/font = ExtResource("1_gs7ng")
+theme_override_font_sizes/font_size = 60
+text = "TIM"
+
 [node name="p3" type="ColorRect" parent="."]
 offset_left = 652.0
 offset_top = 154.0
 offset_right = 911.0
 offset_bottom = 591.0
 color = Color(1, 0.917647, 0.74902, 1)
-
-[node name="Border" type="Sprite2D" parent="."]
-position = Vector2(127, 204)
-scale = Vector2(0.254167, 0.240278)
-texture = ExtResource("7_0i604")
-script = ExtResource("8_plrqa")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Border"]
-libraries = {
-"": SubResource("AnimationLibrary_tiybi")
-}
-
-[connection signal="hovoff" from="p1" to="Border" method="_on_p_1_hovoff"]
-[connection signal="onhov" from="p1" to="Border" method="_on_p_1_onhov"]
