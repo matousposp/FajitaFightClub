@@ -10,6 +10,9 @@ func _ready():
 func _on_button_hover():
 	get_node("AnimationPlayer").play("hover")
 
+func _on_button_hover_off():
+	$AnimationPlayer.stop()
+
 
 func button_pressed():
 	get_tree().change_scene_to_file("res://main scenes/alt_main_menu.tscn")
