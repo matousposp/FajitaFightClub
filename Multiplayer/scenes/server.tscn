@@ -131,7 +131,7 @@ script = ExtResource("1_5vhub")
 layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 651.0
-color = Color(0.92549, 0.92549, 0.92549, 0.882353)
+color = Color(0.92549, 0.92549, 0.92549, 1)
 
 [node name="Host_Title" type="Label" parent="."]
 layout_mode = 0
@@ -225,6 +225,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_w3tb4")
 text = "COPY"
 
 [node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 966.0
 offset_top = 512.0
 offset_right = 1926.0
