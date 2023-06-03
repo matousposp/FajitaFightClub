@@ -30,6 +30,7 @@ scale = Vector2(1.30632, 1.1)
 texture = ExtResource("3_75vl4")
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(31, 79)
 tile_set = SubResource("TileSet_eyepa")
 cell_quadrant_size = 32
 format = 2

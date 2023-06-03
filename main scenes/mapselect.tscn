@@ -188,9 +188,9 @@ texture = ExtResource("6_jm1yt")
 script = ExtResource("7_62bhr")
 
 [node name="SPACE" type="Button" parent="."]
-offset_left = 818.0
+offset_left = 811.0
 offset_top = 246.0
-offset_right = 1087.0
+offset_right = 1098.0
 offset_bottom = 294.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_8nulj")
@@ -200,7 +200,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_p0103")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dt43c")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_rhci5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_cjotm")
-text = "SPACE"
+text = "OUTERSPACE"
 script = ExtResource("8_stghg")
 
 [node name="Spacemap" type="Sprite2D" parent="."]
