@@ -13,3 +13,4 @@ func _process(delta):
 
 func _on_character_select_start():
 	visible = true
+	
