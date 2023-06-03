@@ -1,5 +1,5 @@
 extends Node2D
-var spacemap = null
+var spacemap = preload("res://tmaps/spacemap.tscn")
 var grassmap = preload("res://tmaps/grassmap.tscn")
 var chosenMap = null
 
