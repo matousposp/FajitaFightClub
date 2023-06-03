@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bgx7os0415rjh"]
+[gd_scene load_steps=21 format=3 uid="uid://bgx7os0415rjh"]
 
 [ext_resource type="Script" path="res://main scripts/mapselect.gd" id="1_aeiv3"]
 [ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="2_8nulj"]
@@ -66,6 +66,61 @@ expand_margin_top = 8.0
 expand_margin_right = 8.0
 expand_margin_bottom = 8.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nse8"]
+bg_color = Color(0, 0.823529, 0.513726, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jj8q"]
+bg_color = Color(0, 0.823529, 0.513726, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dopsm"]
+bg_color = Color(0, 0.823529, 0.513726, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_auako"]
+bg_color = Color(0, 0.823529, 0.513726, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1s37e"]
+bg_color = Color(0, 0.823529, 0.513726, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
 [node name="mapselect" type="Node2D"]
 script = ExtResource("1_aeiv3")
 
@@ -95,10 +150,10 @@ theme_override_font_sizes/font_size = 80
 text = "MAP SELECTION"
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1008.0
-offset_top = 535.0
-offset_right = 1968.0
-offset_bottom = 1373.0
+offset_left = 1019.0
+offset_top = 540.0
+offset_right = 1979.0
+offset_bottom = 1369.0
 scale = Vector2(0.150548, 0.126708)
 texture_normal = ExtResource("3_pv2si")
 texture_pressed = ExtResource("3_pv2si")
@@ -151,6 +206,20 @@ position = Vector2(416.25, 379)
 scale = Vector2(0.462227, 0.546083)
 texture = ExtResource("8_oq6si")
 script = ExtResource("9_3x4g1")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 811.0
+offset_top = 565.0
+offset_right = 1030.0
+offset_bottom = 610.0
+theme_override_fonts/font = ExtResource("2_8nulj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_0nse8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2jj8q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dopsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_auako")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1s37e")
+text = "START GAME"
 
 [connection signal="grassChosen" from="GRASSLAND" to="." method="_on_grassland_grass_chosen"]
 [connection signal="showGrassMap" from="GRASSLAND" to="." method="_on_grassland_show_grass_map"]

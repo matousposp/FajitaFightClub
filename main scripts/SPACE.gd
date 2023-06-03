@@ -16,3 +16,4 @@ func _on_button_hover_off():
 
 func button_pressed():
 	emit_signal("showSpaceMap")
+	emit_signal("spaceChosen")
