@@ -1,0 +1,113 @@
+[gd_scene load_steps=11 format=3 uid="uid://bgx7os0415rjh"]
+
+[ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_dqtek"]
+[ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="2_8nulj"]
+[ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://assets/back btn.png" id="3_pv2si"]
+[ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="4_gnujo"]
+[ext_resource type="Script" path="res://main scripts/GRASSLAND.gd" id="5_txh7g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oudbr"]
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0103"]
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dt43c"]
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhci5"]
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjotm"]
+bg_color = Color(0.407843, 0.729412, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[node name="CharacterSelect" type="Node2D"]
+script = ExtResource("1_dqtek")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 651.0
+color = Color(0.92549, 0.92549, 0.92549, 1)
+
+[node name="title" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 34.0
+offset_right = 916.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("2_8nulj")
+theme_override_font_sizes/font_size = 80
+text = "MAP SELECTION"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 984.0
+offset_top = 516.0
+offset_right = 1944.0
+offset_bottom = 1354.0
+scale = Vector2(0.150548, 0.126708)
+texture_normal = ExtResource("3_pv2si")
+texture_pressed = ExtResource("3_pv2si")
+texture_hover = ExtResource("3_pv2si")
+texture_disabled = ExtResource("3_pv2si")
+texture_focused = ExtResource("3_pv2si")
+stretch_mode = 0
+script = ExtResource("4_gnujo")
+
+[node name="GRASSLAND" type="Button" parent="."]
+offset_left = 804.0
+offset_top = 189.0
+offset_right = 1073.0
+offset_bottom = 237.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_8nulj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_oudbr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p0103")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dt43c")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_rhci5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cjotm")
+text = "GRASSLAND"
+script = ExtResource("5_txh7g")
