@@ -21,3 +21,5 @@ func _process(delta):
 	if player1 && get_node("selectionBTN").is_pressed():
 		player1Char = mike
 		print("mike")
+	elif player1 && get_node("selectionBTN2").is_pressed():
+		pass
