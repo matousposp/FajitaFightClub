@@ -2,11 +2,11 @@
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_jhm3e"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_g0p7y"]
-[ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://back btn.png" id="4_0jj4v"]
 [ext_resource type="Script" path="res://main scripts/HSlider.gd" id="4_f365g"]
-[ext_resource type="Texture2D" uid="uid://cf77t61ybtqtk" path="res://outline.png" id="4_j7bbl"]
+[ext_resource type="Texture2D" uid="uid://cf77t61ybtqtk" path="res://assets/outline.png" id="4_hgve8"]
 [ext_resource type="Script" path="res://main scripts/Outline.gd" id="5_5p7g3"]
 [ext_resource type="AudioStream" uid="uid://b6pxvj16ap1xv" path="res://breaking-news-in-2029-5994.mp3" id="5_qunju"]
+[ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://assets/back btn.png" id="6_vbpot"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jmgi"]
 bg_color = Color(0.278431, 0.682353, 1, 1)
@@ -27,21 +27,6 @@ tracks/0/keys = {
 "values": [Vector2(1e-05, 1e-05), Vector2(0.167, 0.167)]
 }
 
-[sub_resource type="Animation" id="Animation_nhjcw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05)]
-}
-
 [sub_resource type="Animation" id="Animation_xwsoh"]
 resource_name = "2"
 length = 0.2
@@ -56,6 +41,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0.167, 0.167), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_nhjcw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kdvs4"]
@@ -131,7 +131,7 @@ autoplay = true
 [node name="Outline" type="Sprite2D" parent="."]
 position = Vector2(1046.88, 558.875)
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("4_j7bbl")
+texture = ExtResource("4_hgve8")
 script = ExtResource("5_5p7g3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Outline"]
@@ -145,11 +145,11 @@ offset_top = 476.0
 offset_right = 1975.0
 offset_bottom = 1314.0
 scale = Vector2(0.150548, 0.126708)
-texture_normal = ExtResource("4_0jj4v")
-texture_pressed = ExtResource("4_0jj4v")
-texture_hover = ExtResource("4_0jj4v")
-texture_disabled = ExtResource("4_0jj4v")
-texture_focused = ExtResource("4_0jj4v")
+texture_normal = ExtResource("6_vbpot")
+texture_pressed = ExtResource("6_vbpot")
+texture_hover = ExtResource("6_vbpot")
+texture_disabled = ExtResource("6_vbpot")
+texture_focused = ExtResource("6_vbpot")
 stretch_mode = 0
 script = ExtResource("3_g0p7y")
 

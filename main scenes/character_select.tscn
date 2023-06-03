@@ -3,10 +3,10 @@
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_e6p2o"]
-[ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://back btn.png" id="3_sxwb3"]
-[ext_resource type="Texture2D" uid="uid://cf77t61ybtqtk" path="res://outline.png" id="3_t07pt"]
+[ext_resource type="Texture2D" uid="uid://cf77t61ybtqtk" path="res://assets/outline.png" id="3_xtpbp"]
 [ext_resource type="Script" path="res://main scripts/Outline.gd" id="4_2g4ib"]
 [ext_resource type="Script" path="res://main scripts/p1.gd" id="4_ex3yg"]
+[ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://assets/back btn.png" id="5_1npav"]
 [ext_resource type="Texture2D" uid="uid://dj2fcduq5e4hl" path="res://assets/New Piskel-1.png.png" id="6_hlrds"]
 [ext_resource type="Texture2D" uid="uid://dxiqol03r1vlu" path="res://assets/tim.png" id="7_tv8ar"]
 
@@ -26,21 +26,6 @@ tracks/0/keys = {
 "values": [Vector2(1e-05, 1e-05), Vector2(0.167, 0.167)]
 }
 
-[sub_resource type="Animation" id="Animation_nhjcw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05)]
-}
-
 [sub_resource type="Animation" id="Animation_xwsoh"]
 resource_name = "2"
 length = 0.2
@@ -55,6 +40,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0.167, 0.167), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_nhjcw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kdvs4"]
@@ -88,7 +88,7 @@ text = "PLAYER SELECT"
 [node name="Outline" type="Sprite2D" parent="."]
 position = Vector2(1046.88, 558.875)
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("3_t07pt")
+texture = ExtResource("3_xtpbp")
 script = ExtResource("4_2g4ib")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Outline"]
@@ -102,11 +102,11 @@ offset_top = 512.0
 offset_right = 1926.0
 offset_bottom = 1350.0
 scale = Vector2(0.150548, 0.126708)
-texture_normal = ExtResource("3_sxwb3")
-texture_pressed = ExtResource("3_sxwb3")
-texture_hover = ExtResource("3_sxwb3")
-texture_disabled = ExtResource("3_sxwb3")
-texture_focused = ExtResource("3_sxwb3")
+texture_normal = ExtResource("5_1npav")
+texture_pressed = ExtResource("5_1npav")
+texture_hover = ExtResource("5_1npav")
+texture_disabled = ExtResource("5_1npav")
+texture_focused = ExtResource("5_1npav")
 stretch_mode = 0
 script = ExtResource("3_e6p2o")
 

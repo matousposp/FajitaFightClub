@@ -1,10 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://rnsitdrx3lh0"]
+[gd_scene load_steps=21 format=3 uid="uid://rnsitdrx3lh0"]
 
 [ext_resource type="Script" path="res://Multiplayer/scripts/server.gd" id="1_5vhub"]
 [ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="2_cg03x"]
-[ext_resource type="Texture2D" uid="uid://dgiu833stxyfu" path="res://assets/1.jpg" id="2_qv4mb"]
+[ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="2_ir4tt"]
 [ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="3_8qb3f"]
-[ext_resource type="Texture2D" uid="uid://dq176nd03stj3" path="res://assets/bakbtn.png" id="5_ce45i"]
+[ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://assets/back btn.png" id="5_hghxu"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="6_cmrbh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aknhl"]
@@ -118,44 +118,6 @@ corner_radius_bottom_left = 15
 expand_margin_top = 8.0
 shadow_color = Color(0, 0, 0, 0.627451)
 
-[sub_resource type="Animation" id="Animation_i2wv3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_sceex"]
-resource_name = "hover"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ejxoo"]
-_data = {
-"RESET": SubResource("Animation_i2wv3"),
-"hover": SubResource("Animation_sceex")
-}
-
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -164,11 +126,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5vhub")
-
-[node name="1" type="Sprite2D" parent="."]
-position = Vector2(584.75, 324.75)
-scale = Vector2(0.30638, 0.305504)
-texture = ExtResource("2_qv4mb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -183,8 +140,8 @@ offset_top = 135.0
 offset_right = 399.0
 offset_bottom = 262.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_fonts/font = ExtResource("2_cg03x")
-theme_override_font_sizes/font_size = 90
+theme_override_fonts/font = ExtResource("2_ir4tt")
+theme_override_font_sizes/font_size = 120
 text = "HOST
 "
 
@@ -204,13 +161,13 @@ text = "HOST
 
 [node name="Join_Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 768.0
+offset_left = 772.0
 offset_top = 135.0
-offset_right = 991.0
+offset_right = 995.0
 offset_bottom = 262.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_fonts/font = ExtResource("2_cg03x")
-theme_override_font_sizes/font_size = 90
+theme_override_fonts/font = ExtResource("2_ir4tt")
+theme_override_font_sizes/font_size = 120
 text = "JOIN
 "
 
@@ -267,25 +224,19 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_s0pwl")
 theme_override_styles/focus = SubResource("StyleBoxFlat_w3tb4")
 text = "COPY"
 
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 1030.0
-offset_top = 545.0
-offset_right = 1530.0
-offset_bottom = 1092.0
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 966.0
+offset_top = 512.0
+offset_right = 1926.0
+offset_bottom = 1350.0
 scale = Vector2(0.150548, 0.126708)
-texture_normal = ExtResource("5_ce45i")
-texture_pressed = ExtResource("5_ce45i")
-texture_hover = ExtResource("5_ce45i")
-texture_disabled = ExtResource("5_ce45i")
-texture_focused = ExtResource("5_ce45i")
+texture_normal = ExtResource("5_hghxu")
+texture_pressed = ExtResource("5_hghxu")
+texture_hover = ExtResource("5_hghxu")
+texture_disabled = ExtResource("5_hghxu")
+texture_focused = ExtResource("5_hghxu")
 stretch_mode = 0
 script = ExtResource("6_cmrbh")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureButton"]
-libraries = {
-"": SubResource("AnimationLibrary_ejxoo")
-}
 
 [connection signal="pressed" from="Host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="Join" to="." method="_on_join_pressed"]
