@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bsaokdaj4qi3a"]
+[gd_scene load_steps=79 format=3 uid="uid://bsaokdaj4qi3a"]
 
 [ext_resource type="Script" path="res://main scripts/alt_main_menu.gd" id="1_fm7cy"]
 [ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="1_rpjd1"]
@@ -7,6 +7,10 @@
 [ext_resource type="Script" path="res://main scripts/options.gd" id="3_1sjhn"]
 [ext_resource type="Script" path="res://main scripts/online.gd" id="4_hjp08"]
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="6_dy5y2"]
+[ext_resource type="Texture2D" uid="uid://cvddhqlbi2kbd" path="res://assets/home shape.png" id="8_s54q2"]
+[ext_resource type="Script" path="res://main scripts/HomeShape.gd" id="9_qv5px"]
+[ext_resource type="Script" path="res://main scripts/HomeShape2.gd" id="10_8gy2p"]
+[ext_resource type="Script" path="res://main scripts/HomeShape3.gd" id="11_kk4hf"]
 
 [sub_resource type="Animation" id="Animation_8bkhs"]
 resource_name = "1"
@@ -881,6 +885,168 @@ _data = {
 "d": SubResource("Animation_n5x3r")
 }
 
+[sub_resource type="Animation" id="Animation_8y8tb"]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.07, 0.07)]
+}
+
+[sub_resource type="Animation" id="Animation_274rr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_1twyq"]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.07, 0.07), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5snx1"]
+_data = {
+"1": SubResource("Animation_8y8tb"),
+"2": SubResource("Animation_1twyq"),
+"RESET": SubResource("Animation_274rr")
+}
+
+[sub_resource type="Animation" id="Animation_8e8y4"]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.07, 0.07)]
+}
+
+[sub_resource type="Animation" id="Animation_66sua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_fx57b"]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.07, 0.07), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x5sb8"]
+_data = {
+"1": SubResource("Animation_8e8y4"),
+"2": SubResource("Animation_fx57b"),
+"RESET": SubResource("Animation_66sua")
+}
+
+[sub_resource type="Animation" id="Animation_jdffe"]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HomeShape3:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.07, 0.07)]
+}
+
+[sub_resource type="Animation" id="Animation_4p8sy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HomeShape3:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_nfi25"]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HomeShape3:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.07, 0.07), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yaetw"]
+_data = {
+"1": SubResource("Animation_jdffe"),
+"2": SubResource("Animation_nfi25"),
+"RESET": SubResource("Animation_4p8sy")
+}
+
 [node name="altMainMenu" type="Node2D"]
 script = ExtResource("1_fm7cy")
 
@@ -890,7 +1056,7 @@ offset_bottom = 651.0
 color = Color(0.92549, 0.92549, 0.92549, 1)
 
 [node name="T16" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
+modulate = Color(1, 1, 1, 0.6)
 position = Vector2(1083, -36)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -901,7 +1067,7 @@ libraries = {
 }
 
 [node name="T14" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
+modulate = Color(1, 1, 1, 0.6)
 position = Vector2(811, 563)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -912,7 +1078,7 @@ libraries = {
 }
 
 [node name="T11" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
+modulate = Color(1, 1, 1, 0.6)
 position = Vector2(165, -325)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -923,7 +1089,7 @@ libraries = {
 }
 
 [node name="T13" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
+modulate = Color(1, 1, 1, 0.6)
 position = Vector2(981, -146)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -934,7 +1100,7 @@ libraries = {
 }
 
 [node name="T6" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
+modulate = Color(1, 1, 1, 0.6)
 position = Vector2(161, -43)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -945,7 +1111,7 @@ libraries = {
 }
 
 [node name="T3" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
+modulate = Color(1, 1, 1, 0.6)
 position = Vector2(728, -44)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -956,7 +1122,7 @@ libraries = {
 }
 
 [node name="T4" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
+modulate = Color(1, 1, 1, 0.6)
 position = Vector2(485, -47)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -967,7 +1133,7 @@ libraries = {
 }
 
 [node name="T9" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
+modulate = Color(1, 1, 1, 0.6)
 position = Vector2(78, -95)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -978,7 +1144,7 @@ libraries = {
 }
 
 [node name="T8" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
+modulate = Color(1, 1, 1, 0.6)
 position = Vector2(394, -154)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -989,7 +1155,7 @@ libraries = {
 }
 
 [node name="T2" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
+modulate = Color(1, 1, 1, 0.6)
 position = Vector2(714, -76)
 scale = Vector2(0.201172, 0.21875)
 texture = ExtResource("1_rpjd1")
@@ -1096,3 +1262,44 @@ theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_fonts/font = ExtResource("2_ai86t")
 theme_override_font_sizes/font_size = 23
 text = "@ fajitafightclub"
+
+[node name="HomeShape" type="Sprite2D" parent="."]
+position = Vector2(492, 357)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("8_s54q2")
+script = ExtResource("9_qv5px")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HomeShape"]
+libraries = {
+"": SubResource("AnimationLibrary_5snx1")
+}
+
+[node name="HomeShape2" type="Sprite2D" parent="."]
+position = Vector2(460, 424)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("8_s54q2")
+script = ExtResource("10_8gy2p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HomeShape2"]
+libraries = {
+"": SubResource("AnimationLibrary_x5sb8")
+}
+
+[node name="HomeShape3" type="Sprite2D" parent="."]
+position = Vector2(472, 493)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("8_s54q2")
+script = ExtResource("11_kk4hf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HomeShape3"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_yaetw")
+}
+
+[connection signal="hoveroff" from="fight" to="HomeShape" method="_on_fight_hoveroff"]
+[connection signal="onhover" from="fight" to="HomeShape" method="_on_fight_onhover"]
+[connection signal="hof" from="options" to="HomeShape2" method="_on_options_hof"]
+[connection signal="onh" from="options" to="HomeShape2" method="_on_options_onh"]
+[connection signal="hovoff" from="online" to="HomeShape3" method="_on_online_hovoff"]
+[connection signal="onnh" from="online" to="HomeShape3" method="_on_online_onnh"]
