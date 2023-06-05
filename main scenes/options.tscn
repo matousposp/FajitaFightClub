@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cjlrfxv51r3sa"]
+[gd_scene load_steps=15 format=3 uid="uid://cjlrfxv51r3sa"]
 
 [ext_resource type="Script" path="res://main scripts/optiosns.gd" id="1_7c00l"]
 [ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="1_ovk7r"]
@@ -9,7 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://b6pxvj16ap1xv" path="res://breaking-news-in-2029-5994.mp3" id="5_qunju"]
 [ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://assets/back btn.png" id="6_vbpot"]
 [ext_resource type="PackedScene" uid="uid://c5wqkd5o75xiq" path="res://main scenes/keybind_tut.tscn" id="8_wbmwq"]
-[ext_resource type="PackedScene" uid="uid://bdh1q35rvc561" path="res://main scenes/pause.tscn" id="9_v8ymd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jmgi"]
 bg_color = Color(0.278431, 0.682353, 1, 1)
@@ -162,8 +161,5 @@ offset_left = -111.0
 offset_top = 121.0
 offset_right = -111.0
 offset_bottom = 121.0
-
-[node name="CanvasLayer" parent="." instance=ExtResource("9_v8ymd")]
-visible = false
 
 [connection signal="value_changed" from="HSlider" to="HSlider" method="_on_value_changed"]
