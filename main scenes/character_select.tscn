@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=38 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
@@ -17,6 +17,7 @@
 [ext_resource type="FontFile" uid="uid://dp1ortpeav3ne" path="res://extra/MASQUE__.ttf" id="14_2b48n"]
 [ext_resource type="Script" path="res://main scripts/CheckButton.gd" id="15_5fvx7"]
 [ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="16_xkjlj"]
+[ext_resource type="Script" path="res://main scripts/intro.gd" id="18_cxkl1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytidb"]
 bg_color = Color(0.278431, 0.682353, 1, 1)
@@ -117,6 +118,91 @@ _data = {
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhdh3"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="FontFile" id="FontFile_mgpyf"]
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/20/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/25/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/23/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/23/0 = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tx6hm"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 6.0
+expand_margin_top = 4.0
+expand_margin_right = 6.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1f4qi"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 6.0
+expand_margin_top = 4.0
+expand_margin_right = 6.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iii8w"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 6.0
+expand_margin_top = 4.0
+expand_margin_right = 6.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgl30"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 6.0
+expand_margin_top = 4.0
+expand_margin_right = 6.0
+expand_margin_bottom = 4.0
 
 [node name="CharacterSelect" type="Node2D"]
 script = ExtResource("1_jprwa")
@@ -307,7 +393,68 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_dhdh3")
 text = "PLAYER SELECTION"
 script = ExtResource("15_5fvx7")
 
+[node name="intro" type="ColorRect" parent="."]
+offset_right = 1161.0
+offset_bottom = 656.0
+color = Color(0.278431, 0.682353, 1, 1)
+script = ExtResource("18_cxkl1")
+
+[node name="Label" type="Label" parent="intro"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -111.0
+offset_right = 120.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_weucl")
+theme_override_font_sizes/font_size = 30
+text = "INSTRUCTIONS"
+
+[node name="Label2" type="Label" parent="intro"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -273.0
+offset_top = -64.5
+offset_right = 273.0
+offset_bottom = 90.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontFile_mgpyf")
+theme_override_font_sizes/font_size = 20
+text = "When the clicker next to player select is off, that means
+it is the turn of Player 2, who must choose first. After Player 2
+has chosen, click the checker and it will turn white, meaning it
+is now time for Player 1 to select their character. Do not select 
+the same character."
+horizontal_alignment = 1
+
+[node name="contin" type="Button" parent="intro"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 438.0
+offset_right = 629.0
+offset_bottom = 458.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_hover_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("2_weucl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tx6hm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1f4qi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iii8w")
+theme_override_styles/focus = SubResource("StyleBoxFlat_lgl30")
+text = "CONTINUE"
+
 [connection signal="start" from="." to="start" method="_on_character_select_start"]
 [connection signal="selected" from="selectionBTN" to="select1" method="_on_selection_btn_selected"]
 [connection signal="select" from="selectionBTN2" to="select2" method="_on_selection_btn_2_select"]
 [connection signal="toggled" from="CheckButton" to="CheckButton" method="_on_toggled"]
+[connection signal="pressed" from="intro/contin" to="intro" method="_on_contin_pressed"]
