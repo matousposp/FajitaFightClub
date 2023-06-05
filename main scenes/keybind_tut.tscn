@@ -1,13 +1,61 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5wqkd5o75xiq"]
+[gd_scene load_steps=12 format=3 uid="uid://c5wqkd5o75xiq"]
 
 [ext_resource type="Script" path="res://main scripts/keybind_tut.gd" id="1_name7"]
+[ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="2_45yet"]
+[ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="3_mq4qk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjxtg"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7nqk"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmn3f"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ys6ad"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjskx"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_klp61"]
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piaa3"]
-bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+bg_color = Color(0.278431, 0.682353, 1, 1)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
 expand_margin_left = 9.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fpur"]
-bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+bg_color = Color(0.278431, 0.682353, 1, 1)
 expand_margin_left = 7.0
 
 [node name="KeybindTut" type="Control"]
@@ -21,40 +69,79 @@ script = ExtResource("1_name7")
 
 [node name="Button_01" type="Button" parent="."]
 layout_mode = 0
-offset_left = 169.0
-offset_top = 192.0
-offset_right = 213.0
-offset_bottom = 223.0
+offset_left = 168.0
+offset_top = 256.0
+offset_right = 279.0
+offset_bottom = 312.0
+theme_override_fonts/font = ExtResource("2_45yet")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jjxtg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i7nqk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kmn3f")
 text = "LEFT"
 
 [node name="Button_02" type="Button" parent="."]
 layout_mode = 0
-offset_left = 169.0
-offset_top = 149.0
-offset_right = 225.0
-offset_bottom = 180.0
+offset_left = 168.0
+offset_top = 180.0
+offset_right = 316.0
+offset_bottom = 236.0
+theme_override_fonts/font = ExtResource("2_45yet")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ys6ad")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cjskx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_klp61")
 text = "RIGHT"
+
+[node name="Button_03" type="Button" parent="."]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 329.0
+offset_right = 317.0
+offset_bottom = 385.0
+theme_override_fonts/font = ExtResource("2_45yet")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ys6ad")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cjskx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_klp61")
+text = "JUMP"
 
 [node name="Label_01" type="Label" parent="."]
 layout_mode = 0
-offset_left = 263.0
-offset_top = 196.0
-offset_right = 303.0
-offset_bottom = 222.0
+offset_left = 484.0
+offset_top = 264.0
+offset_right = 524.0
+offset_bottom = 317.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("3_mq4qk")
+theme_override_font_sizes/font_size = 40
 
 [node name="Label_02" type="Label" parent="."]
 layout_mode = 0
-offset_left = 264.0
-offset_top = 152.0
-offset_right = 304.0
-offset_bottom = 178.0
+offset_left = 487.0
+offset_top = 182.0
+offset_right = 527.0
+offset_bottom = 233.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("3_mq4qk")
+theme_override_font_sizes/font_size = 40
+
+[node name="Label_03" type="Label" parent="."]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 339.0
+offset_right = 527.0
+offset_bottom = 392.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("3_mq4qk")
+theme_override_font_sizes/font_size = 40
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0
 offset_left = 178.0
-offset_top = 95.0
+offset_top = 121.0
 offset_right = 308.0
-offset_bottom = 135.0
+offset_bottom = 161.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_piaa3")
 
 [node name="Label" type="Label" parent="PanelContainer"]

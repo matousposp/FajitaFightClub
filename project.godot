@@ -28,3 +28,7 @@ Button_02={
 "deadzone": 0.5,
 "events": []
 }
+Button_03={
+"deadzone": 0.5,
+"events": []
+}

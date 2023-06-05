@@ -4,14 +4,17 @@ var current_button : Button
 
 @onready var button_01 : Button = $Button_01
 @onready var button_02 : Button = $Button_02
+@onready var button_03 : Button = $Button_03
 @onready var label_01 : Label = $Label_01
 @onready var label_02 : Label = $Label_02
+@onready var label_03 : Label = $Label_03
 @onready var info_panel : PanelContainer = $PanelContainer
 
 func _ready() -> void:
 	# Connect the buttons pressed signal:
 	button_01.pressed.connect(_on_button_pressed.bind(button_01))
 	button_02.pressed.connect(_on_button_pressed.bind(button_02))
+	button_03.pressed.connect(_on_button_pressed.bind(button_03))
 	
 	_update_labels() # called to refresh the labels
 	
@@ -65,3 +68,9 @@ func _update_labels() -> void:
 		label_02.text = eb2[0].as_text()
 	else:
 		label_02.text = ""
+	
+	var eb3 : Array[InputEvent] = InputMap.action_get_events("Button_03")
+	if !eb3.is_empty():
+		label_03.text = eb3[0].as_text()
+	else:
+		label_03.text = ""

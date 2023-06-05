@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cjlrfxv51r3sa"]
+[gd_scene load_steps=14 format=3 uid="uid://cjlrfxv51r3sa"]
 
 [ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="1_ovk7r"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_g0p7y"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://main scripts/Outline.gd" id="5_5p7g3"]
 [ext_resource type="AudioStream" uid="uid://b6pxvj16ap1xv" path="res://breaking-news-in-2029-5994.mp3" id="5_qunju"]
 [ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://assets/back btn.png" id="6_vbpot"]
+[ext_resource type="PackedScene" uid="uid://c5wqkd5o75xiq" path="res://main scenes/keybind_tut.tscn" id="8_wbmwq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jmgi"]
 bg_color = Color(0.278431, 0.682353, 1, 1)
@@ -152,5 +153,11 @@ texture_disabled = ExtResource("6_vbpot")
 texture_focused = ExtResource("6_vbpot")
 stretch_mode = 0
 script = ExtResource("3_g0p7y")
+
+[node name="KeybindTut" parent="." instance=ExtResource("8_wbmwq")]
+offset_left = -111.0
+offset_top = 121.0
+offset_right = -111.0
+offset_bottom = 121.0
 
 [connection signal="value_changed" from="HSlider" to="HSlider" method="_on_value_changed"]
