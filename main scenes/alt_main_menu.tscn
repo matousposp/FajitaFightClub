@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bsaokdaj4qi3a"]
+[gd_scene load_steps=80 format=3 uid="uid://d0jlbvp3jt6aj"]
 
 [ext_resource type="Script" path="res://main scripts/alt_main_menu.gd" id="1_fm7cy"]
 [ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="1_rpjd1"]
@@ -1326,7 +1326,7 @@ theme_override_font_sizes/font_size = 23
 text = "@ fajitafightclub"
 
 [node name="HomeShape" type="Sprite2D" parent="."]
-position = Vector2(492, 357)
+position = Vector2(445, 357)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("8_s54q2")
 script = ExtResource("9_qv5px")
@@ -1337,7 +1337,7 @@ libraries = {
 }
 
 [node name="HomeShape2" type="Sprite2D" parent="."]
-position = Vector2(460, 432)
+position = Vector2(444, 432)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("8_s54q2")
 script = ExtResource("10_8gy2p")
@@ -1348,7 +1348,7 @@ libraries = {
 }
 
 [node name="HomeShape3" type="Sprite2D" parent="."]
-position = Vector2(472, 506)
+position = Vector2(444, 507)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("8_s54q2")
 script = ExtResource("11_kk4hf")
