@@ -1251,9 +1251,9 @@ libraries = {
 
 [node name="options" type="Button" parent="."]
 offset_left = 492.0
-offset_top = 406.0
+offset_top = 404.0
 offset_right = 687.0
-offset_bottom = 455.0
+offset_bottom = 453.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("7_h2wl6")
 theme_override_font_sizes/font_size = 26
@@ -1328,6 +1328,7 @@ theme_override_font_sizes/font_size = 23
 text = "@ fajitafightclub"
 
 [node name="HomeShape" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(487, 357)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("8_s54q2")
@@ -1339,6 +1340,7 @@ libraries = {
 }
 
 [node name="HomeShape2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(449, 432)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("8_s54q2")
@@ -1350,6 +1352,7 @@ libraries = {
 }
 
 [node name="HomeShape3" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(466, 507)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("8_s54q2")
