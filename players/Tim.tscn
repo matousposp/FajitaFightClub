@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://7amgl138c5rs"]
+[gd_scene load_steps=45 format=3 uid="uid://7amgl138c5rs"]
 
 [ext_resource type="Texture2D" uid="uid://6xy5yspttdfd" path="res://players/playerSprites/Tim.png" id="1_ypid1"]
 
@@ -326,12 +326,18 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bn7uj"]
+size = Vector2(28, 53)
+
 [node name="Tim" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 2)
 sprite_frames = SubResource("SpriteFrames_nghs3")
 animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 3.5)
+shape = SubResource("RectangleShape2D_bn7uj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
