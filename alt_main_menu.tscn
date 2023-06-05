@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0jlbvp3jt6aj"]
+
+[ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="1_rmibl"]
+[ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="2_ai86t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gc0my"]
+bg_color = Color(1, 0.810201, 0.914445, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejlbf"]
+bg_color = Color(0.462745, 0.796078, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rse8c"]
+bg_color = Color(0.462745, 0.796078, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uyii3"]
+bg_color = Color(0.462745, 0.796078, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jve46"]
+bg_color = Color(0.462745, 0.796078, 1, 1)
+
+[node name="altMainMenu" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 651.0
+color = Color(0.92549, 0.92549, 0.92549, 1)
+
+[node name="fight" type="Button" parent="."]
+offset_left = 531.0
+offset_top = 332.0
+offset_right = 642.0
+offset_bottom = 379.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_rmibl")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ejlbf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rse8c")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_uyii3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jve46")
+text = "FIGHT"
+
+[node name="options" type="Button" parent="."]
+offset_left = 502.0
+offset_top = 391.0
+offset_right = 674.0
+offset_bottom = 440.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_rmibl")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ejlbf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rse8c")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_uyii3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jve46")
+text = "OPTIONS"
+
+[node name="online" type="Button" parent="."]
+offset_left = 513.0
+offset_top = 453.0
+offset_right = 660.0
+offset_bottom = 502.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_rmibl")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ejlbf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rse8c")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_uyii3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jve46")
+text = "ONLINE
+"
+
+[node name="title" type="Label" parent="."]
+offset_left = 135.0
+offset_top = 140.0
+offset_right = 991.0
+offset_bottom = 326.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.698039, 0.870588, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("2_ai86t")
+theme_override_font_sizes/font_size = 150
+text = "FIGHT CLUB
+"
+
+[node name="title2" type="Label" parent="."]
+offset_left = 539.0
+offset_top = 126.0
+offset_right = 1395.0
+offset_bottom = 312.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("2_ai86t")
+theme_override_font_sizes/font_size = 30
+text = "FAJITA"
+
+[node name="title3" type="Label" parent="."]
+offset_left = 497.0
+offset_top = 602.0
+offset_right = 1353.0
+offset_bottom = 788.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("2_ai86t")
+theme_override_font_sizes/font_size = 23
+text = "@ fajitafightclub"
