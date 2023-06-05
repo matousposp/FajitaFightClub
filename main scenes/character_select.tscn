@@ -286,10 +286,10 @@ libraries = {
 }
 
 [node name="CheckButton" type="CheckButton" parent="."]
-offset_left = 788.0
-offset_top = 67.0
-offset_right = 1036.0
-offset_bottom = 131.0
+offset_left = 759.0
+offset_top = 1.0
+offset_right = 1156.0
+offset_bottom = 65.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_hover_color = Color(0.278431, 0.682353, 1, 1)
@@ -298,7 +298,7 @@ theme_override_colors/font_focus_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_disabled_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_outline_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_fonts/font = ExtResource("14_2j0ef")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "PLAYER SELECTION"
 script = ExtResource("15_5fvx7")
 
