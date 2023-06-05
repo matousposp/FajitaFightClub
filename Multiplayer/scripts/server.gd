@@ -35,7 +35,7 @@ func _on_host_pressed() -> void:
 	multiplayer.multiplayer_peer = peer
 	multiplayer.peer_connected.connect(add_player)
 	multiplayer.peer_disconnected.connect(remove_player)
-#	multiplayer.server_disconnected.connect(server_delete)
+	multiplayer.server_disconnected.connect(server_delete)
 	hide()
 	
 func add_player(id):
@@ -44,8 +44,8 @@ func add_player(id):
 func remove_player(id):
 	print(str(id) + " has left!")
 	
-#func server_delete():
-#	print("Host has left!")
+func server_delete():
+	print("Host has left!")
 
 func _on_copy_pressed() -> void:
 	DisplayServer.clipboard_set($IP.text)
