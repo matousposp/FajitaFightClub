@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=32 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
@@ -15,8 +15,8 @@
 [ext_resource type="Script" path="res://main scripts/select1.gd" id="11_oe7aa"]
 [ext_resource type="Script" path="res://main scripts/star1t.gd" id="13_20j36"]
 [ext_resource type="FontFile" uid="uid://dp1ortpeav3ne" path="res://extra/MASQUE__.ttf" id="14_2b48n"]
-[ext_resource type="FontFile" uid="uid://boxdnct10edu7" path="res://extra/LeagueSpartan-Bold.otf" id="14_2j0ef"]
 [ext_resource type="Script" path="res://main scripts/CheckButton.gd" id="15_5fvx7"]
+[ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="16_xkjlj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytidb"]
 bg_color = Color(0.278431, 0.682353, 1, 1)
@@ -114,6 +114,9 @@ _data = {
 "1": SubResource("Animation_rkbvw"),
 "RESET": SubResource("Animation_gx6eg")
 }
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhdh3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="CharacterSelect" type="Node2D"]
 script = ExtResource("1_jprwa")
@@ -257,6 +260,7 @@ color = Color(0, 0.858824, 0.941176, 0.372549)
 script = ExtResource("11_oe7aa")
 
 [node name="start" type="ColorRect" parent="."]
+visible = false
 offset_left = -83.0
 offset_top = 217.0
 offset_right = 1273.0
@@ -286,10 +290,10 @@ libraries = {
 }
 
 [node name="CheckButton" type="CheckButton" parent="."]
-offset_left = 759.0
-offset_top = 1.0
-offset_right = 1156.0
-offset_bottom = 65.0
+offset_left = 747.0
+offset_top = 59.0
+offset_right = 1144.0
+offset_bottom = 123.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_hover_color = Color(0.278431, 0.682353, 1, 1)
@@ -297,8 +301,9 @@ theme_override_colors/font_hover_pressed_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_focus_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_disabled_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_outline_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_fonts/font = ExtResource("14_2j0ef")
+theme_override_fonts/font = ExtResource("16_xkjlj")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_dhdh3")
 text = "PLAYER SELECTION"
 script = ExtResource("15_5fvx7")
 
