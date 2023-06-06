@@ -95,4 +95,22 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bjg2d")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bm1hx")
 text = "RESUME"
 
+[node name="quit" type="Button" parent="pmenu"]
+offset_left = 525.0
+offset_top = 399.0
+offset_right = 619.0
+offset_bottom = 430.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_hover_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("3_0ufih")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_h3pfg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mokn2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bjg2d")
+theme_override_styles/focus = SubResource("StyleBoxFlat_bm1hx")
+text = "QUIT
+"
+
 [connection signal="pressed" from="pmenu/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="pmenu/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="pmenu/quit" to="." method="_on_resume_pressed"]
