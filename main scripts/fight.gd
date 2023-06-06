@@ -9,11 +9,12 @@ func _ready():
 	
 
 func _on_button_hover():
-	get_node("AnimationPlayer").play("a")
+	get_node("AnimationPlayer").play("wide")
+	# get_node("AnimationPlayer").play("a")
 	emit_signal("onhover")
 
 func _on_button_hover_off():
-	get_node("AnimationPlayer").play("d")
+	# get_node("AnimationPlayer").play("d")
 	emit_signal("hoveroff")
 
 func button_pressed():
