@@ -95,21 +95,4 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bjg2d")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bm1hx")
 text = "RESUME"
 
-[node name="menuu" type="Button" parent="pmenu"]
-layout_mode = 0
-offset_left = 510.0
-offset_top = 395.0
-offset_right = 634.0
-offset_bottom = 426.0
-theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_colors/font_hover_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_fonts/font = ExtResource("3_0ufih")
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_h3pfg")
-theme_override_styles/hover = SubResource("StyleBoxFlat_mokn2")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bjg2d")
-theme_override_styles/focus = SubResource("StyleBoxFlat_bm1hx")
-text = "MAIN MENU"
-
 [connection signal="pressed" from="pmenu/resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="pmenu/menuu" to="." method="_on_menuu_pressed"]

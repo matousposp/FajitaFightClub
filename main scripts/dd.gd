@@ -20,7 +20,3 @@ func _process(delta):
 func _on_resume_pressed():
 	visible = false
 	get_tree().paused = false
-
-
-func _on_menuu_pressed():
-	get_tree().change_scene_to_file("res://main scenes/alt_main_menu.tscn")
