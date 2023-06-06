@@ -108,9 +108,9 @@ text = "JUMP"
 
 [node name="Label_01" type="Label" parent="."]
 layout_mode = 0
-offset_left = 484.0
+offset_left = 467.0
 offset_top = 264.0
-offset_right = 524.0
+offset_right = 507.0
 offset_bottom = 317.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_fonts/font = ExtResource("3_mq4qk")
@@ -118,19 +118,19 @@ theme_override_font_sizes/font_size = 40
 
 [node name="Label_02" type="Label" parent="."]
 layout_mode = 0
-offset_left = 487.0
+offset_left = 469.0
 offset_top = 182.0
-offset_right = 527.0
-offset_bottom = 233.0
+offset_right = 509.0
+offset_bottom = 235.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_fonts/font = ExtResource("3_mq4qk")
 theme_override_font_sizes/font_size = 40
 
 [node name="Label_03" type="Label" parent="."]
 layout_mode = 0
-offset_left = 478.0
+offset_left = 468.0
 offset_top = 339.0
-offset_right = 518.0
+offset_right = 508.0
 offset_bottom = 392.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_fonts/font = ExtResource("3_mq4qk")
@@ -138,10 +138,10 @@ theme_override_font_sizes/font_size = 40
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_left = 178.0
-offset_top = 121.0
-offset_right = 308.0
-offset_bottom = 161.0
+offset_left = 547.0
+offset_top = 262.0
+offset_right = 677.0
+offset_bottom = 302.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_piaa3")
 
 [node name="Label" type="Label" parent="PanelContainer"]

@@ -157,9 +157,9 @@ stretch_mode = 0
 script = ExtResource("3_g0p7y")
 
 [node name="KeybindTut" parent="." instance=ExtResource("8_wbmwq")]
-offset_left = -111.0
-offset_top = 121.0
-offset_right = -111.0
-offset_bottom = 121.0
+offset_left = -127.0
+offset_top = 41.0
+offset_right = -127.0
+offset_bottom = 41.0
 
 [connection signal="value_changed" from="HSlider" to="HSlider" method="_on_value_changed"]
