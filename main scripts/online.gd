@@ -9,6 +9,7 @@ func _ready():
 	
 
 func _on_button_hover():
+	# get_node("AnimationPlayer").play("wide")
 	get_node("AnimationPlayer").play("a")
 	emit_signal("onnh")
 
