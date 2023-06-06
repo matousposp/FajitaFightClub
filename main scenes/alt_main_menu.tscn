@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://d0jlbvp3jt6aj"]
+[gd_scene load_steps=83 format=3 uid="uid://d0jlbvp3jt6aj"]
 
 [ext_resource type="Script" path="res://main scripts/alt_main_menu.gd" id="1_fm7cy"]
 [ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="1_rpjd1"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://main scripts/fight.gd" id="2_v350f"]
 [ext_resource type="Script" path="res://main scripts/options.gd" id="3_1sjhn"]
 [ext_resource type="Script" path="res://main scripts/online.gd" id="4_hjp08"]
-[ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="7_h2wl6"]
 [ext_resource type="FontFile" uid="uid://dp1ortpeav3ne" path="res://extra/MASQUE__.ttf" id="8_oswtu"]
 [ext_resource type="Texture2D" uid="uid://cvddhqlbi2kbd" path="res://assets/home shape.png" id="8_s54q2"]
 [ext_resource type="Script" path="res://main scripts/HomeShape.gd" id="9_qv5px"]
@@ -1417,7 +1416,7 @@ offset_top = 332.0
 offset_right = 642.0
 offset_bottom = 379.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("7_h2wl6")
+theme_override_fonts/font = ExtResource("8_oswtu")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5s04a")
@@ -1438,7 +1437,7 @@ offset_top = 404.0
 offset_right = 687.0
 offset_bottom = 453.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("7_h2wl6")
+theme_override_fonts/font = ExtResource("8_oswtu")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ean54")
@@ -1459,7 +1458,7 @@ offset_top = 481.0
 offset_right = 670.0
 offset_bottom = 530.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("7_h2wl6")
+theme_override_fonts/font = ExtResource("8_oswtu")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_gc0my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_u5j2m")
