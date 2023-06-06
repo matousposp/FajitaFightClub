@@ -1,8 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdh1q35rvc561"]
+[gd_scene load_steps=8 format=3 uid="uid://bdh1q35rvc561"]
 
+[ext_resource type="Script" path="res://main scripts/dd.gd" id="1_3xmdm"]
 [ext_resource type="FontFile" uid="uid://dp1ortpeav3ne" path="res://extra/MASQUE__.ttf" id="1_v68ko"]
+[ext_resource type="FontFile" uid="uid://c0crco43r4s6v" path="res://extra/CocoGothic-Bold_trial.ttf" id="3_0ufih"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3pfg"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mokn2"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjg2d"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bm1hx"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_3xmdm")
 
 [node name="bg" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -10,20 +53,46 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.278431, 0.682353, 1, 0.643137)
+color = Color(0.278431, 0.682353, 1, 0.764706)
 
-[node name="Label" type="Label" parent="."]
+[node name="pmenu" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="pmenu"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -205.5
-offset_top = -40.0
-offset_right = 205.5
-offset_bottom = 22.0
+offset_left = 350.5
+offset_top = 251.0
+offset_right = 761.5
+offset_bottom = 313.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_v68ko")
 theme_override_font_sizes/font_size = 50
 text = "GAME PAUSED"
+
+[node name="resume" type="Button" parent="pmenu"]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 350.0
+offset_right = 619.0
+offset_bottom = 381.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_hover_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("3_0ufih")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_h3pfg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mokn2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bjg2d")
+theme_override_styles/focus = SubResource("StyleBoxFlat_bm1hx")
+text = "RESUME"
+
+[connection signal="pressed" from="pmenu/resume" to="." method="_on_resume_pressed"]
