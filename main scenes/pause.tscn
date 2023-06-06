@@ -96,6 +96,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_bm1hx")
 text = "RESUME"
 
 [node name="quit" type="Button" parent="pmenu"]
+layout_mode = 0
 offset_left = 525.0
 offset_top = 399.0
 offset_right = 619.0

@@ -5,8 +5,8 @@
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_g0p7y"]
 [ext_resource type="Script" path="res://main scripts/HSlider.gd" id="4_f365g"]
 [ext_resource type="Texture2D" uid="uid://cf77t61ybtqtk" path="res://assets/outline.png" id="4_hgve8"]
+[ext_resource type="AudioStream" uid="uid://b6pxvj16ap1xv" path="res://sound/breaking-news-in-2029-5994.mp3" id="4_p2jge"]
 [ext_resource type="Script" path="res://main scripts/Outline.gd" id="5_5p7g3"]
-[ext_resource type="AudioStream" uid="uid://b6pxvj16ap1xv" path="res://breaking-news-in-2029-5994.mp3" id="5_qunju"]
 [ext_resource type="Texture2D" uid="uid://bjpowotu6rj76" path="res://assets/back btn.png" id="6_vbpot"]
 [ext_resource type="PackedScene" uid="uid://c5wqkd5o75xiq" path="res://main scenes/keybind_tut.tscn" id="8_wbmwq"]
 
@@ -121,7 +121,7 @@ theme_override_font_sizes/font_size = 50
 text = "GAME VOLUME"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_qunju")
+stream = ExtResource("4_p2jge")
 autoplay = true
 
 [node name="Outline" type="Sprite2D" parent="."]
