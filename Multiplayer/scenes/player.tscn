@@ -1,9 +1,29 @@
-[gd_scene format=3 uid="uid://dw7eael57dars"]
+[gd_scene load_steps=3 format=3 uid="uid://dw7eael57dars"]
 
-[node name="Player" type="CharacterBody2D"]
+[ext_resource type="PackedScene" uid="uid://rnsitdrx3lh0" path="res://Multiplayer/scenes/server.tscn" id="1_4vx24"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwrpa"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Node2D" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Player_Spawn" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Server" parent="." instance=ExtResource("1_4vx24")]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://players/Tim.tscn")
+spawn_path = NodePath("../Player_Spawn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(292, 540)
+scale = Vector2(64.2684, 3.60999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_iwrpa")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
