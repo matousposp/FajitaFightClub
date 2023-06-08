@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3 uid="uid://hg5poslajmme"]
+
+[ext_resource type="FontFile" uid="uid://dp1ortpeav3ne" path="res://extra/MASQUE__.ttf" id="1_unjkx"]
+[ext_resource type="Texture2D" uid="uid://pp5ux8ms2fqn" path="res://tmaps/cover.png" id="2_epa8g"]
+[ext_resource type="Texture2D" uid="uid://cn4v6ajnq4e6b" path="res://tmaps/cover1.png" id="3_dq5aa"]
+
+[node name="aftermenu" type="Node2D"]
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 651.0
+color = Color(0.92549, 0.92549, 0.92549, 1)
+
+[node name="other title" type="Label" parent="."]
+offset_left = -122.0
+offset_top = 31.0
+offset_right = 1319.0
+offset_bottom = 139.0
+scale = Vector2(0.951234, 0.951234)
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("1_unjkx")
+theme_override_font_sizes/font_size = 90
+text = "SELECT AN OPTION
+"
+horizontal_alignment = 1
+
+[node name="options_01" type="ColorRect" parent="."]
+offset_left = 730.0
+offset_top = 156.0
+offset_right = 1029.0
+offset_bottom = 584.0
+
+[node name="options2" type="Label" parent="options_01"]
+offset_left = 22.0
+offset_top = 105.0
+offset_right = 291.0
+offset_bottom = 156.0
+scale = Vector2(0.951234, 0.951234)
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("1_unjkx")
+theme_override_font_sizes/font_size = 40
+text = "OPTIONS
+"
+horizontal_alignment = 1
+
+[node name="fight2" type="Label" parent="."]
+offset_left = -436.0
+offset_top = 260.0
+offset_right = 1005.0
+offset_bottom = 572.0
+scale = Vector2(0.951234, 0.951234)
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("1_unjkx")
+theme_override_font_sizes/font_size = 40
+text = "FIGHT
+"
+horizontal_alignment = 1
+
+[node name="Cover" type="Sprite2D" parent="fight2"]
+modulate = Color(1, 1, 1, 0.25098)
+position = Vector2(725.374, 115.902)
+scale = Vector2(2.38081, 2.32858)
+texture = ExtResource("2_epa8g")
+
+[node name="online2" type="Label" parent="."]
+offset_left = 442.0
+offset_top = 260.0
+offset_right = 709.0
+offset_bottom = 572.0
+scale = Vector2(0.951234, 0.951234)
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("1_unjkx")
+theme_override_font_sizes/font_size = 40
+text = "ONLINE
+"
+horizontal_alignment = 1
+
+[node name="Cover1" type="Sprite2D" parent="online2"]
+modulate = Color(1, 1, 1, 0.25098)
+position = Vector2(133.511, 116.428)
+scale = Vector2(3.1538, 3.2559)
+texture = ExtResource("3_dq5aa")

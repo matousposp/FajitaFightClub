@@ -16,23 +16,19 @@ var hit = 0
 var block = 0
 
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-func _enter_tree() -> void:
-	set_multiplayer_authority(str(name).to_int()) 
 
 func _physics_process(delta):
-	if !is_multiplayer_authority(): return
-	$Camera2D.enabled = true
-	# Add the gravity.
+
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		$AnimatedSprite2D.play("jump")
 	else:
 		jumps = 2
 
-	# Handle Jump.
+
 	if Input.is_action_just_pressed("ui_accept") and jumps > 0:
 		$AnimatedSprite2D.play("jump")
 		velocity.y = JUMP_VELOCITY
@@ -44,10 +40,7 @@ func _physics_process(delta):
 			$AnimatedSprite2D.flip_h = true
 		if Input.is_action_pressed("ui_right"):	
 			$AnimatedSprite2D.flip_h = false
-		
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		$AnimatedSprite2D.play("run")
