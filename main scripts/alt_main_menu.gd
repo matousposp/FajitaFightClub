@@ -13,4 +13,5 @@ func _ready():
 	$T8/AnimationPlayer.play("1")
 	$T2/AnimationPlayer.play("1")
 	$T13/AnimationPlayer.play("1")
+	$Label/AnimationPlayer.play("fade")
 	
