@@ -30,7 +30,7 @@ func _physics_process(delta):
 
 
 	if Input.is_action_just_pressed("ui_accept") and jumps > 0:
-		$AnimatedSprite2D.play("jump")
+		$AnimatedSprite2D.play("kick")
 		velocity.y = JUMP_VELOCITY
 		jumps -= 1
 	if is_on_floor() and Input.get_axis("ui_left", "ui_right") == 0:
