@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=40 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
@@ -18,6 +18,8 @@
 [ext_resource type="Script" path="res://main scripts/CheckButton.gd" id="15_5fvx7"]
 [ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="16_xkjlj"]
 [ext_resource type="Script" path="res://main scripts/intro.gd" id="18_cxkl1"]
+[ext_resource type="Texture2D" uid="uid://bxn2wvh3xpyde" path="res://images/P1-removebg-preview.png" id="19_xrvr1"]
+[ext_resource type="Texture2D" uid="uid://dnl6yee5wakmy" path="res://images/P2-removebg-preview.png" id="20_jp5xh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytidb"]
 bg_color = Color(0.278431, 0.682353, 1, 1)
@@ -429,6 +431,14 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_1f4qi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_iii8w")
 theme_override_styles/focus = SubResource("StyleBoxFlat_lgl30")
 text = "CONTINUE"
+
+[node name="p1indicator" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("19_xrvr1")
+
+[node name="p2indicator" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("20_jp5xh")
 
 [connection signal="start" from="." to="start" method="_on_character_select_start"]
 [connection signal="selected" from="selectionBTN" to="select1" method="_on_selection_btn_selected"]
