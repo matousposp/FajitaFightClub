@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://hg5poslajmme"]
+[gd_scene load_steps=43 format=3 uid="uid://hg5poslajmme"]
 
 [ext_resource type="Script" path="res://main scripts/aftermenu.gd" id="1_mkps3"]
 [ext_resource type="FontFile" uid="uid://dp1ortpeav3ne" path="res://extra/MASQUE__.ttf" id="1_unjkx"]
@@ -8,7 +8,10 @@
 [ext_resource type="Script" path="res://main scenes/b1.gd" id="4_4he1n"]
 [ext_resource type="Script" path="res://main scripts/f.gd" id="5_c3xaq"]
 [ext_resource type="Script" path="res://main scenes/b2.gd" id="5_y2ujt"]
+[ext_resource type="Script" path="res://main scenes/b3.gd" id="6_0nw14"]
 [ext_resource type="Script" path="res://main scenes/o.gd" id="9_cfwev"]
+[ext_resource type="Texture2D" uid="uid://dg80sp1gcydwe" path="res://png.png" id="10_32fak"]
+[ext_resource type="Script" path="res://main scenes/op.gd" id="11_gul1k"]
 
 [sub_resource type="Animation" id="Animation_8bkhs"]
 resource_name = "1"
@@ -775,44 +778,85 @@ text = "SELECT AN OPTION
 horizontal_alignment = 1
 
 [node name="b1" type="ColorRect" parent="."]
-offset_left = 93.0
+offset_left = 65.0
 offset_top = 147.0
-offset_right = 441.0
+offset_right = 413.0
 offset_bottom = 619.0
 color = Color(1, 0.858824, 0.568627, 1)
 script = ExtResource("4_4he1n")
 
 [node name="b2" type="ColorRect" parent="."]
-offset_left = 445.0
+offset_left = 421.0
 offset_top = 147.0
-offset_right = 795.0
+offset_right = 771.0
 offset_bottom = 619.0
 color = Color(1, 0.858824, 0.568627, 1)
 script = ExtResource("5_y2ujt")
 
+[node name="b3" type="ColorRect" parent="."]
+offset_left = 785.0
+offset_top = 147.0
+offset_right = 1112.0
+offset_bottom = 619.0
+color = Color(1, 0.858824, 0.568627, 1)
+script = ExtResource("6_0nw14")
+
+[node name="b4" type="ColorRect" parent="."]
+offset_left = 793.0
+offset_top = 153.0
+offset_right = 1106.0
+offset_bottom = 613.0
+color = Color(0.92549, 0.92549, 0.92549, 1)
+
 [node name="f" type="TextureRect" parent="."]
-offset_left = 101.0
+offset_left = 73.0
 offset_top = 154.0
-offset_right = 423.0
+offset_right = 395.0
 offset_bottom = 601.0
 scale = Vector2(1.03363, 1.02308)
 texture = ExtResource("3_i4ewd")
 script = ExtResource("5_c3xaq")
 
 [node name="o" type="TextureRect" parent="."]
-offset_left = 451.0
+offset_left = 427.0
 offset_top = 154.0
-offset_right = 789.0
+offset_right = 765.0
 offset_bottom = 613.0
 texture = ExtResource("3_sfvq4")
 script = ExtResource("9_cfwev")
+
+[node name="op" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.411765)
+offset_left = 793.0
+offset_top = 153.0
+offset_right = 1106.0
+offset_bottom = 613.0
+texture = ExtResource("10_32fak")
+script = ExtResource("11_gul1k")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0.85098)
+offset_left = 849.0
+offset_top = 246.0
+offset_right = 1050.0
+offset_bottom = 297.0
+theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
+theme_override_fonts/font = ExtResource("1_unjkx")
+theme_override_font_sizes/font_size = 40
+text = "OPTIONS"
 
 [connection signal="click" from="f" to="f" method="_on_click"]
 [connection signal="mouse_entered" from="f" to="f" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="f" to="f" method="_on_mouse_exited"]
 [connection signal="n" from="f" to="b1" method="_on_f_n"]
 [connection signal="o" from="f" to="b1" method="_on_f_o"]
+[connection signal="c" from="o" to="o" method="_on_c"]
 [connection signal="mouse_entered" from="o" to="o" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="o" to="o" method="_on_mouse_exited"]
 [connection signal="r" from="o" to="b2" method="_on_o_r"]
 [connection signal="t" from="o" to="b2" method="_on_o_t"]
+[connection signal="a" from="op" to="b3" method="_on_op_a"]
+[connection signal="cl" from="op" to="op" method="_on_cl"]
+[connection signal="mouse_entered" from="op" to="op" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="op" to="op" method="_on_mouse_exited"]
+[connection signal="s" from="op" to="b3" method="_on_op_s"]

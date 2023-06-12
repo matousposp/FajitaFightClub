@@ -5,7 +5,7 @@ extends Node2D
 func _ready():
 	print(PlayerData.p1)
 	print(PlayerData.p2)
-	$Mike.position.y = 360
+
 	$char.position.y = 360
 	if PlayerData.p1 == "mike":
 		$Mike.position.x = 333
