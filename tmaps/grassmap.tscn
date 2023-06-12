@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b5jt62etl3ckc"]
+[gd_scene load_steps=13 format=3 uid="uid://b5jt62etl3ckc"]
 
 [ext_resource type="Script" path="res://tmaps/grassmap.gd" id="1_r0t0s"]
 [ext_resource type="Texture2D" uid="uid://cvm702pm7bxds" path="res://tmaps/groundTop.png" id="1_s21f4"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bdh1q35rvc561" path="res://main scenes/pause.tscn" id="5_im0bm"]
 [ext_resource type="PackedScene" uid="uid://bo2ixor2u500u" path="res://players/Mike.tscn" id="5_obqfb"]
 [ext_resource type="PackedScene" uid="uid://xd5nwk0p6wqm" path="res://players/char.tscn" id="7_g3xma"]
+[ext_resource type="Texture2D" uid="uid://bxn2wvh3xpyde" path="res://images/P1-removebg-preview.png" id="8_qlqu0"]
+[ext_resource type="Texture2D" uid="uid://dnl6yee5wakmy" path="res://images/P2-removebg-preview.png" id="9_bte2q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j2vbq"]
 texture = ExtResource("1_s21f4")
@@ -76,3 +78,11 @@ position = Vector2(795, 360)
 
 [node name="Mike" parent="." instance=ExtResource("5_obqfb")]
 position = Vector2(333, 363)
+
+[node name="p1indicator" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_qlqu0")
+
+[node name="p2indicator" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_bte2q")

@@ -66,58 +66,6 @@ corner_radius_bottom_left = 15
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jlh3"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7rkq"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_688md"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jabd"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dsh6q"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="Animation" id="Animation_rkbvw"]
-resource_name = "1"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_gx6eg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_73u85"]
-_data = {
-"1": SubResource("Animation_rkbvw"),
-"RESET": SubResource("Animation_gx6eg")
-}
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhdh3"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
@@ -205,6 +153,58 @@ expand_margin_left = 6.0
 expand_margin_top = 4.0
 expand_margin_right = 6.0
 expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jlh3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7rkq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_688md"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jabd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dsh6q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_rkbvw"]
+resource_name = "1"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gx6eg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_73u85"]
+_data = {
+"1": SubResource("Animation_rkbvw"),
+"RESET": SubResource("Animation_gx6eg")
+}
 
 [node name="CharacterSelect" type="Node2D"]
 script = ExtResource("1_jprwa")
@@ -323,36 +323,6 @@ offset_bottom = 516.0
 color = Color(0, 0, 0, 0.372549)
 script = ExtResource("11_oe7aa")
 
-[node name="start" type="ColorRect" parent="."]
-visible = false
-offset_left = -83.0
-offset_top = 217.0
-offset_right = 1273.0
-offset_bottom = 423.0
-color = Color(0, 0.917647, 0.407843, 1)
-script = ExtResource("10_80q22")
-
-[node name="start" type="Button" parent="start"]
-layout_mode = 0
-offset_left = 309.0
-offset_top = -19.0
-offset_right = 1031.0
-offset_bottom = 215.0
-theme_override_fonts/font = ExtResource("14_2b48n")
-theme_override_font_sizes/font_size = 200
-theme_override_styles/normal = SubResource("StyleBoxFlat_8jlh3")
-theme_override_styles/hover = SubResource("StyleBoxFlat_o7rkq")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_688md")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_8jabd")
-theme_override_styles/focus = SubResource("StyleBoxFlat_dsh6q")
-text = "START"
-script = ExtResource("13_20j36")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="start"]
-libraries = {
-"": SubResource("AnimationLibrary_73u85")
-}
-
 [node name="CheckButton" type="CheckButton" parent="."]
 offset_left = 747.0
 offset_top = 59.0
@@ -451,6 +421,36 @@ texture = ExtResource("19_xrvr1")
 visible = false
 position = Vector2(488, 165)
 texture = ExtResource("20_jp5xh")
+
+[node name="start" type="ColorRect" parent="."]
+visible = false
+offset_left = -83.0
+offset_top = 217.0
+offset_right = 1273.0
+offset_bottom = 423.0
+color = Color(0, 0.917647, 0.407843, 1)
+script = ExtResource("10_80q22")
+
+[node name="start" type="Button" parent="start"]
+layout_mode = 0
+offset_left = 309.0
+offset_top = -19.0
+offset_right = 1031.0
+offset_bottom = 215.0
+theme_override_fonts/font = ExtResource("14_2b48n")
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxFlat_8jlh3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o7rkq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_688md")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8jabd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dsh6q")
+text = "START"
+script = ExtResource("13_20j36")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="start"]
+libraries = {
+"": SubResource("AnimationLibrary_73u85")
+}
 
 [connection signal="start" from="." to="start" method="_on_character_select_start"]
 [connection signal="selected" from="selectionBTN" to="select1" method="_on_selection_btn_selected"]
