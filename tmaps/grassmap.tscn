@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5jt62etl3ckc"]
+[gd_scene load_steps=9 format=3 uid="uid://b5jt62etl3ckc"]
 
 [ext_resource type="Texture2D" uid="uid://cvm702pm7bxds" path="res://tmaps/groundTop.png" id="1_s21f4"]
 [ext_resource type="Texture2D" uid="uid://don0l045uwsxi" path="res://tmaps/ground.png" id="2_6k03u"]
 [ext_resource type="Texture2D" uid="uid://df4gssnkm6rd6" path="res://assets/sky.png" id="3_75vl4"]
 [ext_resource type="PackedScene" uid="uid://bdh1q35rvc561" path="res://main scenes/pause.tscn" id="5_im0bm"]
 [ext_resource type="PackedScene" uid="uid://bo2ixor2u500u" path="res://players/Mike.tscn" id="5_obqfb"]
-[ext_resource type="PackedScene" uid="uid://xd5nwk0p6wqm" path="res://players/char.tscn" id="7_g3xma"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j2vbq"]
 texture = ExtResource("1_s21f4")
@@ -71,12 +70,3 @@ visible = false
 
 [node name="Mike" parent="." instance=ExtResource("5_obqfb")]
 position = Vector2(690, 292)
-
-[node name="char" parent="." instance=ExtResource("7_g3xma")]
-visible = false
-position = Vector2(524, 174)
-
-[node name="Camera2D" type="Camera2D" parent="char"]
-zoom = Vector2(1.5, 1.5)
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
