@@ -36,9 +36,9 @@ func _physics_process(delta):
 	if is_on_floor() and Input.get_axis("ui_left", "ui_right") == 0:
 		$AnimatedSprite2D.play("idle")
 	if is_on_floor():
-		if Input.is_action_pressed("ui_left"):	
+		if Input.is_action_pressed("ui_left"):
 			$AnimatedSprite2D.flip_h = true
-		if Input.is_action_pressed("ui_right"):	
+		if Input.is_action_pressed("ui_right"):
 			$AnimatedSprite2D.flip_h = false
 
 	var direction = Input.get_axis("ui_left", "ui_right")

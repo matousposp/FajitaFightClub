@@ -434,10 +434,22 @@ text = "CONTINUE"
 
 [node name="p1indicator" type="Sprite2D" parent="."]
 visible = false
+position = Vector2(187, 158)
 texture = ExtResource("19_xrvr1")
 
 [node name="p2indicator" type="Sprite2D" parent="."]
 visible = false
+position = Vector2(190, 161)
+texture = ExtResource("20_jp5xh")
+
+[node name="p1indicator2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(485, 162)
+texture = ExtResource("19_xrvr1")
+
+[node name="p2indicator2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(488, 165)
 texture = ExtResource("20_jp5xh")
 
 [connection signal="start" from="." to="start" method="_on_character_select_start"]
