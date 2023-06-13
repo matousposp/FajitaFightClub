@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://cjlrfxv51r3sa"]
+[gd_scene load_steps=15 format=3 uid="uid://cjlrfxv51r3sa"]
 
 [ext_resource type="Script" path="res://main scripts/optiosns.gd" id="1_7c00l"]
 [ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="1_ovk7r"]
+[ext_resource type="FontFile" uid="uid://dp1ortpeav3ne" path="res://extra/MASQUE__.ttf" id="2_6t5np"]
 [ext_resource type="Script" path="res://main scripts/TextureButton.gd" id="3_g0p7y"]
 [ext_resource type="Script" path="res://main scripts/HSlider.gd" id="4_f365g"]
 [ext_resource type="Texture2D" uid="uid://cf77t61ybtqtk" path="res://assets/outline.png" id="4_hgve8"]
@@ -83,7 +84,7 @@ theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)
 theme_override_constants/shadow_offset_x = 7
 theme_override_constants/shadow_offset_y = 6
-theme_override_fonts/font = ExtResource("1_ovk7r")
+theme_override_fonts/font = ExtResource("2_6t5np")
 theme_override_font_sizes/font_size = 100
 text = "OPTIONS
 "

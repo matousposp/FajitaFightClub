@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=37 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
@@ -15,8 +15,6 @@
 [ext_resource type="Script" path="res://main scripts/select1.gd" id="11_oe7aa"]
 [ext_resource type="Script" path="res://main scripts/star1t.gd" id="13_20j36"]
 [ext_resource type="FontFile" uid="uid://dp1ortpeav3ne" path="res://extra/MASQUE__.ttf" id="14_2b48n"]
-[ext_resource type="Script" path="res://main scripts/CheckButton.gd" id="15_5fvx7"]
-[ext_resource type="FontFile" uid="uid://2hiemraph8s5" path="res://extra/Fontspring-DEMO-proximanova-bold.otf" id="16_xkjlj"]
 [ext_resource type="Script" path="res://main scripts/intro.gd" id="18_cxkl1"]
 [ext_resource type="Texture2D" uid="uid://bxn2wvh3xpyde" path="res://images/P1-removebg-preview.png" id="19_xrvr1"]
 [ext_resource type="Texture2D" uid="uid://dnl6yee5wakmy" path="res://images/P2-removebg-preview.png" id="20_jp5xh"]
@@ -65,9 +63,6 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 expand_margin_left = 4.0
 expand_margin_right = 4.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhdh3"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="FontFile" id="FontFile_mgpyf"]
 face_index = null
@@ -223,7 +218,7 @@ theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)
 theme_override_constants/shadow_offset_x = 7
 theme_override_constants/shadow_offset_y = 6
-theme_override_fonts/font = ExtResource("2_weucl")
+theme_override_fonts/font = ExtResource("14_2b48n")
 theme_override_font_sizes/font_size = 80
 text = "PLAYER SELECT"
 
@@ -322,24 +317,6 @@ offset_right = 617.0
 offset_bottom = 516.0
 color = Color(0, 0, 0, 0.372549)
 script = ExtResource("11_oe7aa")
-
-[node name="CheckButton" type="CheckButton" parent="."]
-offset_left = 747.0
-offset_top = 59.0
-offset_right = 1144.0
-offset_bottom = 123.0
-theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_colors/font_hover_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_colors/font_focus_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_colors/font_disabled_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_colors/font_outline_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_fonts/font = ExtResource("16_xkjlj")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/focus = SubResource("StyleBoxFlat_dhdh3")
-text = "PLAYER SELECTION"
-script = ExtResource("15_5fvx7")
 
 [node name="intro" type="ColorRect" parent="."]
 visible = false
@@ -455,5 +432,4 @@ libraries = {
 [connection signal="start" from="." to="start" method="_on_character_select_start"]
 [connection signal="selected" from="selectionBTN" to="select1" method="_on_selection_btn_selected"]
 [connection signal="select" from="selectionBTN2" to="select2" method="_on_selection_btn_2_select"]
-[connection signal="toggled" from="CheckButton" to="CheckButton" method="_on_toggled"]
 [connection signal="pressed" from="intro/contin" to="intro" method="_on_contin_pressed"]
