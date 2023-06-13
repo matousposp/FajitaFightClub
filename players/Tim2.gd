@@ -17,8 +17,12 @@ var block = 0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func enter_tree() -> void:
+	set_multiplayer_authority(str(name).to_int())
+
 func _physics_process(delta):
-	
+	if !is_multiplayer_authority(): return
+	$Camera2D.enabled = true
 	hit -= 1
 	block -= 1
 	if not is_on_floor():

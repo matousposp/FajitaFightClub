@@ -113,5 +113,5 @@ text = "QUIT
 "
 
 [connection signal="pressed" from="pmenu/resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="pmenu/quit" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="pmenu/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="pmenu/quit" to="." method="_on_resume_pressed"]

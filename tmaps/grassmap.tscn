@@ -55,7 +55,7 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_j2vbq")
 sources/1 = SubResource("TileSetAtlasSource_h6qwn")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource("1_r0t0s")
 
 [node name="Sky" type="Sprite2D" parent="."]
