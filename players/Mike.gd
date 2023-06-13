@@ -44,7 +44,7 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("kick")
 		velocity.y = JUMP_VELOCITY
 		jumps -= 1
-	if is_on_floor() and Input.get_axis("ui_lef t", "ui_right") == 0:
+	if is_on_floor() and Input.get_axis("ui_left", "ui_right") == 0:
 		if hit < 1 and block < 1:
 			$AnimatedSprite2D.play("idle")
 
