@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg80sp1gcydwe"
-path="res://.godot/imported/png.png-64aa6c7d5a447856c12636a825258f2e.ctex"
+uid="uid://dwu0h4eo10ke4"
+path="res://.godot/imported/nikocadowithchop.png-a724124b2436a30582af538fcb6fb20b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png.png"
-dest_files=["res://.godot/imported/png.png-64aa6c7d5a447856c12636a825258f2e.ctex"]
+source_file="res://players/playerSprites/nikocadowithchop.png"
+dest_files=["res://.godot/imported/nikocadowithchop.png-a724124b2436a30582af538fcb6fb20b.ctex"]
 
 [params]
 
