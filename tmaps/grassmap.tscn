@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b5jt62etl3ckc"]
+[gd_scene load_steps=14 format=3 uid="uid://b5jt62etl3ckc"]
 
 [ext_resource type="Script" path="res://tmaps/grassmap.gd" id="1_r0t0s"]
 [ext_resource type="Texture2D" uid="uid://cvm702pm7bxds" path="res://tmaps/groundTop.png" id="1_s21f4"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://xd5nwk0p6wqm" path="res://players/char.tscn" id="7_g3xma"]
 [ext_resource type="Texture2D" uid="uid://bxn2wvh3xpyde" path="res://images/P1-removebg-preview.png" id="8_qlqu0"]
 [ext_resource type="Texture2D" uid="uid://dnl6yee5wakmy" path="res://images/P2-removebg-preview.png" id="9_bte2q"]
+[ext_resource type="PackedScene" uid="uid://0flba7v3fkvm" path="res://players/nikkacado.tscn" id="10_fmb3l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j2vbq"]
 texture = ExtResource("1_s21f4")
@@ -85,3 +86,5 @@ texture = ExtResource("9_bte2q")
 position = Vector2(429, 431)
 
 [node name="Mike" parent="." instance=ExtResource("5_obqfb")]
+
+[node name="nikkacado" parent="." instance=ExtResource("10_fmb3l")]

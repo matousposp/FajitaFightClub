@@ -15,7 +15,12 @@ func _ready():
 		$Mike.position.x = 795
 	if PlayerData.p2 == "tim":
 		$char.position.x = 795
-
+	if not(PlayerData.p1 == "mike" or PlayerData.p2 == "mike"):
+		$Mike.queue_free()
+	if not(PlayerData.p1 == "tim" or PlayerData.p2 == "tim"):
+		$char.queue_free()
+	if not(PlayerData.p1 == "nikkacado" or PlayerData.p2 == "nikkacado"):
+		$nikkacado.queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
