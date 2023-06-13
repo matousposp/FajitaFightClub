@@ -13,9 +13,4 @@ func _ready():
 	$T8/AnimationPlayer.play("1")
 	$T2/AnimationPlayer.play("1")
 	$T13/AnimationPlayer.play("1")
-	$Label/AnimationPlayer.play("fade")
-	
-func _process(delta):
-	if Input.is_action_pressed("Space"):
-		get_tree().change_scene_to_file("res://main scenes/aftermenu.tscn")
-	
+

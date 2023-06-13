@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://d0jlbvp3jt6aj"]
+[gd_scene load_steps=87 format=3 uid="uid://d0jlbvp3jt6aj"]
 
 [ext_resource type="Script" path="res://main scripts/alt_main_menu.gd" id="1_fm7cy"]
 [ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="1_rpjd1"]
@@ -752,18 +752,6 @@ tracks/4/keys = {
 "update": 0,
 "values": [2.0]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(531, 332)]
-}
 
 [sub_resource type="Animation" id="Animation_1e6jj"]
 resource_name = "a"
@@ -800,30 +788,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_dmqw4"]
 resource_name = "fightIn"
 length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(15, 15), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-228, 12), Vector2(531, 332)]
-}
 
 [sub_resource type="Animation" id="Animation_dpm4n"]
 resource_name = "wide"
@@ -1339,44 +1303,6 @@ _data = {
 "RESET": SubResource("Animation_4p8sy")
 }
 
-[sub_resource type="Animation" id="Animation_x2wvh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_mflr4"]
-resource_name = "fade"
-length = 5.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_n6v00"]
-_data = {
-"RESET": SubResource("Animation_x2wvh"),
-"fade": SubResource("Animation_mflr4")
-}
-
 [node name="altMainMenu" type="Node2D"]
 script = ExtResource("1_fm7cy")
 
@@ -1390,8 +1316,9 @@ stream = SubResource("AudioStreamMP3_4f0us")
 stream = SubResource("AudioStreamMP3_4f0us")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+offset_top = -21.0
 offset_right = 1156.0
-offset_bottom = 651.0
+offset_bottom = 653.0
 color = Color(0.92549, 0.92549, 0.92549, 1)
 
 [node name="T16" type="Sprite2D" parent="."]
@@ -1505,11 +1432,10 @@ libraries = {
 }
 
 [node name="fight" type="Button" parent="."]
-visible = false
-offset_left = 531.0
-offset_top = 332.0
-offset_right = 642.0
-offset_bottom = 379.0
+offset_left = 536.0
+offset_top = 391.0
+offset_right = 647.0
+offset_bottom = 438.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_oswtu")
 theme_override_font_sizes/font_size = 26
@@ -1527,11 +1453,10 @@ libraries = {
 }
 
 [node name="options" type="Button" parent="."]
-visible = false
 offset_left = 492.0
-offset_top = 404.0
+offset_top = 458.0
 offset_right = 687.0
-offset_bottom = 453.0
+offset_bottom = 507.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_oswtu")
 theme_override_font_sizes/font_size = 26
@@ -1549,11 +1474,10 @@ libraries = {
 }
 
 [node name="online" type="Button" parent="."]
-visible = false
 offset_left = 509.0
-offset_top = 481.0
+offset_top = 527.0
 offset_right = 670.0
-offset_bottom = 530.0
+offset_bottom = 576.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_oswtu")
 theme_override_font_sizes/font_size = 26
@@ -1572,10 +1496,10 @@ libraries = {
 }
 
 [node name="title" type="Label" parent="."]
-offset_left = 172.259
-offset_top = 127.0
-offset_right = 1030.26
-offset_bottom = 439.0
+offset_left = 170.0
+offset_top = 60.0
+offset_right = 1028.0
+offset_bottom = 372.0
 scale = Vector2(0.951234, 0.951234)
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.858824, 0.568627, 1)
@@ -1633,21 +1557,6 @@ libraries = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_cfyp5")
 autoplay = true
-
-[node name="Label" type="Label" parent="."]
-offset_left = 386.0
-offset_top = 449.0
-offset_right = 812.0
-offset_bottom = 488.0
-theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
-theme_override_fonts/font = ExtResource("8_oswtu")
-theme_override_font_sizes/font_size = 30
-text = "PRESS SPACE TO START"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
-libraries = {
-"": SubResource("AnimationLibrary_n6v00")
-}
 
 [connection signal="title" from="." to="fight" method="_on_alt_main_menu_title"]
 [connection signal="hoveroff" from="fight" to="HomeShape" method="_on_fight_hoveroff"]
