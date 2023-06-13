@@ -3,6 +3,7 @@ extends Node2D
 signal start
 var tim = preload("res://assets/1.jpg")
 var mike = preload("res://Multiplayer/scenes/player.tscn")
+var char = preload("res://assets/2.jpg")
 var selectedChars = 0
 var player1 = true
 var player2 = false
@@ -34,6 +35,13 @@ func _process(delta):
 		player2 = true
 		PlayerData.p1 = "tim"
 		print("player 1 chose tim")
+	elif player1 && get_node("selectionBTN3").is_pressed():
+		$p1indicator3.visible = true
+		player1 = false
+		player1Char = char
+		player2 = true
+		PlayerData.p1 = "char"
+		print("player 1 chose char")
 	
 	if player2 && get_node("selectionBTN").is_pressed() && player1Char != mike:
 		$p2indicator.visible = true
@@ -45,3 +53,8 @@ func _process(delta):
 		player2Char = tim
 		PlayerData.p2 = "tim"
 		print("player 2 chose tim")
+	elif player2 && get_node("selectionBTN3").is_pressed() && player1Char != char:
+		$p2indicator3.visible = true
+		player2Char = char
+		PlayerData.p2 = "char"
+		print("player 2 chose char")
