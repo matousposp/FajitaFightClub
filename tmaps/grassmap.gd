@@ -37,3 +37,4 @@ func _process(delta):
 	if PlayerData.p2 == "tim":
 		$p2indicator.position.x = $char.position.x
 		$p2indicator.position.y = $char.position.y - 50
+	
