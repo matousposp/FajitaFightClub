@@ -25,11 +25,13 @@ func _process(delta):
 		player1 = false
 		player1Char = mike
 		PlayerData.p1 = "mike"
+		player2 = true
 		print("player 1 chose mike")
 	elif player1 && get_node("selectionBTN2").is_pressed():
 		$p1indicator2.visible = true
 		player1 = false
 		player1Char = tim
+		player2 = true
 		PlayerData.p1 = "tim"
 		print("player 1 chose tim")
 	
