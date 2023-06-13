@@ -1316,7 +1316,7 @@ stream = SubResource("AudioStreamMP3_4f0us")
 stream = SubResource("AudioStreamMP3_4f0us")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_top = -21.0
+offset_top = -40.0
 offset_right = 1156.0
 offset_bottom = 653.0
 color = Color(0.92549, 0.92549, 0.92549, 1)
