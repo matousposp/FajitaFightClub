@@ -93,7 +93,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_d7jy7")
 }],
 "loop": false,
-"name": &"kick",
+"name": &"jump",
 "speed": 20.0
 }, {
 "frames": [{
@@ -114,8 +114,10 @@ script = ExtResource("1_034ga")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vqvqg")
-animation = &"idle"
+animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_6mvwe")
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -10,13 +10,13 @@ var jumps = 2
 var bullet_speed = 10
 var dash = 0
 
-func _ready():
-	pass
-
-func _reset_jump():
-	JUMP_FORCE = 500
+func _enter_tree() -> void:
+	set_multiplayer_authority(str(name).to_int()) 
 
 func _physics_process(delta: float) -> void:
+	if !is_multiplayer_authority(): return
+	$Camera2D.enabled = true
+	
 	dash -= 1
 	motion.y += GRAVITY * delta
 	
@@ -61,3 +61,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and jumps > 0:
 		jumps -= 1
 		motion.y = -JUMP_FORCE
+
+func _reset_jump():
+	JUMP_FORCE = 500 
