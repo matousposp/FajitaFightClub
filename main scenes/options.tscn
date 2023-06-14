@@ -149,8 +149,4 @@ texture_focused = ExtResource("6_vbpot")
 stretch_mode = 0
 script = ExtResource("3_g0p7y")
 
-[node name="OptionButton" type="OptionButton" parent="."]
-offset_right = 14.0
-offset_bottom = 20.0
-
 [connection signal="value_changed" from="HSlider" to="HSlider" method="_on_value_changed"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://snudj3qh502m"]
+
+[ext_resource type="Script" path="res://main scripts/actionbtn.gd" id="1_p37rf"]
+
+[node name="KeybindButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_p37rf")

@@ -12,5 +12,5 @@ func _process(delta):
 
 
 
-func _on_selection_btn_3_select():
+func _on_selection_btn_2_select():
 	visible = true

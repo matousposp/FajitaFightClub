@@ -319,31 +319,6 @@ offset_bottom = 516.0
 color = Color(0, 0, 0, 0.372549)
 script = ExtResource("11_oe7aa")
 
-[node name="selectionBTN3" type="Button" parent="."]
-offset_left = 734.0
-offset_top = 551.0
-offset_right = 856.0
-offset_bottom = 599.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_gs7ng")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_ytidb")
-theme_override_styles/hover = SubResource("StyleBoxFlat_hu2kj")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_dgpkb")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_mw2qv")
-theme_override_styles/focus = SubResource("StyleBoxFlat_1wglb")
-text = "SELECT"
-script = ExtResource("10_0lumc")
-
-[node name="select3" type="ColorRect" parent="."]
-visible = false
-offset_left = 358.0
-offset_top = 154.0
-offset_right = 617.0
-offset_bottom = 516.0
-color = Color(0, 0, 0, 0.372549)
-script = ExtResource("11_oe7aa")
-
 [node name="Char4" type="Sprite2D" parent="."]
 position = Vector2(779, 320)
 scale = Vector2(5.87857, 5.10714)
@@ -430,16 +405,6 @@ visible = false
 position = Vector2(488, 165)
 texture = ExtResource("20_jp5xh")
 
-[node name="p1indicator3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(778, 161)
-texture = ExtResource("19_xrvr1")
-
-[node name="p2indicator3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(781, 164)
-texture = ExtResource("20_jp5xh")
-
 [node name="start" type="ColorRect" parent="."]
 visible = false
 offset_left = -83.0
@@ -473,5 +438,4 @@ libraries = {
 [connection signal="start" from="." to="start" method="_on_character_select_start"]
 [connection signal="selected" from="selectionBTN" to="select1" method="_on_selection_btn_selected"]
 [connection signal="select" from="selectionBTN2" to="select2" method="_on_selection_btn_2_select"]
-[connection signal="select" from="selectionBTN3" to="select3" method="_on_selection_btn_3_select"]
 [connection signal="pressed" from="intro/contin" to="intro" method="_on_contin_pressed"]
