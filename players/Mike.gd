@@ -42,6 +42,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("special") and Input.get_axis("ui_left", "ui_right") == 0:
 		block = 30
 		$AnimatedSprite2D.play("block")
+	if Input.is_action_just_pressed("special") and Input.get_axis("ui_left", "ui_right") == 1:
+		block = 30
+		$AnimatedSprite2D.play("sideSpec")
 
 
 	if Input.is_action_just_pressed("ui_accept") and jumps > 0:
@@ -55,14 +58,15 @@ func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		if is_on_floor():
-			if hit < 1:
+			if hit < 1 and block < 1:
 				$AnimatedSprite2D.play("run")
 				if Input.is_action_pressed("ui_left"):
 					$AnimatedSprite2D.flip_h = true
 				if Input.is_action_pressed("ui_right"):
 					$AnimatedSprite2D.flip_h = false
-		velocity.x = direction * SPEED
+				velocity.x = direction * SPEED
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
+		if hit < 1 and block < 1:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+	if hit < 1 and block < 1:
+		move_and_slide()

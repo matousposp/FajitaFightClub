@@ -342,7 +342,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dgywo")
 }],
-"loop": true,
+"loop": false,
 "name": &"downSpec",
 "speed": 20.0
 }, {
@@ -506,7 +506,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0abue")
 }],
-"loop": true,
+"loop": false,
 "name": &"sideSpec",
 "speed": 20.0
 }, {
@@ -528,7 +528,7 @@ script = ExtResource("1_1sdkv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_80a3i")
-animation = &"sideSpec"
+animation = &"downSpec"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.5)
