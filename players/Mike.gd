@@ -21,21 +21,25 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
+	#timers
 	hit -= 1
 	block -= 1
+	#if not on floor then play air animation
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		if block < 1:
 			$AnimatedSprite2D.play("jump")
 	else:
 		jumps = 2
+	#jab and aerials
 	if Input.is_action_just_pressed("normHit"):
 			if hit < 0:
 				$AnimatedSprite2D.play("hit1")
 				hit = 20
 			elif hit < 15:
 				$AnimatedSprite2D.play("hit2")
-	if Input.is_action_just_pressed("special"):
+	#specials
+	if Input.is_action_just_pressed("special") and Input.get_axis("ui_left", "ui_right") == 0:
 		block = 30
 		$AnimatedSprite2D.play("block")
 
@@ -45,7 +49,7 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 		jumps -= 1
 	if is_on_floor() and Input.get_axis("ui_left", "ui_right") == 0:
-		if hit < 1 or block < 1:
+		if hit < 1 and block < 1:
 			$AnimatedSprite2D.play("idle")
 
 	var direction = Input.get_axis("ui_left", "ui_right")
