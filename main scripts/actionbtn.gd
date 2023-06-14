@@ -1,11 +1,28 @@
 extends Button
 
 
-# Called when the node enters the scene tree for the first time.
+var action: String = "ui_up"
+
 func _ready():
-	pass # Replace with function body.
+	InputMap.set_action_enabled(action, false)
+	display_key()
 
+func display_key():
+	text = "%s" % InputMap.get_action_list(action)[0].as_text()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_Button_toggled(button_pressed: bool):
+	InputMap.set_action_enabled(action, button_pressed)
+	if button_pressed:
+		text = "..."
+	else:
+		display_key()
+
+func _unhandled_key_input(event: InputEvent):
+	remap_key(event)
+	pressed = false
+
+func remap_key(event: InputEvent):
+	InputMap.erase_action_events(action)
+	InputMap.add_action_event(action, event)
+
+	text = "%s" % event.as_text()
