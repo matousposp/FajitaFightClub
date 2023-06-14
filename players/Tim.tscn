@@ -345,6 +345,7 @@ properties/3/spawn = true
 properties/3/sync = true
 
 [node name="Tim" type="CharacterBody2D"]
+position = Vector2(441, 18)
 script = ExtResource("1_2sfrr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -356,7 +357,7 @@ animation = &"jump"
 position = Vector2(-2, 3.5)
 shape = SubResource("RectangleShape2D_bn7uj")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_nb6j5")
+
+[node name="Camera2D" type="Camera2D" parent="."]

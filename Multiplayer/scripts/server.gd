@@ -4,7 +4,7 @@ const port = 7777
 var peer = ENetMultiplayerPeer.new()
 var ipad : String
 
-
+var randMap = RandomNumberGenerator.new()
 var player = preload("res://players/Tim.tscn" )
 
 func _ready() -> void:
@@ -22,6 +22,7 @@ func _ready() -> void:
 
 
 func _on_host_pressed() -> void:
+#	var my_random_number = randMap.randi_range(1, 2)
 	if OS.get_name() == "Android":
 		peer.set_bind_ip(ipad)
 	peer.create_server(port) 
@@ -30,6 +31,10 @@ func _on_host_pressed() -> void:
 	multiplayer.peer_disconnected.connect(remove_player)
 #	multiplayer.server_disconnected.connect(server_delete)
 	add_player(multiplayer.get_unique_id())
+#	if my_random_number == 1:
+#		get_tree().change_scene_to_file("res://tmaps/grassmap.tscn")
+#	elif my_random_number == 2:
+#		get_tree().change_scene_to_file("res://tmaps/spacemap.tscn")
 	hide()
 	
 func _on_join_pressed() -> void:
