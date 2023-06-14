@@ -45,7 +45,7 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 		jumps -= 1
 	if is_on_floor() and Input.get_axis("ui_left", "ui_right") == 0:
-		if hit < 1 or block < 1:
+		if hit < 1 and block < 1:
 			$AnimatedSprite2D.play("idle")
 
 	var direction = Input.get_axis("ui_left", "ui_right")
