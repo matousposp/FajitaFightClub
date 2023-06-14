@@ -356,7 +356,7 @@ animation = &"jump"
 position = Vector2(-2, 3.5)
 shape = SubResource("RectangleShape2D_bn7uj")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_nb6j5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
