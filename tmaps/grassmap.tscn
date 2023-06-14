@@ -6,12 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://df4gssnkm6rd6" path="res://assets/sky.png" id="3_75vl4"]
 [ext_resource type="PackedScene" uid="uid://bdh1q35rvc561" path="res://main scenes/pause.tscn" id="5_im0bm"]
 [ext_resource type="PackedScene" uid="uid://bvv260pf81ine" path="res://main scenes/in_game_options_menu.tscn" id="5_jfaem"]
-[ext_resource type="PackedScene" uid="uid://bo2ixor2u500u" path="res://players/Mike.tscn" id="5_obqfb"]
 [ext_resource type="Script" path="res://main scenes/in_game_options_menu.gd" id="6_331og"]
 [ext_resource type="PackedScene" uid="uid://xd5nwk0p6wqm" path="res://players/char.tscn" id="7_g3xma"]
 [ext_resource type="Texture2D" uid="uid://bxn2wvh3xpyde" path="res://images/P1-removebg-preview.png" id="8_qlqu0"]
 [ext_resource type="Texture2D" uid="uid://dnl6yee5wakmy" path="res://images/P2-removebg-preview.png" id="9_bte2q"]
 [ext_resource type="PackedScene" uid="uid://0flba7v3fkvm" path="res://players/nikkacado.tscn" id="10_fmb3l"]
+[ext_resource type="PackedScene" uid="uid://bo2ixor2u500u" path="res://players/Mike.tscn" id="11_i2p4e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j2vbq"]
 texture = ExtResource("1_s21f4")
@@ -91,6 +91,6 @@ texture = ExtResource("9_bte2q")
 [node name="char" parent="." instance=ExtResource("7_g3xma")]
 position = Vector2(429, 431)
 
-[node name="Mike" parent="." instance=ExtResource("5_obqfb")]
+[node name="Mike" parent="." instance=ExtResource("11_i2p4e")]
 
 [node name="nikkacado" parent="." instance=ExtResource("10_fmb3l")]
