@@ -42,6 +42,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("special") and Input.get_axis("ui_left", "ui_right") == 0:
 		block = 30
 		$AnimatedSprite2D.play("block")
+	if Input.is_action_just_pressed("special") and Input.get_axis("ui_left", "ui_right") > 0:
+		block = 30
+		$AnimatedSprite2D.play("sideSpec")
 
 
 	if Input.is_action_just_pressed("ui_accept") and jumps > 0:
