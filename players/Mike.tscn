@@ -342,7 +342,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dgywo")
 }],
-"loop": true,
+"loop": false,
 "name": &"downSpec",
 "speed": 20.0
 }, {
@@ -506,7 +506,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0abue")
 }],
-"loop": true,
+"loop": false,
 "name": &"sideSpec",
 "speed": 20.0
 }, {
