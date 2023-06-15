@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc4gpvjd8qeta"]
+[gd_scene load_steps=3 format=3 uid="uid://bc4gpvjd8qeta"]
 
 [ext_resource type="PackedScene" uid="uid://rnsitdrx3lh0" path="res://Multiplayer/scenes/server.tscn" id="1_4vx24"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ctx8"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -8,7 +10,21 @@
 unique_name_in_owner = true
 
 [node name="Server" parent="." instance=ExtResource("1_4vx24")]
+metadata/_edit_use_anchors_ = true
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("res://players/Tim.tscn")
 spawn_path = NodePath("../Player_Spawn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(91, 485)
+scale = Vector2(22.7923, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_8ctx8")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -10.0
+offset_top = -11.0
+offset_right = 10.0
+offset_bottom = 10.0

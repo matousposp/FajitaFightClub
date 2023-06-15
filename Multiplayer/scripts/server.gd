@@ -22,7 +22,7 @@ func _ready() -> void:
 
 
 func _on_host_pressed() -> void:
-#	var my_random_number = randMap.randi_range(1, 2)
+	var my_random_number = randMap.randi_range(1, 2)
 	if OS.get_name() == "Android":
 		peer.set_bind_ip(ipad)
 	peer.create_server(port) 

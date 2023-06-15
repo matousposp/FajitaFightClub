@@ -29,4 +29,4 @@ func rect_contains(point: Vector2) -> bool:
 
 
 func _on_c():
-	get_tree().change_scene_to_file("res://Multiplayer/scenes/server.tscn")
+	get_tree().change_scene_to_file("res://Multiplayer/scenes/player.tscn")
