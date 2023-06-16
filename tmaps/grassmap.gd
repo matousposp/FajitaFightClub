@@ -45,4 +45,9 @@ func _process(delta):
 	if PlayerData.p2 == "tim":
 		$p2indicator.position.x = $char.position.x
 		$p2indicator.position.y = $char.position.y - 50
+	camMovement()
 	
+func camMovement():
+	if PlayerData.p1 == "mike" and PlayerData.p2 == "tim" or PlayerData.p1 == "tim" and PlayerData.p2 == "mike":
+		$Camera2D.position.x = ($char.position.x + $Mike.position.x)/2
+		$Camera2D.position.y = ($char.position.y + $Mike.position.y)/2

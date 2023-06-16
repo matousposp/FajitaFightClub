@@ -94,3 +94,6 @@ position = Vector2(-2, 15)
 [node name="Mike" parent="." instance=ExtResource("11_i2p4e")]
 
 [node name="nikkacado" parent="." instance=ExtResource("10_fmb3l")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(592, 330)
