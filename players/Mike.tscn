@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://bo2ixor2u500u"]
+[gd_scene load_steps=67 format=3 uid="uid://bo2ixor2u500u"]
 
 [ext_resource type="Script" path="res://players/Mike.gd" id="1_1sdkv"]
 [ext_resource type="Texture2D" uid="uid://cphevgfbuhda0" path="res://players/playerSprites/mike3.png" id="2_vhdb2"]
@@ -39,26 +39,6 @@ region = Rect2(320, 384, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_24xay"]
 atlas = ExtResource("2_vhdb2")
 region = Rect2(384, 384, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_plkew"]
-atlas = ExtResource("3_su7rc")
-region = Rect2(64, 448, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rrbr1"]
-atlas = ExtResource("3_su7rc")
-region = Rect2(128, 448, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fycpa"]
-atlas = ExtResource("3_su7rc")
-region = Rect2(192, 448, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_23nix"]
-atlas = ExtResource("3_su7rc")
-region = Rect2(256, 448, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o5y6w"]
-atlas = ExtResource("3_su7rc")
-region = Rect2(320, 448, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xosc6"]
 atlas = ExtResource("3_su7rc")
@@ -304,21 +284,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_plkew")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rrbr1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fycpa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_23nix")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o5y6w")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_xosc6")
 }, {
 "duration": 1.0,
@@ -339,7 +304,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nk0pw")
 }, {
-"duration": 1.0,
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_dgywo")
 }],
 "loop": false,
@@ -528,7 +493,7 @@ script = ExtResource("1_1sdkv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_80a3i")
-animation = &"run"
+animation = &"downSpec"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.5)
