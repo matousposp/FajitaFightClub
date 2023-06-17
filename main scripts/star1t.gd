@@ -12,4 +12,4 @@ func _process(delta):
 	pass
 
 func button_pressed():
-	get_tree().change_scene_to_file("res://main scenes/mapselect.tscn")
+	get_parent().get_parent().map = true

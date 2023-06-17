@@ -11,6 +11,7 @@ var player1Char = null
 var player2Char = null
 var p1 = ""
 var p2 = ""
+var map = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -58,3 +59,8 @@ func _process(delta):
 		player2Char = char
 		PlayerData.p2 = "char"
 		print("player 2 chose char")
+	if $mapselect.skew > 0.06 and map:
+		$mapselect.skew -= 0.1
+		print($mapselect.skew)
+	if map and abs($mapselect.skew) < 0.1:
+		$mapselect.skew = 0

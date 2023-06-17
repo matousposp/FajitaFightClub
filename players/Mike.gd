@@ -56,7 +56,7 @@ func _physics_process(delta):
 		block = 15
 		specDone = true
 		$AnimatedSprite2D.play("block")
-	if Input.is_action_just_pressed("special") and Input.get_axis("ui_left", "ui_right") != 0 and Input.get_axis("ui_up","ui_down") == 1 and not(specDone) and block < 10:
+	if Input.is_action_just_pressed("special") and Input.get_axis("ui_left", "ui_right") != 0 and Input.get_axis("ui_up","ui_down") == 0 and not(specDone) and block < 10:
 		velocity.x = 0
 		velocity.y = 0
 		block = 15
@@ -104,6 +104,6 @@ func laser(laser_direction:Vector2):
 		var laser = LASER.instantiate()
 		get_tree().current_scene.add_child(laser)
 		laser.global_position = self.global_position
-		
+		laser.position.y -= 15
 		var laser_rotation = laser_direction.angle()
 		laser.rotation = laser_rotation

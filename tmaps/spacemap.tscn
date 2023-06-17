@@ -55,3 +55,5 @@ layer_0/tile_data = PackedInt32Array(1441806, 0, 0, 1507342, 0, 1, 1441807, 6553
 [node name="p1indicator" type="Sprite2D" parent="."]
 
 [node name="p2indicator" type="Sprite2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
