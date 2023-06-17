@@ -199,6 +199,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pnugp")
 text = "JOIN"
 
 [node name="IP" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 306.0
 offset_top = 179.0

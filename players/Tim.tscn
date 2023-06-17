@@ -1,6 +1,6 @@
 [gd_scene load_steps=47 format=3 uid="uid://7amgl138c5rs"]
 
-[ext_resource type="Script" path="res://Multiplayer/scripts/Tim.gd" id="1_2sfrr"]
+[ext_resource type="Script" path="res://Multiplayer/scripts/Tim.gd" id="1_4alut"]
 [ext_resource type="Texture2D" uid="uid://6xy5yspttdfd" path="res://players/playerSprites/Tim.png" id="1_ypid1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7idcu"]
@@ -346,7 +346,7 @@ properties/3/sync = true
 
 [node name="Tim" type="CharacterBody2D"]
 position = Vector2(441, 18)
-script = ExtResource("1_2sfrr")
+script = ExtResource("1_4alut")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 2)
