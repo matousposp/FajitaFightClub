@@ -20,7 +20,7 @@ var specDone = false
 var freefall = false
 var direct = false
 var action = ""
-var p1 = PlayerData.p1 == "mike"
+var p1 = PlayerData.p1 == "tim"
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
