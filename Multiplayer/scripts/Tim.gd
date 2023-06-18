@@ -32,7 +32,7 @@ func _physics_process(delta):
 	else:
 		jumps = 2
 
-	if Input.is_action_just_pressed("normHit"):
+	if Input.is_action_just_pressed("P1normHit"):
 		if hit < 0:
 			$AnimatedSprite2D.play("punch")
 			hit = 20

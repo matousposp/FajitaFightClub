@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://don0l045uwsxi" path="res://tmaps/ground.png" id="2_6k03u"]
 [ext_resource type="Texture2D" uid="uid://df4gssnkm6rd6" path="res://assets/sky.png" id="3_75vl4"]
 [ext_resource type="PackedScene" uid="uid://bdh1q35rvc561" path="res://main scenes/pause.tscn" id="5_im0bm"]
-[ext_resource type="PackedScene" uid="uid://bvv260pf81ine" path="res://main scenes/in_game_options_menu.tscn" id="5_jfaem"]
+[ext_resource type="PackedScene" path="res://main scenes/in_game_options_menu.tscn" id="5_jfaem"]
 [ext_resource type="Script" path="res://main scenes/in_game_options_menu.gd" id="6_331og"]
 [ext_resource type="PackedScene" uid="uid://xd5nwk0p6wqm" path="res://players/char.tscn" id="7_g3xma"]
 [ext_resource type="Texture2D" uid="uid://bxn2wvh3xpyde" path="res://images/P1-removebg-preview.png" id="8_qlqu0"]
@@ -106,12 +106,14 @@ offset_left = -442.0
 offset_top = 154.0
 offset_right = -442.0
 offset_bottom = 154.0
+metadata/_edit_use_anchors_ = true
 
 [node name="kb_percent_p_2" parent="Camera2D" instance=ExtResource("14_d0j66")]
 offset_left = 270.0
 offset_top = 155.0
 offset_right = 270.0
 offset_bottom = 155.0
+metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_jl3c6")
