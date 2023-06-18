@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://do2u1kirflj3h"
+path="res://.godot/imported/bing qi lin.ogg-6e0c1017aca74e23e86bb74c5afb7c5f.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/bing qi lin.ogg"
+dest_files=["res://.godot/imported/bing qi lin.ogg-6e0c1017aca74e23e86bb74c5afb7c5f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
