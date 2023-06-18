@@ -16,8 +16,8 @@ sources/0 = SubResource("TileSetAtlasSource_2snwi")
 [node name="lavamap" type="Node2D"]
 
 [node name="Joshua-groves-pixel-art-volcano-isle" type="Sprite2D" parent="."]
-position = Vector2(587, 318)
-scale = Vector2(1.551, 1.702)
+position = Vector2(672.75, 395.75)
+scale = Vector2(1.7225, 2.013)
 texture = ExtResource("1_sv6lj")
 
 [node name="TileMap" type="TileMap" parent="."]

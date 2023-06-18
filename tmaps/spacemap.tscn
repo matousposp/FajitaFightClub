@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://de5uoo8yj7jmr"]
+[gd_scene load_steps=10 format=3 uid="uid://de5uoo8yj7jmr"]
 
 [ext_resource type="Texture2D" uid="uid://yyq3sjoadswg" path="res://tmaps/982277-pixel-art-digital-art-pixelated-pixels-nature-landscape.png" id="1_o0m4i"]
 [ext_resource type="Script" path="res://tmaps/grassmap.gd" id="1_tkp6q"]
@@ -6,8 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://xd5nwk0p6wqm" path="res://players/char.tscn" id="4_ah6aa"]
 [ext_resource type="PackedScene" uid="uid://bo2ixor2u500u" path="res://players/Mike.tscn" id="5_jyjb2"]
 [ext_resource type="PackedScene" uid="uid://0flba7v3fkvm" path="res://players/nikkacado.tscn" id="6_bx254"]
-[ext_resource type="PackedScene" uid="uid://bn0rj1dxlvgvv" path="res://players/kb_percent_p_1.tscn" id="7_rf3qu"]
-[ext_resource type="PackedScene" uid="uid://3wy4de4fgevs" path="res://players/kb_percent_p_2.tscn" id="8_faedw"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6ut55"]
 
@@ -39,8 +37,8 @@ sources/0 = SubResource("TileSetAtlasSource_lnuup")
 script = ExtResource("1_tkp6q")
 
 [node name="982277-pixel-art-digital-art-pixelated-pixels-nature-landscape" type="Sprite2D" parent="."]
-position = Vector2(598, 305)
-scale = Vector2(0.702865, 0.754167)
+position = Vector2(661, 409.875)
+scale = Vector2(0.884375, 0.94838)
 texture = ExtResource("1_o0m4i")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -59,16 +57,3 @@ layer_0/tile_data = PackedInt32Array(1441806, 0, 0, 1507342, 0, 1, 1441807, 6553
 [node name="p2indicator" type="Sprite2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(582, 270)
-
-[node name="KBPercentP1" parent="Camera2D" instance=ExtResource("7_rf3qu")]
-offset_left = -354.0
-offset_top = 200.0
-offset_right = -354.0
-offset_bottom = 200.0
-
-[node name="kb_percent_p_2" parent="Camera2D" instance=ExtResource("8_faedw")]
-offset_left = 233.0
-offset_top = 203.0
-offset_right = 233.0
-offset_bottom = 203.0

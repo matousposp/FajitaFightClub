@@ -38,8 +38,8 @@ sources/1 = SubResource("TileSetAtlasSource_evmdk")
 script = ExtResource("1_kyiqk")
 
 [node name="TitleImage" type="Sprite2D" parent="."]
-position = Vector2(567, 330)
-scale = Vector2(1.78351, 1.89444)
+position = Vector2(657.984, 411)
+scale = Vector2(2.36393, 2.78889)
 texture = ExtResource("1_kxsp1")
 
 [node name="TileMap" type="TileMap" parent="."]
