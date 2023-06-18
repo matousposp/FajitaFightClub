@@ -29,9 +29,12 @@ func _on_button_pressed():
 		get_tree().change_scene_to_file("res://tmaps/grassmap.tscn")
 	if chosenMap == spacemap:
 		PlayerData.map = "spacemap"
-		get_tree().change_scene_to_file("res://tmaps/spacemap.tscn")
+		get_tree().change_scene_to_file("res://tmaps/rockmap.tscn")
 	if chosenMap == lavamap:
-		PlayerData.map = "spacemap"
+		PlayerData.map = "lavamap"
+		get_tree().change_scene_to_file("res://tmaps/lavamap.tscn")
+	if chosenMap == rockmap:
+		PlayerData.map = "rockmap"
 		get_tree().change_scene_to_file("res://tmaps/spacemap.tscn")
 
 
