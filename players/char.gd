@@ -22,6 +22,7 @@ var direct = false
 var action = ""
 var p1 = PlayerData.p1 == "tim"
 var kbpercent = 0
+var stun = 0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -196,3 +197,10 @@ func laser(laser_direction:Vector2):
 		laser.position.y -= 15
 		var laser_rotation = laser_direction.angle()
 		laser.rotation = laser_rotation
+		
+func on_hitbox_attack(hitstun, percent, kb, setkb):
+	kbpercent += percent
+	velocity.x *= kb
+	velocity.y *= kb
+	stun = hitstun
+	

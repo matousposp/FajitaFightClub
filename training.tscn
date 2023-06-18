@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bw05b26np3xqx"]
+[gd_scene load_steps=21 format=3 uid="uid://wqb1gco1d1dc"]
 
 [ext_resource type="Texture2D" uid="uid://df4gssnkm6rd6" path="res://assets/sky.png" id="1_0ueck"]
 [ext_resource type="Script" path="res://training.gd" id="1_2h21f"]

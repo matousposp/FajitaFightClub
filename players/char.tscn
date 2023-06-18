@@ -108,7 +108,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6mvwe"]
 size = Vector2(20, 46)
 
-[node name="char" type="CharacterBody2D"]
+[node name="char" type="CharacterBody2D" groups=["char"]]
 position = Vector2(0, 8)
 script = ExtResource("1_mi4dn")
 
