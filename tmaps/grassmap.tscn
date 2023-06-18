@@ -63,8 +63,8 @@ sources/1 = SubResource("TileSetAtlasSource_h6qwn")
 script = ExtResource("1_r0t0s")
 
 [node name="Sky" type="Sprite2D" parent="."]
-position = Vector2(658.5, 413.5)
-scale = Vector2(1.63538, 1.21375)
+position = Vector2(788, 341)
+scale = Vector2(2.31423, 1.7275)
 texture = ExtResource("3_75vl4")
 
 [node name="TileMap" type="TileMap" parent="."]

@@ -97,10 +97,10 @@ offset_bottom = 603.0
 color = Color(1, 0.945098, 0.839216, 1)
 
 [node name="HSlider" type="HSlider" parent="."]
-offset_left = 657.0
-offset_top = 292.0
-offset_right = 1075.0
-offset_bottom = 308.0
+offset_left = 77.0
+offset_top = 378.0
+offset_right = 1076.0
+offset_bottom = 394.0
 theme_override_constants/grabber_offset = 0
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_2jmgi")
 min_value = -30.0
@@ -109,10 +109,10 @@ rounded = true
 script = ExtResource("4_f365g")
 
 [node name="title2" type="Label" parent="."]
-offset_left = 653.0
-offset_top = 214.0
-offset_right = 1509.0
-offset_bottom = 291.0
+offset_left = 76.0
+offset_top = 223.0
+offset_right = 932.0
+offset_bottom = 300.0
 theme_override_colors/font_color = Color(0.278431, 0.682353, 1, 1)
 theme_override_constants/shadow_offset_x = 7
 theme_override_constants/shadow_offset_y = 6

@@ -15,7 +15,3 @@ func _on_grassland_show_grass_map():
 	visible = true
 	z_index = get_parent().get_child_count() - 1
 	emit_signal("hide1")
-
-
-func _on_spacemap_hide():
-	visible = false
