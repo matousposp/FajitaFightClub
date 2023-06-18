@@ -21,6 +21,7 @@ var freefall = false
 var direct = false
 var action = ""
 var p1 = PlayerData.p1 == "mike"
+var kbpercent = 0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 

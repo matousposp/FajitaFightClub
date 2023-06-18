@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn0rj1dxlvgvv"]
+
+[ext_resource type="Script" path="res://main scripts/KBPercentP1.gd" id="1_1oodc"]
+[ext_resource type="Texture2D" uid="uid://dmsel1avcqv7d" path="res://images/p1percent.png" id="2_k36pa"]
+
+[node name="KBPercentP1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1oodc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(81, 79)
+texture = ExtResource("2_k36pa")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 59.0
+offset_right = 158.0
+offset_bottom = 142.0
+theme_override_font_sizes/normal_font_size = 40
+text = "XXX%"

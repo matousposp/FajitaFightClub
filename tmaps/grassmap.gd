@@ -45,6 +45,18 @@ func _process(delta):
 	if PlayerData.p2 == "tim":
 		$p2indicator.position.x = $char.position.x
 		$p2indicator.position.y = $char.position.y - 50
+	if PlayerData.p1 == "mike":
+		$Camera2D/KBPercentP1.percent = $Mike.kbpercent
+	if PlayerData.p1 == "tim":
+		$Camera2D/KBPercentP1.percent = $char.kbpercent
+	if PlayerData.p1 == "char":
+		$Camera2D/KBPercentP1.percent = $char.kbpercent
+	if PlayerData.p2 == "mike":
+		$Camera2D/kb_percent_p_2.percent = $Mike.kbpercent
+	if PlayerData.p2 == "tim":
+		$Camera2D/kb_percent_p_2.percent = $char.kbpercent
+	if PlayerData.p2 == "char":
+		$Camera2D/kb_percent_p_2.percent = $char.kbpercent
 	camMovement()
 	
 func camMovement():

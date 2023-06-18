@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b5jt62etl3ckc"]
+[gd_scene load_steps=18 format=3 uid="uid://b5jt62etl3ckc"]
 
 [ext_resource type="Script" path="res://tmaps/grassmap.gd" id="1_r0t0s"]
 [ext_resource type="Texture2D" uid="uid://cvm702pm7bxds" path="res://tmaps/groundTop.png" id="1_s21f4"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dnl6yee5wakmy" path="res://images/P2-removebg-preview.png" id="9_bte2q"]
 [ext_resource type="PackedScene" uid="uid://0flba7v3fkvm" path="res://players/nikkacado.tscn" id="10_fmb3l"]
 [ext_resource type="PackedScene" uid="uid://bo2ixor2u500u" path="res://players/Mike.tscn" id="11_i2p4e"]
+[ext_resource type="PackedScene" uid="uid://bn0rj1dxlvgvv" path="res://players/kb_percent_p_1.tscn" id="13_obih7"]
+[ext_resource type="PackedScene" uid="uid://3wy4de4fgevs" path="res://players/kb_percent_p_2.tscn" id="14_d0j66"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j2vbq"]
 texture = ExtResource("1_s21f4")
@@ -97,3 +99,15 @@ position = Vector2(-2, 15)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(592, 330)
+
+[node name="KBPercentP1" parent="Camera2D" instance=ExtResource("13_obih7")]
+offset_left = -396.0
+offset_top = 145.0
+offset_right = -396.0
+offset_bottom = 145.0
+
+[node name="kb_percent_p_2" parent="Camera2D" instance=ExtResource("14_d0j66")]
+offset_left = 119.0
+offset_top = 148.0
+offset_right = 119.0
+offset_bottom = 148.0
