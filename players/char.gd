@@ -23,8 +23,6 @@ var action = ""
 var p1 = PlayerData.p1 == "tim"
 var kbpercent = 0
 var stun = 0
-var knockbackx = 0
-var knockbacky = 0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -37,14 +35,6 @@ func _physics_process(delta):
 	#timers
 	hit -= 1
 	block -= 1
-	if knockbackx > 0:
-		knockbackx -= 1
-	if knockbackx < 0:
-		knockbackx += 1
-	if knockbacky > 0:
-		knockbacky -= 1
-	if knockbacky < 0:
-		knockbacky += 1
 	#if not on floor then play air animation
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -197,8 +187,6 @@ func _physics_process(delta):
 				velocity.x = direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
-	velocity.x += knockbackx
-	velocity.y -= knockbacky
 	move_and_slide()
 
 func laser(laser_direction:Vector2):
@@ -212,9 +200,9 @@ func laser(laser_direction:Vector2):
 
 func _on_hitbox_attack(pos, hitstun, percent, hkb, vkb):
 	kbpercent += percent
-	knockbackx = hkb * (pos.x-position.x)/abs(pos.x-position.x)
-	knockbacky = vkb
-	knockbackx *= 1+0.2*kbpercent*0.2*percent
-	knockbacky *= 1+0.1*kbpercent*0.1*percent
+	velocity.x = hkb * (pos.x-position.x)/abs(pos.x-position.x)
+	velocity.y = vkb
+	velocity.x *= 1+0.2*kbpercent*0.2*percent
+	velocity.y *= 1+0.1*kbpercent*0.1*percent
 	stun = hitstun
 	print("booty cheeks")

@@ -277,10 +277,6 @@ func _physics_process(delta):
 				velocity.x = direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
-	if action == "jump" or action == "idle" or action == "run" or action == "downSpecial":
-		$hitbox/CollisionShape2D.disabled = true
-	else:
-		$hitbox/CollisionShape2D.disabled = false
 	velocity.x += knockbackx
 	velocity.y -= knockbacky
 	move_and_slide()
