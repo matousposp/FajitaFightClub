@@ -22,6 +22,8 @@ var direct = false
 var action = ""
 var p1 = PlayerData.p1 == "mike"
 var kbpercent = 0
+var knockbackx = 0
+var knockbacky = 0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -35,6 +37,14 @@ func _physics_process(delta):
 	#timers
 	hit -= 1
 	block -= 1
+	if knockbackx > 0:
+		knockbackx -= 1
+	if knockbackx < 0:
+		knockbackx += 1
+	if knockbacky > 0:
+		knockbacky -= 1
+	if knockbacky < 0:
+		knockbacky += 1
 	#if not on floor then play air animation
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -134,6 +144,7 @@ func _physics_process(delta):
 			if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") == 0 and Input.get_axis("P1up", "P1down") == 1 and not(specDone) and not(freefall):
 				if hit < 0:
 					action = "dAir"
+					velocity.y = 200
 					$AnimatedSprite2D.play("dAir")
 					$hitbox/AnimationPlayer.play("dAir")
 					hit = 20
@@ -270,6 +281,8 @@ func _physics_process(delta):
 		$hitbox/CollisionShape2D.disabled = true
 	else:
 		$hitbox/CollisionShape2D.disabled = false
+	velocity.x += knockbackx
+	velocity.y -= knockbacky
 	move_and_slide()
 
 func laser(laser_direction:Vector2):

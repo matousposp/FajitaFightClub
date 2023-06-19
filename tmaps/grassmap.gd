@@ -6,7 +6,6 @@ func _ready():
 	print(PlayerData.p1)
 	print(PlayerData.p2)
 
-	$char.position.y = 360
 	if PlayerData.p1 == "mike":
 		$Mike.position.x = 333
 	if PlayerData.p1 == "tim":

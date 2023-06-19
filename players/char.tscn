@@ -123,8 +123,8 @@ animation = &"jump"
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_6mvwe")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="hurtbox" type="Area2D" parent="." groups=["char"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
 position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_m6joj")
