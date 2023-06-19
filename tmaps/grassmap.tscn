@@ -116,3 +116,7 @@ offset_bottom = 155.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_jl3c6")
 autoplay = true
+
+[connection signal="attack" from="Mike/hitbox" to="char" method="_on_hitbox_attack"]
+
+[editable path="Mike"]
