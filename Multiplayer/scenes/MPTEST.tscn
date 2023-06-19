@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dounnwlrnkxjx"]
+
+[ext_resource type="PackedScene" uid="uid://csy5vcp11wr0n" path="res://players/Vlad.tscn" id="1_36uwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqf55"]
+
+[node name="MPTEST" type="Node2D"]
+position = Vector2(1, 53)
+scale = Vector2(15.8, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.0632911, 0)
+shape = SubResource("RectangleShape2D_qqf55")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="vladd" parent="." instance=ExtResource("1_36uwl")]
+position = Vector2(-0.189873, -27)

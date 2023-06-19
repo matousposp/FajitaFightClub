@@ -50,36 +50,44 @@ func _physics_process(delta):
 			if hit < 0:
 				action = "jab"
 				$AnimatedSprite2D.play("hit1")
+				$hitbox/AnimationPlayer.play("hit1")
 				hit = 20
 			elif hit < 15:
 				$AnimatedSprite2D.play("hit2")
+				$hitbox/AnimationPlayer.play("hit2")
 		if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") != 0 and is_on_floor():
 			if hit < 0:
 				action = "fTilt"
 				$AnimatedSprite2D.play("fTilt")
+				$hitbox/AnimationPlayer.play("fTilt")
 				hit = 20
 		if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1up", "P1down") == 1 and is_on_floor():
 			if hit < 0:
 				action = "dTilt"
 				$AnimatedSprite2D.play("dTilt")
+				$hitbox/AnimationPlayer.play("dTilt")
 				hit = 20
 	else:
 		if Input.is_action_just_pressed("P2normHit") and is_on_floor():
 			action = "jab"
 			if hit < 0:
 				$AnimatedSprite2D.play("hit1")
+				$hitbox/AnimationPlayer.play("hit1")
 				hit = 20
 			elif hit < 15:
 				$AnimatedSprite2D.play("hit2")
+				$hitbox/AnimationPlayer.play("hit2")
 		if Input.is_action_just_pressed("P2normHit") and Input.get_axis("P2left", "P2right") != 0 and is_on_floor():
 			if hit < 0:
 				action = "fTilt"
 				$AnimatedSprite2D.play("fTilt")
+				$hitbox/AnimationPlayer.play("fTilt")
 				hit = 20
 		if Input.is_action_just_pressed("P2normHit") and Input.get_axis("P2up", "P2down") == 1 and is_on_floor():
 			if hit < 0:
 				action = "dTilt"
 				$AnimatedSprite2D.play("dTilt")
+				$hitbox/AnimationPlayer.play("dTilt")
 				hit = 20
 	#aerials
 	if not(is_on_floor()):
@@ -88,38 +96,45 @@ func _physics_process(delta):
 				if hit < 0:
 					action = "nAir"
 					$AnimatedSprite2D.play("nAir")
+					$hitbox/AnimationPlayer.play("nAir")
 					hit = 20
 			if direct == 1:
 				if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") == 1 and Input.get_axis("P1up", "P1down") == 0 and not(specDone) and not(freefall):
 					if hit < 0:
 						action = "fAir"
 						$AnimatedSprite2D.play("fAir")
+						$hitbox/AnimationPlayer.play("dTilt")
 						hit = 20
 				if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") == -1 and Input.get_axis("P1up", "P1down") == 0 and not(specDone) and not(freefall):
 					if hit < 0:
 						action = "bAir"
 						$AnimatedSprite2D.play("bAir")
+						$hitbox/AnimationPlayer.play("bAir")
 						hit = 20
 			else:
 				if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") == -1 and Input.get_axis("P1up", "P1down") == 0 and not(specDone) and not(freefall):
 					if hit < 0:
 						action = "fAir"
 						$AnimatedSprite2D.play("fAir")
+						$hitbox/AnimationPlayer.play("dTilt")
 						hit = 20
 				if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") == 1 and Input.get_axis("P1up", "P1down") == 0 and not(specDone) and not(freefall):
 					if hit < 0:
 						action = "bAir"
 						$AnimatedSprite2D.play("bAir")
+						$hitbox/AnimationPlayer.play("bAir")
 						hit = 20
 			if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") == 0 and Input.get_axis("P1up", "P1down") == -1 and not(specDone) and not(freefall):
 				if hit < 0:
 					action = "uAir"
 					$AnimatedSprite2D.play("uAir")
+					$hitbox/AnimationPlayer.play("uAir")
 					hit = 20
 			if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") == 0 and Input.get_axis("P1up", "P1down") == 1 and not(specDone) and not(freefall):
 				if hit < 0:
 					action = "dAir"
 					$AnimatedSprite2D.play("dAir")
+					$hitbox/AnimationPlayer.play("dAir")
 					hit = 20
 	#specials
 	if p1:
@@ -130,6 +145,7 @@ func _physics_process(delta):
 			block = 15
 			specDone = true
 			$AnimatedSprite2D.play("block")
+			$hitbox/AnimationPlayer.play("block")
 		if Input.is_action_just_pressed("P1special") and Input.get_axis("P1left", "P1right") != 0 and Input.get_axis("P1up", "P1down") == 0 and not(specDone) and block < 10:
 			action = "sideSpecial"
 			velocity.x = 0
@@ -137,12 +153,14 @@ func _physics_process(delta):
 			block = 15
 			specDone = true
 			$AnimatedSprite2D.play("sideSpec")
+			$hitbox/AnimationPlayer.play("sideSpec")
 		if Input.is_action_just_pressed("P1special") and Input.get_axis("P1up", "P1down") == -1  and not(freefall) and block < 10:
 			action = "upSpecial"
 			velocity.y = -500
 			freefall = true
 			specDone = true
 			$AnimatedSprite2D.play("upSpec")
+			$hitbox/AnimationPlayer.play("upSpec")
 		if Input.is_action_just_pressed("P1special") and Input.get_axis("P1up", "P1down") == 1  and not(freefall) and not(specDone) and block < 10:
 			action = "downSpecial"
 			var laser_direction = self.global_position.direction_to(Vector2(position.x+(50)*direct,position.y))
@@ -247,6 +265,10 @@ func _physics_process(delta):
 				velocity.x = direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+	if action == "jump" or action == "idle" or action == "run" or action == "downSpecial":
+		$hitbox/CollisionShape2D.disabled = true
+	else:
+		$hitbox/CollisionShape2D.disabled = false
 	move_and_slide()
 
 func laser(laser_direction:Vector2):
