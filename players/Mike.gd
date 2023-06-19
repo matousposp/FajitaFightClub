@@ -69,12 +69,13 @@ func _physics_process(delta):
 				hit = 20
 	else:
 		if Input.is_action_just_pressed("P2normHit") and is_on_floor():
-			action = "jab"
 			if hit < 0:
+				action = "jab"
 				$AnimatedSprite2D.play("hit1")
 				$hitbox/AnimationPlayer.play("hit1")
 				hit = 20
 			elif hit < 15:
+				action = "jab2"
 				$AnimatedSprite2D.play("hit2")
 				$hitbox/AnimationPlayer.play("hit2")
 		if Input.is_action_just_pressed("P2normHit") and Input.get_axis("P2left", "P2right") != 0 and is_on_floor():

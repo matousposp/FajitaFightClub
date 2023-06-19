@@ -198,11 +198,11 @@ func laser(laser_direction:Vector2):
 		var laser_rotation = laser_direction.angle()
 		laser.rotation = laser_rotation
 
-func _on_hitbox_attack(target, hitstun, percent, kb, setkb):
+func _on_hitbox_attack(pos, hitstun, percent, hkb, vkb):
 	kbpercent += percent
-	velocity.x = (1+0.1*percent)*setkb
-	velocity.y = -((1+0.1*percent)*setkb)
-	velocity.x *= 1+0.1*kb
-	velocity.y *= 1+0.1*kb
+	velocity.x = hkb * (pos.x-position.x)/abs(pos.x-position.x)
+	velocity.y = vkb
+	velocity.x *= 1+0.4*kbpercent*0.4*percent
+	velocity.y *= 1+0.1*kbpercent*0.1*percent
 	stun = hitstun
 	print("booty cheeks")
