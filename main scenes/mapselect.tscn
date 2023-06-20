@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bgx7os0415rjh"]
+[gd_scene load_steps=22 format=3 uid="uid://bgx7os0415rjh"]
 
 [ext_resource type="Script" path="res://main scripts/mapselect.gd" id="1_aeiv3"]
 [ext_resource type="FontFile" uid="uid://x67yloc584gj" path="res://extra/BigJohnPRO-Bold.otf" id="2_8nulj"]
@@ -11,12 +11,6 @@
 [ext_resource type="Script" path="res://main scripts/SPACE.gd" id="8_stghg"]
 [ext_resource type="Script" path="res://main scripts/Spacemap.gd" id="9_3x4g1"]
 [ext_resource type="Script" path="res://main scripts/startgame.gd" id="11_y1hva"]
-[ext_resource type="Texture2D" uid="uid://7u2redr7jb68" path="res://main scenes/rm.png" id="12_kg8kd"]
-[ext_resource type="Script" path="res://main scenes/rock.gd" id="12_n227m"]
-[ext_resource type="Script" path="res://main scenes/Rm.gd" id="13_7a1cr"]
-[ext_resource type="Texture2D" uid="uid://hfn0fqn23igs" path="res://main scenes/lm.png" id="14_su1hp"]
-[ext_resource type="Script" path="res://main scenes/Lm.gd" id="15_a7xkx"]
-[ext_resource type="Script" path="res://main scenes/lava.gd" id="17_myngk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oudbr"]
 bg_color = Color(0.407843, 0.729412, 1, 1)
@@ -231,65 +225,13 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_1s37e")
 text = "START GAME"
 script = ExtResource("11_y1hva")
 
-[node name="rock" type="Button" parent="."]
-offset_left = 811.0
-offset_top = 335.0
-offset_right = 1098.0
-offset_bottom = 383.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_8nulj")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_oudbr")
-theme_override_styles/hover = SubResource("StyleBoxFlat_p0103")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_dt43c")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_rhci5")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cjotm")
-text = "ROCK"
-script = ExtResource("12_n227m")
-
-[node name="Rm" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(416.5, 380)
-scale = Vector2(0.811409, 0.977413)
-texture = ExtResource("12_kg8kd")
-script = ExtResource("13_7a1cr")
-
-[node name="Lm" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(418.5, 380)
-scale = Vector2(0.701807, 0.853047)
-texture = ExtResource("14_su1hp")
-script = ExtResource("15_a7xkx")
-
-[node name="lava" type="Button" parent="."]
-offset_left = 813.0
-offset_top = 421.0
-offset_right = 1100.0
-offset_bottom = 469.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_8nulj")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_oudbr")
-theme_override_styles/hover = SubResource("StyleBoxFlat_p0103")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_dt43c")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_rhci5")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cjotm")
-text = "LAVA"
-script = ExtResource("17_myngk")
-
 [connection signal="grassChosen" from="GRASSLAND" to="." method="_on_grassland_grass_chosen"]
 [connection signal="showGrassMap" from="GRASSLAND" to="." method="_on_grassland_show_grass_map"]
 [connection signal="showGrassMap" from="GRASSLAND" to="Grass" method="_on_grassland_show_grass_map"]
 [connection signal="showGrassMap" from="GRASSLAND" to="Button" method="_on_grassland_show_grass_map"]
-[connection signal="hide1" from="Grass" to="." method="_on_grass_hide_1"]
+[connection signal="hide1" from="Grass" to="Spacemap" method="_on_grass_hide_1"]
 [connection signal="showSpaceMap" from="SPACE" to="Spacemap" method="_on_space_show_space_map"]
 [connection signal="showSpaceMap" from="SPACE" to="Button" method="_on_space_show_space_map"]
 [connection signal="spaceChosen" from="SPACE" to="." method="_on_space_space_chosen"]
-[connection signal="hide" from="Spacemap" to="." method="_on_spacemap_hide"]
+[connection signal="hide" from="Spacemap" to="Grass" method="_on_spacemap_hide"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="rockChosen" from="rock" to="." method="_on_rock_rock_chosen"]
-[connection signal="showrock" from="rock" to="Rm" method="_on_rock_showrock"]
-[connection signal="hide4" from="Rm" to="." method="_on_rm_hide_4"]
-[connection signal="hide2" from="Lm" to="." method="_on_lm_hide_2"]
-[connection signal="lavaChosen" from="lava" to="." method="_on_lava_lava_chosen"]
-[connection signal="showlavalmap" from="lava" to="Lm" method="_on_lava_showlavalmap"]

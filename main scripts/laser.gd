@@ -13,7 +13,8 @@ func destroy():
 
 
 func _on_body_entered(body):
-	pass # Replace with function body.
+	if body.is_in_group("char"):
+		body.projHit(position, 40, 30, -30, -30)
 
 
 
