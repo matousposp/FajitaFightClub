@@ -1,8 +1,9 @@
-[gd_scene load_steps=72 format=3 uid="uid://xd5nwk0p6wqm"]
+[gd_scene load_steps=74 format=3 uid="uid://xd5nwk0p6wqm"]
 
 [ext_resource type="Script" path="res://players/char.gd" id="1_mi4dn"]
 [ext_resource type="Texture2D" uid="uid://bwocjgaotclrd" path="res://players/Char_4.png" id="2_wih2t"]
 [ext_resource type="Script" path="res://players/hurtbox.gd" id="3_l5c10"]
+[ext_resource type="Script" path="res://players/hitbox.gd" id="4_ojb5g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2e758"]
 atlas = ExtResource("2_wih2t")
@@ -633,6 +634,21 @@ tracks/0/keys = {
 "values": [Vector2(15, -14)]
 }
 
+[sub_resource type="Animation" id="Animation_mj4ql"]
+resource_name = "neutralSPec"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15, -14)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iewmp"]
 _data = {
 "RESET": SubResource("Animation_r7wmo"),
@@ -644,6 +660,7 @@ _data = {
 "hit1": SubResource("Animation_0lkvx"),
 "hit2": SubResource("Animation_bp6f8"),
 "nAir": SubResource("Animation_dnk14"),
+"neutralSPec": SubResource("Animation_mj4ql"),
 "sideSpec": SubResource("Animation_pn8hr"),
 "uAir": SubResource("Animation_7art8")
 }
@@ -654,7 +671,7 @@ script = ExtResource("1_mi4dn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vqvqg")
-animation = &"upSpec"
+animation = &"nSpec"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
@@ -668,6 +685,7 @@ position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_m6joj")
 
 [node name="hitbox" type="Area2D" parent="."]
+script = ExtResource("4_ojb5g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(4, 14)

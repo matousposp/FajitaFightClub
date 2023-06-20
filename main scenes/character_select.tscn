@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://6l602pnrkpki"]
+[gd_scene load_steps=32 format=3 uid="uid://6l602pnrkpki"]
 
 [ext_resource type="FontFile" uid="uid://dxddn6gjlkjs" path="res://extra/junegull.ttf" id="1_gs7ng"]
 [ext_resource type="Script" path="res://main scripts/character_select.gd" id="1_jprwa"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://main scripts/select1.gd" id="11_oe7aa"]
 [ext_resource type="Script" path="res://main scripts/star1t.gd" id="13_20j36"]
 [ext_resource type="FontFile" uid="uid://dp1ortpeav3ne" path="res://extra/MASQUE__.ttf" id="14_2b48n"]
+[ext_resource type="PackedScene" uid="uid://bgx7os0415rjh" path="res://main scenes/mapselect.tscn" id="18_j60bq"]
 [ext_resource type="Texture2D" uid="uid://l3rchqdiuapp" path="res://assets/Char_4.png" id="19_sow7o"]
 [ext_resource type="Texture2D" uid="uid://bxn2wvh3xpyde" path="res://images/P1-removebg-preview.png" id="19_xrvr1"]
 [ext_resource type="Texture2D" uid="uid://dnl6yee5wakmy" path="res://images/P2-removebg-preview.png" id="20_jp5xh"]
@@ -322,6 +323,10 @@ script = ExtResource("13_20j36")
 libraries = {
 "": SubResource("AnimationLibrary_73u85")
 }
+
+[node name="mapselect" parent="." instance=ExtResource("18_j60bq")]
+scale = Vector2(0.95, 0.95)
+skew = 1.56905
 
 [connection signal="start" from="." to="start" method="_on_character_select_start"]
 [connection signal="selected" from="selectionBTN" to="select1" method="_on_selection_btn_selected"]

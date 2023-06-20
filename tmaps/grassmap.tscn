@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b5jt62etl3ckc"]
+[gd_scene load_steps=21 format=3 uid="uid://b5jt62etl3ckc"]
 
 [ext_resource type="Script" path="res://tmaps/grassmap.gd" id="1_r0t0s"]
 [ext_resource type="Texture2D" uid="uid://cvm702pm7bxds" path="res://tmaps/groundTop.png" id="1_s21f4"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bxn2wvh3xpyde" path="res://images/P1-removebg-preview.png" id="8_qlqu0"]
 [ext_resource type="Texture2D" uid="uid://dnl6yee5wakmy" path="res://images/P2-removebg-preview.png" id="9_bte2q"]
 [ext_resource type="PackedScene" uid="uid://0flba7v3fkvm" path="res://players/nikkacado.tscn" id="10_fmb3l"]
+[ext_resource type="Script" path="res://tmaps/hitbox.gd" id="11_gfpju"]
 [ext_resource type="PackedScene" uid="uid://bo2ixor2u500u" path="res://players/Mike.tscn" id="11_i2p4e"]
 [ext_resource type="PackedScene" uid="uid://bn0rj1dxlvgvv" path="res://players/kb_percent_p_1.tscn" id="13_obih7"]
 [ext_resource type="PackedScene" uid="uid://3wy4de4fgevs" path="res://players/kb_percent_p_2.tscn" id="14_d0j66"]
@@ -95,6 +96,9 @@ texture = ExtResource("9_bte2q")
 [node name="char" parent="." instance=ExtResource("7_g3xma")]
 position = Vector2(-2, 15)
 
+[node name="hitbox" parent="char" index="3"]
+script = ExtResource("11_gfpju")
+
 [node name="Mike" parent="." instance=ExtResource("11_i2p4e")]
 
 [node name="nikkacado" parent="." instance=ExtResource("10_fmb3l")]
@@ -126,4 +130,5 @@ scale = Vector2(0.7, 0.7)
 [connection signal="body_entered" from="borders" to="char" method="_on_borders_body_entered"]
 [connection signal="body_entered" from="borders" to="Mike" method="_on_borders_body_entered"]
 
+[editable path="char"]
 [editable path="Mike"]
