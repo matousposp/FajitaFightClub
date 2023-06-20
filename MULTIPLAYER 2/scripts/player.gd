@@ -5,9 +5,6 @@ const JUMP_VELOCITY = -400.0
 
 const UP = Vector2(0, -1)
 var GRAVITY = 30
-var MAX_FALL_SPEED = 1000
-var MAX_SPEED = 200
-var JUMP_FORCE = 500
 var MAXFALLSPEED = 1000
 var MAXSPEED = 200
 var motion = Vector2()
@@ -20,60 +17,22 @@ var block = 0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _enter_tree() -> void:
-	set_multiplayer_authority(str(name).to_int()) 
+	set_multiplayer_authority(str(name).to_int())
 
 func _physics_process(delta):
 	if !is_multiplayer_authority(): return
 	$Camera2D.enabled = true
-	
-	dash -= 1
-	motion.y += GRAVITY * delta
-	
-	if dash <= 0 and not(Input.is_action_pressed("ui_right")):
-		MAX_SPEED = 200
 	hit -= 1
 	block -= 1
 
-	if Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_left"):
-		if dash <= 0:
-			dash = 20
-		else:
-			MAX_SPEED = 350
-			
-	if motion.y > MAX_FALL_SPEED:
-		motion.y = MAX_FALL_SPEED
-	
-	if Input.is_action_pressed("ui_right"):
-		$AnimatedSprite2D.flip_h = false
-		if is_on_floor():
-			$AnimatedSprite2D.play("run")
-		motion.x = MAX_SPEED
-	elif Input.is_action_pressed("ui_left"):
-		$AnimatedSprite2D.flip_h = true
-		if is_on_floor():
-			$AnimatedSprite2D.play("run")
-		motion.x = -MAX_SPEED
-	elif Input.is_action_pressed("P1normHit"):
-		$AnimatedSprite2D.play("hit1")
-#	elif Input.is_action_pressed("block"):
-#		$AnimatedSprite.play("block")
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		if block < 1:
 			$AnimatedSprite2D.play("jump")
 	else:
-		if is_on_floor():
-			$AnimatedSprite2D.play("idle")
-		motion.x = 0
-	
-	motion = motion.slide(UP)  
-	
-	if is_on_floor():
 		jumps = 2
-	else:
-		$AnimatedSprite2D.play("jump")
 
-	if Input.is_action_just_pressed("P1normHit"):
+	if Input.is_action_just_pressed("punch"):
 		if hit < 0:
 			$AnimatedSprite2D.play("punch")
 			hit = 20
@@ -89,10 +48,7 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("jump")
 		velocity.y = JUMP_VELOCITY
 		jumps -= 1
-		motion.y = -JUMP_FORCE
 
-func _reset_jump():
-	JUMP_FORCE = 500 
 	if is_on_floor() and Input.get_axis("ui_left", "ui_right") == 0:
 		if hit < 1 or block < 1:
 			$AnimatedSprite2D.play("idle")
