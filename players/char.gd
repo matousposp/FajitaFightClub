@@ -226,7 +226,6 @@ func _on_hurtbox_laserhit(pos, hitstun, percent, hkb, vkb):
 	velocity.y *= 1+0.1*kbpercent*0.1*percent
 	stun = hitstun
 
-
 func _on_borders_body_entered(body):
 	if body.is_in_group("char"):
 		lives -= 1
