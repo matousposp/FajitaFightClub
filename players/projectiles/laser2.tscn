@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://qxar7xl30w2j"]
+[gd_scene load_steps=4 format=3 uid="uid://dcj6m8qwt5tsa"]
 
-[ext_resource type="Script" path="res://players/projectiles/laser.gd" id="1_pltth"]
-[ext_resource type="Texture2D" uid="uid://bmjtk6vi8gday" path="res://images/laser.png" id="2_i3yq5"]
+[ext_resource type="Script" path="res://players/projectiles/laser2.gd" id="1_m4mbd"]
+[ext_resource type="Texture2D" uid="uid://bmjtk6vi8gday" path="res://images/laser.png" id="2_8kymy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e7v1"]
 size = Vector2(25, 6)
 
 [node name="laser" type="Area2D" groups=["hitbox"]]
-script = ExtResource("1_pltth")
+script = ExtResource("1_m4mbd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 2)
-texture = ExtResource("2_i3yq5")
+texture = ExtResource("2_8kymy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)

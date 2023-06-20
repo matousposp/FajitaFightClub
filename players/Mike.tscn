@@ -867,22 +867,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6mvwe"]
 size = Vector2(20, 57)
 
-[sub_resource type="Animation" id="Animation_4y1qi"]
-resource_name = "block"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(13, 13.8597), Vector2(-11, 14)]
-}
-
 [sub_resource type="Animation" id="Animation_xdvp4"]
 length = 0.001
 tracks/0/type = "value"
@@ -912,6 +896,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(12.2418, 15.5), Vector2(-16, 18), Vector2(-17, 20), Vector2(12, 18)]
+}
+
+[sub_resource type="Animation" id="Animation_4y1qi"]
+resource_name = "block"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(13, 13.8597), Vector2(-11, 14)]
 }
 
 [sub_resource type="Animation" id="Animation_aq5jw"]
@@ -994,22 +994,6 @@ tracks/0/keys = {
 "values": [Vector2(16, -17), Vector2(18, 13)]
 }
 
-[sub_resource type="Animation" id="Animation_u7c7r"]
-resource_name = "uAir"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-
 [sub_resource type="Animation" id="Animation_2hmju"]
 resource_name = "nAir"
 tracks/0/type = "value"
@@ -1039,6 +1023,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(18, 17), Vector2(19, 8)]
+}
+
+[sub_resource type="Animation" id="Animation_u7c7r"]
+resource_name = "uAir"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
 }
 
 [sub_resource type="Animation" id="Animation_hlm0j"]

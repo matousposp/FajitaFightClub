@@ -10,7 +10,7 @@ func _process(delta):
 	pass
 
 func _on_area_entered(area):
-	if not(area.is_in_group("mike")):
+	if not(area.is_in_group("char")):
 		if get_parent().action == "bAir":
 			emit_signal("attack",position,30,15,-50,-70)
 		if get_parent().action == "fAir":
@@ -38,3 +38,7 @@ func _on_area_entered(area):
 		
 func _on_hitbox_attack(pos, hitstun, percent, hkb, vkb):
 	print("buids")
+
+
+func _on_attack(target, hitstun, percent, kb, setkb):
+	pass # Replace with function body.

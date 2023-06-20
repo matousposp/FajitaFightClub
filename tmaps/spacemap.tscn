@@ -72,3 +72,9 @@ offset_left = 233.0
 offset_top = 203.0
 offset_right = 233.0
 offset_bottom = 203.0
+
+[connection signal="attack" from="char/hitbox" to="Mike" method="_on_hitbox_attack"]
+[connection signal="attack" from="Mike/hitbox" to="char" method="_on_hitbox_attack"]
+
+[editable path="char"]
+[editable path="Mike"]

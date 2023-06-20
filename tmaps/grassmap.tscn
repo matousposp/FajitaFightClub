@@ -65,8 +65,8 @@ sources/1 = SubResource("TileSetAtlasSource_h6qwn")
 script = ExtResource("1_r0t0s")
 
 [node name="Sky" type="Sprite2D" parent="."]
-position = Vector2(658.5, 413.5)
-scale = Vector2(1.63538, 1.21375)
+position = Vector2(544.5, 209)
+scale = Vector2(3.667, 3.065)
 texture = ExtResource("3_75vl4")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -98,6 +98,7 @@ position = Vector2(-2, 15)
 [node name="Mike" parent="." instance=ExtResource("11_i2p4e")]
 
 [node name="nikkacado" parent="." instance=ExtResource("10_fmb3l")]
+position = Vector2(0, 8)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(592, 330)
@@ -122,8 +123,10 @@ autoplay = true
 position = Vector2(150, 2.08165e-12)
 scale = Vector2(0.7, 0.7)
 
+[connection signal="attack" from="char/hitbox" to="Mike" method="_on_hitbox_attack"]
 [connection signal="attack" from="Mike/hitbox" to="char" method="_on_hitbox_attack"]
 [connection signal="body_entered" from="borders" to="char" method="_on_borders_body_entered"]
 [connection signal="body_entered" from="borders" to="Mike" method="_on_borders_body_entered"]
 
+[editable path="char"]
 [editable path="Mike"]

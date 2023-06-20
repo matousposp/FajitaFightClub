@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-var LASER: PackedScene = preload('res://players/projectiles/laser.tscn')
+var LASER: PackedScene = preload('res://players/projectiles/laser2.tscn')
 
 const UP= Vector2(0, -1) 
 var GRAVITY= 30
@@ -302,6 +302,15 @@ func _on_borders_body_entered(body):
 		position.y = 0
 
 func projHit(pos, hitstun, percent, hkb, vkb):
+	kbpercent += percent
+	velocity.x = hkb * (pos.x-position.x)/abs(pos.x-position.x)
+	velocity.y = vkb
+	velocity.x *= 1+0.2*kbpercent*0.2*percent
+	velocity.y *= 1+0.1*kbpercent*0.1*percent
+	stun = hitstun
+
+
+func _on_hitbox_attack(pos, hitstun, percent, hkb, vkb):
 	kbpercent += percent
 	velocity.x = hkb * (pos.x-position.x)/abs(pos.x-position.x)
 	velocity.y = vkb
