@@ -10,7 +10,7 @@ func _process(delta):
 	pass
 
 func _on_area_entered(area):
-	if not(area.is_in_group("char")):
+	if not(area.is_in_group("mike")):
 		if get_parent().action == "bAir":
 			emit_signal("attack",position,30,15,-50,-70)
 		if get_parent().action == "fAir":

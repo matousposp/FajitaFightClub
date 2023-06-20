@@ -146,53 +146,6 @@ func _physics_process(delta):
 					$AnimatedSprite2D.play("dAir")
 					$hitbox/AnimationPlayer.play("dAir")
 					hit = 20
-		else:
-			if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") == 0 and Input.get_axis("P1up", "P1down") == 0 and not(specDone) and not(freefall):
-				if hit < 0:
-					action = "nAir"
-					$AnimatedSprite2D.play("nAir")
-					$hitbox/AnimationPlayer.play("nAir")
-					hit = 20
-			if direct == 1:
-				if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") == 1 and Input.get_axis("P1up", "P1down") == 0 and not(specDone) and not(freefall):
-					if hit < 0:
-						action = "fAir"
-						$AnimatedSprite2D.play("fAir")
-						$hitbox/AnimationPlayer.play("dTilt")
-						hit = 20
-				if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") == -1 and Input.get_axis("P1up", "P1down") == 0 and not(specDone) and not(freefall):
-					if hit < 0:
-						action = "bAir"
-						$AnimatedSprite2D.play("bAir")
-						$hitbox/AnimationPlayer.play("bAir")
-						hit = 20
-			else:
-				if Input.is_action_just_pressed("P2normHit") and Input.get_axis("P2left", "P2right") == -1 and Input.get_axis("P2up", "P2down") == 0 and not(specDone) and not(freefall):
-					if hit < 0:
-						action = "fAir"
-						$AnimatedSprite2D.play("fAir")
-						$hitbox/AnimationPlayer.play("dTilt")
-						hit = 20
-				if Input.is_action_just_pressed("P2normHit") and Input.get_axis("P2left", "P2right") == 1 and Input.get_axis("P2up", "P2down") == 0 and not(specDone) and not(freefall):
-					if hit < 0:
-						action = "bAir"
-						$AnimatedSprite2D.play("bAir")
-						$hitbox/AnimationPlayer.play("bAir")
-						hit = 20
-			if Input.is_action_just_pressed("P2normHit") and Input.get_axis("P2left", "P2right") == 0 and Input.get_axis("P2up", "P2down") == -1 and not(specDone) and not(freefall):
-				if hit < 0:
-					action = "uAir"
-					$AnimatedSprite2D.play("uAir")
-					$hitbox/AnimationPlayer.play("uAir")
-					hit = 20
-			if Input.is_action_just_pressed("P2normHit") and Input.get_axis("P2left", "P2right") == 0 and Input.get_axis("P2up", "P2down") == 1 and not(specDone) and not(freefall):
-				if hit < 0:
-					action = "dAir"
-					velocity.y = 200
-					$AnimatedSprite2D.play("dAir")
-					$hitbox/AnimationPlayer.play("dAir")
-					hit = 20
-			
 	#specials
 	if p1:
 		if Input.is_action_just_pressed("P1special") and Input.get_axis("P1left", "P1right") == 0 and Input.get_axis("P1up", "P1down") == 0 and not(specDone) and not(freefall) and block < 10:
@@ -233,7 +186,6 @@ func _physics_process(delta):
 			velocity.y = 0
 			block = 15
 			specDone = true
-			$hitbox/AnimationPlayer.play("block")
 			$AnimatedSprite2D.play("block")
 		if Input.is_action_just_pressed("P2special") and Input.get_axis("P2left", "P2right") != 0 and Input.get_axis("P2up", "P2down") == 0 and not(specDone) and block < 10:
 			action = "sideSpecial"
@@ -241,14 +193,12 @@ func _physics_process(delta):
 			velocity.y = 0
 			block = 15
 			specDone = true
-			$hitbox/AnimationPlayer.play("upSpec")
 			$AnimatedSprite2D.play("sideSpec")
 		if Input.is_action_just_pressed("P2special") and Input.get_axis("P2up", "P2down") == -1  and not(freefall) and block < 10:
 			action = "upSpecial"
 			velocity.y = -500
 			freefall = true
 			specDone = true
-			$hitbox/AnimationPlayer.play("upSpec")
 			$AnimatedSprite2D.play("upSpec")
 		if Input.is_action_just_pressed("P2special") and Input.get_axis("P2up", "P2down") == 1  and not(freefall) and not(specDone) and block < 10:
 			action = "downSpecial"
@@ -258,7 +208,6 @@ func _physics_process(delta):
 			specDone = true
 			block = 30
 			$AnimatedSprite2D.play("downSpec")
-		
 
 	if p1:
 		if Input.is_action_just_pressed("P1jump") and jumps > 0:
