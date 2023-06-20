@@ -22,14 +22,19 @@ var direct = false
 var action = ""
 var p1 = PlayerData.p1 == "mike"
 var kbpercent = 0
-var knockbackx = 0
-var knockbacky = 0
 var respawn = 0
 var stun = 0
+var lives = 3
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
+	respawn -=  1
+	if respawn > 0:
+		velocity.x = 0
+		velocity.y = 0
+		position.x = 600
+		position.y = 0
 	if $AnimatedSprite2D.flip_h:
 		direct = -1
 	else:
@@ -37,14 +42,6 @@ func _physics_process(delta):
 	#timers
 	hit -= 1
 	block -= 1
-	if knockbackx > 0:
-		knockbackx -= 1
-	if knockbackx < 0:
-		knockbackx += 1
-	if knockbacky > 0:
-		knockbacky -= 1
-	if knockbacky < 0:
-		knockbacky += 1
 	#if not on floor then play air animation
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -278,6 +275,12 @@ func _physics_process(delta):
 				velocity.x = direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+	if lives == 0 and p1:
+		PlayerData.winner = PlayerData.p2
+		get_tree().change_scene_to_file("res://win_screen.tscn")
+	if lives == 0 and not(p1):
+		PlayerData.winner = PlayerData.p1
+		get_tree().change_scene_to_file("res://win_screen.tscn")
 	move_and_slide()
 
 func laser(laser_direction:Vector2):
@@ -288,3 +291,12 @@ func laser(laser_direction:Vector2):
 		laser.position.y -= 15
 		var laser_rotation = laser_direction.angle()
 		laser.rotation = laser_rotation
+
+
+func _on_borders_body_entered(body):
+	if body.is_in_group("mike"):
+		lives -= 1
+		respawn  = 180
+		kbpercent = 0
+		position.x = 600
+		position.y = 0

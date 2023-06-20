@@ -4,28 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://b3bdcdf064btm" path="res://players/playerSprites/mikeComplete.png" id="2_pxbqn"]
 [ext_resource type="Texture2D" uid="uid://cphevgfbuhda0" path="res://players/playerSprites/mike3.png" id="2_vhdb2"]
 [ext_resource type="Texture2D" uid="uid://bh77v6ur0lk6p" path="res://players/playerSprites/mikealmostfinished.png" id="3_su7rc"]
-
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_c3jn0"]
-properties/0/path = NodePath(".:position")
-properties/0/spawn = true
-properties/0/sync = true
-properties/1/path = NodePath("AnimatedSprite2D:animation")
-properties/1/spawn = true
-properties/1/sync = true
-properties/2/path = NodePath("AnimatedSprite2D:flip_h")
-properties/2/spawn = true
-properties/2/sync = true
-properties/3/path = NodePath("AnimatedSprite2D:frame")
-properties/3/spawn = true
-properties/3/sync = true
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cmr23"]
-atlas = ExtResource("2_pxbqn")
-region = Rect2(192, 448, 64, 64)
+[ext_resource type="Script" path="res://players/hitbox.gd" id="5_1khke"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_77sw0"]
 atlas = ExtResource("2_pxbqn")
 region = Rect2(256, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmr23"]
+atlas = ExtResource("2_pxbqn")
+region = Rect2(192, 448, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_di0ps"]
 atlas = ExtResource("2_pxbqn")
@@ -463,10 +450,10 @@ region = Rect2(384, 512, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cmr23")
+"texture": SubResource("AtlasTexture_77sw0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_77sw0")
+"texture": SubResource("AtlasTexture_cmr23")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_di0ps")
@@ -1096,12 +1083,9 @@ size = Vector2(20, 57)
 position = Vector2(0, 8)
 script = ExtResource("1_1sdkv")
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_c3jn0")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_80a3i")
-animation = &"bAir"
+animation = &"uAir"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.5)

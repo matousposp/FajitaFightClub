@@ -23,11 +23,19 @@ var action = ""
 var p1 = PlayerData.p1 == "tim"
 var kbpercent = 0
 var stun = 0
+var respawn = 0
+var lives =3
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
+	respawn -=  1
+	if respawn > 0:
+		velocity.x = 0
+		velocity.y = 0
+		position.x = 600
+		position.y = 0
 	if $AnimatedSprite2D.flip_h:
 		direct = -1
 	else:
@@ -206,3 +214,23 @@ func _on_hitbox_attack(pos, hitstun, percent, hkb, vkb):
 	velocity.y *= 1+0.1*kbpercent*0.1*percent
 	stun = hitstun
 	print("booty cheeks")
+
+
+
+
+func _on_hurtbox_laserhit(pos, hitstun, percent, hkb, vkb):
+	kbpercent += percent
+	velocity.x = hkb * (pos.x-position.x)/abs(pos.x-position.x)
+	velocity.y = vkb
+	velocity.x *= 1+0.2*kbpercent*0.2*percent
+	velocity.y *= 1+0.1*kbpercent*0.1*percent
+	stun = hitstun
+
+
+func _on_borders_body_entered(body):
+	if body.is_in_group("char"):
+		lives -= 1
+		respawn  = 180
+		kbpercent = 0
+		position.x = 600
+		position.y = 0

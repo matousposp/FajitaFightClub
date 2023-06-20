@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cr17sishsajny"]
+[gd_scene load_steps=47 format=3 uid="uid://btq3g0qkpdsl7"]
 
 [ext_resource type="Script" path="res://main scripts/mike win.gd" id="1_3thlh"]
 [ext_resource type="Texture2D" uid="uid://dfccgk4yemg7j" path="res://assets/t2.png" id="1_pii3i"]

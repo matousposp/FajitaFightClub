@@ -24,3 +24,11 @@ offset_right = 158.0
 offset_bottom = 142.0
 theme_override_font_sizes/normal_font_size = 40
 text = "XXX%"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 17.0
+offset_right = 58.0
+offset_bottom = 57.0
+text = "3"
