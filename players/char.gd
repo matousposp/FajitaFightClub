@@ -20,7 +20,7 @@ var specDone = false
 var freefall = false
 var direct = false
 var action = ""
-var p1 = PlayerData.p1 == "mike"
+var p1 = PlayerData.p1 == "char"
 var kbpercent = 0
 var respawn = 0
 var stun = 0
@@ -294,7 +294,7 @@ func laser(laser_direction:Vector2):
 
 
 func _on_borders_body_entered(body):
-	if body.is_in_group("mike"):
+	if body.is_in_group("char"):
 		lives -= 1
 		respawn  = 180
 		kbpercent = 0
