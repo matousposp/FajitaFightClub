@@ -443,10 +443,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6mvwe"]
 size = Vector2(20, 46)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6joj"]
-size = Vector2(20, 32)
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_njilg"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+properties/1/path = NodePath("AnimatedSprite2D:animation")
+properties/1/spawn = true
+properties/1/sync = true
+properties/2/path = NodePath("AnimatedSprite2D:flip_h")
+properties/2/spawn = true
+properties/2/sync = true
+properties/3/path = NodePath("AnimatedSprite2D:frame")
+properties/3/spawn = true
+properties/3/sync = true
 
-[node name="char" type="CharacterBody2D" groups=["char"]]
+[node name="char" type="CharacterBody2D"]
 position = Vector2(0, 8)
 script = ExtResource("1_mi4dn")
 
@@ -458,8 +469,5 @@ animation = &"bAir"
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_6mvwe")
 
-[node name="hurtbox" type="Area2D" parent="." groups=["char"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(0, -6)
-shape = SubResource("RectangleShape2D_m6joj")
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_njilg")

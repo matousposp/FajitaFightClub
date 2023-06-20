@@ -1,7 +1,19 @@
 [gd_scene load_steps=47 format=3 uid="uid://7amgl138c5rs"]
 
-[ext_resource type="Script" path="res://Multiplayer/scripts/Tim.gd" id="1_4alut"]
+[ext_resource type="Script" path="res://Multiplayer/scripts/Vlad.gd" id="1_pqgeu"]
 [ext_resource type="Texture2D" uid="uid://6xy5yspttdfd" path="res://players/playerSprites/Tim.png" id="1_ypid1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3ulw"]
+atlas = ExtResource("1_ypid1")
+region = Rect2(384, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2j3l"]
+atlas = ExtResource("1_ypid1")
+region = Rect2(320, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsuni"]
+atlas = ExtResource("1_ypid1")
+region = Rect2(0, 320, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7idcu"]
 atlas = ExtResource("1_ypid1")
@@ -123,18 +135,6 @@ region = Rect2(128, 384, 64, 64)
 atlas = ExtResource("1_ypid1")
 region = Rect2(256, 320, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l3ulw"]
-atlas = ExtResource("1_ypid1")
-region = Rect2(384, 256, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v2j3l"]
-atlas = ExtResource("1_ypid1")
-region = Rect2(320, 256, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rsuni"]
-atlas = ExtResource("1_ypid1")
-region = Rect2(0, 320, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_fiykw"]
 atlas = ExtResource("1_ypid1")
 region = Rect2(192, 192, 64, 64)
@@ -169,6 +169,26 @@ region = Rect2(192, 256, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nghs3"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3ulw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2j3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsuni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3ulw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2j3l")
+}],
+"loop": true,
+"name": &"hit1",
+"speed": 20.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7idcu")
@@ -279,26 +299,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l3ulw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v2j3l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rsuni")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l3ulw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v2j3l")
-}],
-"loop": true,
-"name": &"punch",
-"speed": 20.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_fiykw")
 }, {
 "duration": 1.0,
@@ -346,12 +346,12 @@ properties/3/sync = true
 
 [node name="Tim" type="CharacterBody2D"]
 position = Vector2(441, 18)
-script = ExtResource("1_4alut")
+script = ExtResource("1_pqgeu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 2)
 sprite_frames = SubResource("SpriteFrames_nghs3")
-animation = &"jump"
+animation = &"hit1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 3.5)

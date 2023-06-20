@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2mciu1ob85g7"
-path="res://.godot/imported/VladRun.png-49f92c090cfb89a3b39c6c5f141010ec.ctex"
+uid="uid://b8y1hj4g3auv3"
+path="res://.godot/imported/imageedit_4_6968244886.png-c675782c75e67696139ca13fd5d2ac5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://players/playerSprites/VladRun.png"
-dest_files=["res://.godot/imported/VladRun.png-49f92c090cfb89a3b39c6c5f141010ec.ctex"]
+source_file="res://assets/imageedit_4_6968244886.png"
+dest_files=["res://.godot/imported/imageedit_4_6968244886.png-c675782c75e67696139ca13fd5d2ac5c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3r7fnrpe7eyr"
-path="res://.godot/imported/Vlad.png-1bdad55b1739309b73d8ed85a6bc5022.ctex"
+uid="uid://cxqx8xpw3fsyx"
+path="res://.godot/imported/imageedit_1_4810126010.png-98a957c9557dfb3d0d817718488b49be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://players/playerSprites/Vlad.png"
-dest_files=["res://.godot/imported/Vlad.png-1bdad55b1739309b73d8ed85a6bc5022.ctex"]
+source_file="res://assets/imageedit_1_4810126010.png"
+dest_files=["res://.godot/imported/imageedit_1_4810126010.png-98a957c9557dfb3d0d817718488b49be.ctex"]
 
 [params]
 
