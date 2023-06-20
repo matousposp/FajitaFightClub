@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://sviii4b3uwl5"]
+
+[ext_resource type="Script" path="res://players/projectiles/energy.gd" id="1_ghtun"]
+[ext_resource type="Texture2D" uid="uid://xotjb8x6xqdq" path="res://images/energyBall.png" id="2_ssprt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4k3bq"]
+size = Vector2(24, 26)
+
+[node name="energy" type="Area2D" groups=["hitbox"]]
+script = ExtResource("1_ghtun")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ssprt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1)
+shape = SubResource("RectangleShape2D_4k3bq")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
