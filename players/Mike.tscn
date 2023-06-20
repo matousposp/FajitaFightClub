@@ -1,4 +1,4 @@
-[gd_scene load_steps=132 format=3 uid="uid://bo2ixor2u500u"]
+[gd_scene load_steps=133 format=3 uid="uid://bo2ixor2u500u"]
 
 [ext_resource type="Script" path="res://players/Mike.gd" id="1_1sdkv"]
 [ext_resource type="Texture2D" uid="uid://b3bdcdf064btm" path="res://players/playerSprites/mikeComplete.png" id="2_pxbqn"]
@@ -1076,7 +1076,10 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fmqp"]
 size = Vector2(18.9554, 23.0385)
 
-[node name="Mike" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3syu"]
+size = Vector2(20, 57)
+
+[node name="Mike" type="CharacterBody2D" groups=["mike"]]
 position = Vector2(0, 8)
 script = ExtResource("1_1sdkv")
 
@@ -1088,7 +1091,7 @@ animation = &"uAir"
 position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_6mvwe")
 
-[node name="hitbox" type="Area2D" parent="." groups=["hitbox"]]
+[node name="hitbox" type="Area2D" parent="." groups=["hitbox", "mike"]]
 script = ExtResource("5_1khke")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="hitbox"]
@@ -1101,5 +1104,11 @@ libraries = {
 position = Vector2(13, 13.8597)
 scale = Vector2(1.45164, 1.17195)
 shape = SubResource("RectangleShape2D_8fmqp")
+
+[node name="hurtbox" type="Area2D" parent="." groups=["mike"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_y3syu")
 
 [connection signal="area_entered" from="hitbox" to="hitbox" method="_on_area_entered"]

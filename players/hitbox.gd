@@ -21,9 +21,9 @@ func _on_area_entered(area):
 			emit_signal("attack",position,20,18,30,140)
 		if get_parent().action == "nAir":
 			emit_signal("attack",position,20,10,0,-100)
-		if get_parent().action == "jab1":
+		if get_parent().action == "jab":
 			emit_signal("attack",position,20,2,0,30)
-		if get_parent().action == "jab1":
+		if get_parent().action == "jab2":
 			emit_signal("attack",position,20,5,60,-50)
 		if get_parent().action == "fTilt":
 			emit_signal("attack",position,20,9,80,0)

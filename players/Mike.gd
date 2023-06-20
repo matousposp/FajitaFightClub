@@ -24,6 +24,8 @@ var p1 = PlayerData.p1 == "mike"
 var kbpercent = 0
 var knockbackx = 0
 var knockbacky = 0
+var respawn = 0
+var stun = 0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -63,6 +65,7 @@ func _physics_process(delta):
 				$hitbox/AnimationPlayer.play("hit1")
 				hit = 20
 			elif hit < 15:
+				action = "jab2"
 				$AnimatedSprite2D.play("hit2")
 				$hitbox/AnimationPlayer.play("hit2")
 		if Input.is_action_just_pressed("P1normHit") and Input.get_axis("P1left", "P1right") != 0 and is_on_floor():
@@ -277,8 +280,6 @@ func _physics_process(delta):
 				velocity.x = direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
-	velocity.x += knockbackx
-	velocity.y -= knockbacky
 	move_and_slide()
 
 func laser(laser_direction:Vector2):
